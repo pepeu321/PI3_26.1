@@ -33,8 +33,48 @@ Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se h
 ### 1. Diagrama de blocos do sistema
 
 
-Essa tarefa está apresentada primeiro porque apresenta uma visão geral do funcionamento do projeto quando ficar pronto.
+<img width="798" height="265" alt="image" src="https://github.com/user-attachments/assets/8bc2e720-88b2-4fef-b79a-4b81943d1b55" />
 
+
+
+**Descrição dos Blocos:**
+
+
+**Celular:** 
+
+O celular é responsável por permitir a interação do usuário com o sistema. Através dele, é 
+possível definir a velocidade desejada da esteira e visualizar, em tempo real, os dados de 
+funcionamento, como a velocidade atual medida. 
+
+**Controlador (ESP32):** 
+
+O controlador é o elemento central do sistema, responsável por realizar o processamento 
+das informações. Ele compara a velocidade desejada, enviada pelo celular, com a 
+velocidade real medida pelo sensor, calculando o erro do sistema. A partir desse erro, o 
+controlador gera um sinal PWM para ajustar a velocidade do motor. Além disso, realiza a 
+comunicação com o celular e o tratamento dos dados provenientes do sensor. 
+
+**Driver do Motor:**
+
+O driver do é responsável por fazer a interface entre o ESP32 e o motor. Ele recebe o sinal 
+PWM do controlador e fornece a corrente necessária para o acionamento do motor, 
+permitindo o controle da velocidade da esteira de forma eficiente. 
+
+**Motor:**
+
+O sistema utiliza um motor DC escovado (Brushed DC Motor), responsável por converter 
+energia elétrica em movimento mecânico para acionar a esteira. Sua velocidade é 
+controlada por meio da variação do sinal PWM aplicado, permitindo ajuste contínuo da 
+rotação. 
+
+**Esteira:** 
+
+A esteira é o sistema a ser controlado. Seu movimento depende diretamente da atuação do 
+motor, em que ela será controlada 
+
+**Sensor:**
+
+O sensor será responsável por medir a velocidade de rotação do motor. Os dados serão enviados ao ESP32, permitindo calcular a velocidade da esteira e realizar o controle em malha fechada.
 
 ### 2. Estudo e configuração do ESP IDF para aplicar no projeto
 
@@ -99,11 +139,28 @@ Essa rampa pode ser baseada em tempo ou em referência de RPM, usando o encoder 
 
 Os principais tipos são:
 
-Rampa linear (Linear ramp / trapezoidal profile): aumento constante do PWM, simples porém mais brusco.
-Rampa em S (S-curve / jerk-limited): início e fim suaves, com variação gradual da aceleração.
+**Rampa Linear:**
 
-Para o problema da esteira, a melhor escolha é a rampa em S, pois reduz trancos, limita corrente de partida e melhora a estabilidade com carga variável.
+Uma rampa de aceleração linear é uma maneira mais simples de controlar a variação de velocidade em motores. A velocidade tem um aumento com o tempo, o que resulta numa aceleração constante.
 
+No gráfico de velocidade pelo tempo, que é uma rampa, a reta crescente mostra que a velocidade do motor aumenta de forma uniforme até atingir o valor desejado. Enquanto no gráfico de aceleração possui um valor fixo durante seu intervalo, tendo uma mudança brusca no início e no fim.
+
+<img width="734" height="166" alt="image" src="https://github.com/user-attachments/assets/c38d0026-c35c-4269-9755-d926432ea3cf" />
+
+Esse tipo de rampa apresenta descontinuidade no início e no fim, onde a aceleração sofre uma variação brusca. Essa variação pode causar impactos mecânicos, picos de corrente e até a perda de controle de velocidade inicial. 
+
+**Rampa em S:**
+
+A rampa em S é usada para garantir transições mais suaves na variação de velocidade do motor. A aceleração não é constante, variando de forma gradual ao longo do tempo.
+Seu gráfico de velocidade tem o formato de “S”, onde a velocidade tem um início e um fim suave. A aceleração tem um comportamento de crescer gradualmente até um valor máximo e retornar a zero. 
+
+Esse comportamento elimina descontinuidades, reduzindo significativamente esforços mecânicos, vibrações e picos de corrente.
+
+<img width="761" height="176" alt="image" src="https://github.com/user-attachments/assets/4a00f36f-cfdb-4641-b447-9eb2867b966f" />
+
+Portanto, embora a rampa linear seja mais simples de implementar, ela pode causar impactos indesejados no sistema, enquanto a rampa em S, é capaz de oferecer uma variação mais suave de velocidade, melhorando o desempenho de controle do sistema.
+
+O sistema a ser controlado é a velocidade de uma esteira, por meio do feedback do sensor de velocidade. Portanto será utilizado a rampa em "S", já que contribui para uma melhor estabilidade e precisão, além de ter uma melhor resposta dinâmica do sistema, limita a corrente de partida e melhora a estabilidade com carga variável. Garantindo um controle e acionamento suave do motor.
 
 Referências (links/datasheets/livros)
 *************************************
