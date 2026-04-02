@@ -43,13 +43,25 @@ Essa tarefa está apresentada primeiro porque apresenta uma visão geral do func
 Editar
 
 3. Definição do sensor de efeito hall
-=======
+
 
 Essa atividade tem por objetivo definir o sensor de velocidade do motor. Desse modo o microcontrolador terá o rpm do motor e decidirá se é necessário aumentar ou diminuir a corrente do driver do motor para que o motor gire na rotação pré-determinada.
 
 Inicialmente iríamos utilizar o encoder as5600, que utiliza o efeito hall, e por isso o nome desta atividade ficou definição do sensor de efeito hall. Porém o mais indicado para o nosso uso é o encoder óptico de arduino.
 
+###################### imagem
+
 ![Encoder](https://raw.githubusercontent.com/pepeu321/PI3_26.1/main/etapa_1/encoders2.jpg)
+
+O encoder as5600 utiliza vários sensores de efeito hall para gerar uma posição angular do campo magnético. Então um ímã em determinada posição gerará um equivalente de tensão que é então convertido para um número binário com resolução de 12 bits e isso indicará a posição em graus que o ímã(fonte geradora de campo magnético) está.
+
+Abaixo está um gif do funcionamento desse sensor:
+
+##################### gif as5600
+
+![alternativol](https://github.com/pepeu321/PI3_26.1/blob/main/etapa_1/imagens/gif_as5600.gif)
+
+![Encoder](https://raw.githubusercontent.com/pepeu321/PI3_26.1/main/etapa_1/imagens/gif_as5600.gif)
 
 4. Rampa de aceleração linear ou rampa em S
 =======
