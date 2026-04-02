@@ -63,14 +63,27 @@ Após obter a variação angular corrigida, converte-se essa diferença em núme
 
 #### Encoder óptico
 
+![Encoder](https://github.com/pepeu321/PI3_26.1/blob/main/etapa_1/imagens/post_encoder3a.png)
+
 Um encoder óptico usa um LED contínuo e um fotossensor separados por um disco com ranhuras que gira com o eixo.
 Quando as ranhuras passam, a luz é alternadamente bloqueada/liberada, gerando um sinal digital (0 e 1).
 Cada ranhura corresponde a um pulso, permitindo contar quantos “passos” de rotação ocorreram.
 Ele possui dois canais (A e B) defasados entre si (quadratura).
 Essa defasagem permite determinar o sentido de rotação e aumentar a resolução da medição.
+Para o cálculo do rpm: o encoder gera pulsos conforme o eixo gira, onde cada pulso representa uma fração da rotação.
+Conta-se o número de pulsos em um intervalo de tempo conhecido usando o microcontrolador.
+Divide-se pelos pulsos por volta e converte-se para minutos, obtendo o rpm.
 
-![Encoder](https://github.com/pepeu321/PI3_26.1/blob/main/etapa_1/imagens/post_encoder3a.png)
 
+#### Escolha entre encoder as5600 e encoder óptico
+
+O microcontrolador a ser usado será o esp idf. O ESP32 possui o periférico de hardware PCNT (Pulse Counter), um contador de pulsos. Então o esp contará os pulsos do encoder automaticamente sem sobrecarregar a CPU.
+Isso permite medições de RPM mais precisas e confiáveis, mesmo em altas velocidades.
+Além disso, integrado ao ESP-IDF com FreeRTOS, facilita a leitura periódica e o controle em tempo real do motor.
+
+![pcnt](https://github.com/pepeu321/PI3_26.1/blob/main/etapa_1/imagens/pcnt.jpg)
+
+Referência do esp, comprovando a existência do pcnt.
 
 ### 4. Rampa de aceleração linear ou rampa em S
 
