@@ -219,7 +219,7 @@ ESPRESSIF SYSTEMS. ESP32-S3-DevKitC-1 User Guide v1.0. Disponível em: https://d
 
 DYNAPAR. Encoder: funcionamento. Disponível em: https://dynaparencoders.com.br/encoder-funcionamento/. Acesso em: 29 abr. 2026. 
 
-DYNAPAR. Encoder óptico: comparativo com encoder magnético. Disponível em: https://dynaparencoders.com.br/encoder-optico-comparativo-com-encoder-magnetico/. Acesso em: 29 abr. 2026. 
+DYNAPAR. Encoder óptico: comparativo com encoder magnético. Disponível em: https://dynaparencoders.com.br/encoder-optico-comparativo-com-encoder-magnetico/. Acesso em: 29 mar. 2026. 
 
 AUTOMAÇÃO GLOBAL. Como funcionam os encoders. Disponível em: https://www.automacaoglobal.com.br/como-funcionam-os-encoders. Acesso em: 29 abr. 2026. 
 
