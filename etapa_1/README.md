@@ -162,7 +162,18 @@ Portanto, embora a rampa linear seja mais simples de implementar, ela pode causa
 
 O sistema a ser controlado é a velocidade de uma esteira, por meio do feedback do sensor de velocidade. Portanto será utilizado a rampa em "S", já que contribui para uma melhor estabilidade e precisão, além de ter uma melhor resposta dinâmica do sistema, limita a corrente de partida e melhora a estabilidade com carga variável. Garantindo um controle e acionamento suave do motor.
 
-Referências (links/datasheets/livros)
+### Referências
+
+DYNAPAR. Encoder: funcionamento. Disponível em: https://dynaparencoders.com.br/encoder-funcionamento/. 
+
+DYNAPAR. Encoder óptico: comparativo com encoder magnético. Disponível em: https://dynaparencoders.com.br/encoder-optico-comparativo-com-encoder-magnetico/.
+
+AUTOMAÇÃO GLOBAL. Como funcionam os encoders. Disponível em: https://www.automacaoglobal.com.br/como-funcionam-os-encoders. 
+
+VOLTIMUM BRASIL. Soft Starter: O que é? Como funciona? E quais são as vantagens ao utilizá-las? Disponível em: https://www.voltimum.com.br/artigos/noticias/soft-starter
+
+LEWIN, Chuck. S-curve motion profiles: vital for optimizing machine performance. Performance Motion Devices, 11 maio 2025. Disponível em:https://www.pmdcorp.com/resources/type/articles/get/s-curve-profiles-deep-dive-article?utm_source=chatgpt.com
+
 *************************************
 
 - `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
