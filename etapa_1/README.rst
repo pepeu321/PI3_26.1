@@ -49,7 +49,7 @@ Essa atividade tem por objetivo definir o sensor de velocidade do motor. Desse m
 
 Inicialmente iríamos utilizar o encoder as5600, que utiliza o efeito hall, e por isso o nome desta atividade ficou definição do sensor de efeito hall. Porém o mais indicado para o nosso uso é o encoder óptico de arduino.
 
-![alternativol](https://raw.githubusercontent.com/pepeu321/PI3_26.1/main/etapa_1/imagens/encoders2.jpg)
+![alternativol](etapa_1/imagens/encoders2.jpg)
 
 4. Rampa de aceleração linear ou rampa em S
 =======
