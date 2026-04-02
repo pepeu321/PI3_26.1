@@ -6,7 +6,7 @@
   - Estudo e configuração do ESP IDF para aplicar no projeto
   - Definição do sensor de efeito hall
   - Rampa de aceleração linear ou rampa em S
-- Referências(links/datasheets/livros)
+- Referências
 
 
 ## Visão geral
