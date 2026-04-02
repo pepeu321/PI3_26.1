@@ -172,6 +172,14 @@ Referência do esp, comprovando a existência do pcnt.
 
 Por isso a melhor escolha para medir o rpm do motor é o **encoder óptico**, pois se aproveita da arquitetura do microcontrolador e as contas para cálculo do rpm são mais simples do que com o as5600.
 
+#### Posicionamento do sensor
+
+A imagem abaixo mostra uma possível localização do encoder óptico no sistema:
+
+<p align="center">
+  <img src="imagens/Localizacao.jpg" width="250" height="300"/>
+</p>
+
 ### 4. Rampa de aceleração linear ou rampa em S
 
 O soft start é a técnica de partida suave do motor, onde o PWM (ou tensão/corrente) é aumentado gradualmente ao invés de aplicar valor máximo instantaneamente.
