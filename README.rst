@@ -1,5 +1,8 @@
-Módulo CAN para depuração do barco solar (Exemplo do nome do projeto)(Teste Pedro)
+Desenvolvimento de Sistema de Acionamento e Controle de Velocidade para Motor CC Escovado com PID e Telemetria IOT via Protocolo COAP Aplicado a Esteira Transportadora do Laboratório LPAE
 #####################################################################
+
+<img width="793" height="594" alt="image" src="https://github.com/user-attachments/assets/a23db623-e63c-4183-bc36-be9c45ac1be0" />
+
 
 .. contents::
    :local:
@@ -18,14 +21,14 @@ Este projeto foi implementado com os seguintes módulos/softwares/hardwares...
 Visão geral
 ***********
 
-Esse projeto faz parta do barco solar e ...
+Este projeto consiste no desenvolvimento de um sistema de controle de velocidade para uma esteira acionada por um motor DC, utilizando o microcontrolador ESP32. O sistema permite ao usuário definir a velocidade desejada pelo celular, enquanto um sensor realiza a medição da velocidade real do motor. Com base nessas informações, o controlador ajusta o sinal PWM aplicado ao motor, garantindo um controle preciso.
 
 O desenvolvimento foi divido em quatro etapas:
 
-- Etapa 1 (data da entrega): (breve resumo da etapa)
-- Etapa 2 (data da entrega): (breve resumo da etapa)
-- Etapa 3 (data da entrega): (breve resumo da etapa)
-- Etapa 4 (data da entrega): (breve resumo da etapa)
+- Etapa 1 (02/04/2026): (Nesta etapa, foi realizado o estudo do microcontrolador ESP32, tipo do sensor que será utilizado, a comparação entre rampa de aceleração linear e rampa em S e o diagrama de blocos do sistema, permitindo a visualização geral do funcionamento do projeto.)
+- Etapa 2 (30/04/2026): (breve resumo da etapa)
+- Etapa 3 (28/05/2026): (breve resumo da etapa)
+- Etapa 4 (09/07/2026): (breve resumo da etapa)
 
 Configuração
 *************
