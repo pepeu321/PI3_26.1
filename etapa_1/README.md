@@ -56,7 +56,7 @@ comunicação com o celular e o tratamento dos dados provenientes do sensor.
 
 **Driver do Motor:**
 
-O driver do é responsável por fazer a interface entre o ESP32 e o motor. Ele recebe o sinal 
+O driver é responsável por fazer a interface entre o ESP32 e o motor. Ele recebe o sinal 
 PWM do controlador e fornece a corrente necessária para o acionamento do motor, 
 permitindo o controle da velocidade da esteira de forma eficiente. 
 
