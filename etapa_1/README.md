@@ -75,8 +75,40 @@ O sensor será responsável por medir a velocidade de rotação do motor. Os dad
 
 ### 2. Estudo e configuração do ESP IDF para aplicar no projeto
 
+O ESP32 é um microcontrolador desenvolvido pela Espressif Systems, utilizado em sistemas embarcadas, especialmente em projetos e prototipagem. Sua popularidade se deve a fatores como baixo custo, ampla disponibilidade no mercado, facilidade de implementação e elevada integração de recursos em um único dispositivo.
+Entre as características que tornam o ESP32 interessante, é a conectividade sem fio integrada, incluindo Wi-Fi, o que elimina a necessidade de módulos externos para comunicação em rede, o que simplifica o desenvolvimento de sistemas que precisem se comunicar.
 
-Editar
+O ESP32 está disponível em diversas versões e variações de hardware, incluindo diferentes módulos e placas de desenvolvimento. Neste projeto, será utilizada a versão ESP32-S3, ele oferece capacidade de processamento, suporta diferentes núcleos, disponibilidade de memória e recursos voltados ao processamento de dados. Além de que é capaz de executar simultaneamente tarefas de controle e comunicação, como a implementação de algoritmos de controle e a troca de dados via rede.
+
+Para o desenvolvimento deste projeto, será utilizada a placa de desenvolvimento baseada no módulo ESP32-S3-WROOM-1 N16R8, que integra o sistema em um único encapsulamento contendo o chip ESP32-S3, memória flash e, dependendo da versão, PSRAM.
+O módulo é montado em uma placa de desenvolvimento que realiza a adaptação dos terminais do encapsulamento original (SMD – Surface Mount Device) para um formato com furos metalizados (PTH – Plated Through Hole), permitindo sua conexão em soquetes e protoboards no padrão DIP (Dual In-line Package), facilitando a prototipagem e integração com outros circuitos.
+A placa de desenvolvimento também incorpora uma camada de máscara de solda (solder mask), responsável por proteger as trilhas condutoras contra oxidação, curto-circuitos e interferências do ambiente externo, contribuindo para maior confiabilidade do sistema.
+
+Além disso, diversos circuitos auxiliares são integrados à placa, reduzindo a necessidade de componentes externos. Entre eles, destacam-se:
+
+- Regulador de tensão responsável pela conversão de 5 V para 3,3 V, necessário para alimentação do microcontrolador;
+- Circuitos de proteção elétrica;
+- Botões de controle, como reset (reinicialização) e boot (modo de programação);
+- LEDs indicadores de funcionamento;
+- Interface de comunicação com o computador via USB, geralmente implementada por meio de um conversor USB-UART;
+- Sistema de antena integrado ou conector para antena externa, dependendo da versão do módulo.
+
+A Figura 1 apresenta a placa de desenvolvimento utilizada neste trabalho, enquanto a Figura 2 ilustra o diagrama de blocos correspondente.
+
+<img width="689" height="399" alt="image" src="https://github.com/user-attachments/assets/7d9ca061-11d3-4417-a52b-ce152140052d" />
+
+
+<img width="547" height="439" alt="image" src="https://github.com/user-attachments/assets/db991ea7-6fee-4f3e-a795-37030df3db52" />
+
+A Figura 3 apresenta o diagrama de pinos da placa baseada no módulo ESP32-S3-WROOM-1 N16R8. Nela são ilustradas as principais conexões elétricas disponíveis, incluindo os pinos de entrada e saída digital (GPIO), interfaces de comunicação, alimentação e funções especiais.
+Observa-se que os pinos GPIO são multiplexados, podendo assumir diferentes funções conforme a configuração do firmware, como conversão analógico-digital (ADC), sensores capacitivos (touch), interfaces de comunicação serial (UART), comunicação I2C e SPI, além de suporte a sinais PWM.
+
+A imagem também mostra os pinos dedicados a funções específicas, como USB, interface de depuração JTAG, além dos pinos de alimentação (3,3 V e 5 V) e terra (GND). Adicionalmente, são indicados pinos de boot e controle, utilizados durante o processo de inicialização e programação do dispositivo.
+Esse tipo de representação é fundamental pois permite identificar corretamente os pinos e periféricos a serem utilizados no desenvolvimento do projeto.
+
+<img width="659" height="496" alt="image" src="https://github.com/user-attachments/assets/93d0558f-d51a-4957-a928-ded282aa9ea5" />
+
+
 
 ### 3. Definição do sensor de efeito hall
 
@@ -159,20 +191,24 @@ Portanto, embora a rampa linear seja mais simples de implementar, ela pode causa
 
 O sistema a ser controlado é a velocidade de uma esteira, por meio do feedback do sensor de velocidade. Portanto será utilizado a rampa em "S", já que contribui para uma melhor estabilidade e precisão, além de ter uma melhor resposta dinâmica do sistema, limita a corrente de partida e melhora a estabilidade com carga variável. Garantindo um controle e acionamento suave do motor.
 
+
+
 ### Referências
 
-DYNAPAR. Encoder: funcionamento. Disponível em: https://dynaparencoders.com.br/encoder-funcionamento/. 
+ESPRESSIF SYSTEMS. ESP32-S3 Datasheet. [S.l.]: Espressif Systems, 2023. Disponível em: https://documentation.espressif.com/esp32-s3_datasheet_en.pdf. Acesso em: 30 mar. 2026.
 
-DYNAPAR. Encoder óptico: comparativo com encoder magnético. Disponível em: https://dynaparencoders.com.br/encoder-optico-comparativo-com-encoder-magnetico/.
+ESPRESSIF SYSTEMS. ESP32-S3-DevKitC-1 User Guide v1.0. Disponível em: https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html. Acesso em: 31 mar. 2026. 
 
-AUTOMAÇÃO GLOBAL. Como funcionam os encoders. Disponível em: https://www.automacaoglobal.com.br/como-funcionam-os-encoders. 
+DYNAPAR. Encoder: funcionamento. Disponível em: https://dynaparencoders.com.br/encoder-funcionamento/. Acesso em: 29 abr. 2026. 
 
-VOLTIMUM BRASIL. Soft Starter: O que é? Como funciona? E quais são as vantagens ao utilizá-las? Disponível em: https://www.voltimum.com.br/artigos/noticias/soft-starter
+DYNAPAR. Encoder óptico: comparativo com encoder magnético. Disponível em: https://dynaparencoders.com.br/encoder-optico-comparativo-com-encoder-magnetico/. Acesso em: 29 abr. 2026. 
 
-LEWIN, Chuck. S-curve motion profiles: vital for optimizing machine performance. Performance Motion Devices, 11 maio 2025. Disponível em:https://www.pmdcorp.com/resources/type/articles/get/s-curve-profiles-deep-dive-article?utm_source=chatgpt.com
+AUTOMAÇÃO GLOBAL. Como funcionam os encoders. Disponível em: https://www.automacaoglobal.com.br/como-funcionam-os-encoders. Acesso em: 29 abr. 2026. 
 
-*************************************
+VOLTIMUM BRASIL. Soft Starter: O que é? Como funciona? E quais são as vantagens ao utilizá-las? Disponível em: https://www.voltimum.com.br/artigos/noticias/soft-starter. Acesso em: 01 abr. 2026. 
 
-- `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
+LEWIN, Chuck. S-curve motion profiles: vital for optimizing machine performance. Performance Motion Devices, 11 maio 2025. Disponível em:https://www.pmdcorp.com/resources/type/articles/get/s-curve-profiles-deep-dive-article?utm_source=chatgpt.com. Acesso em: 01 abr. 2026. 
+
+
 
 
