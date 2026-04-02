@@ -27,9 +27,6 @@ A etapa 1 consiste numa fase de estudo para o desenvolvimento do projeto. As ati
 ## Desenvolvimento
 
 
-Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Adicionar pesqusisas realizadas bem como testes realizados.
-
-
 ### 1. Diagrama de blocos do sistema
 
 
