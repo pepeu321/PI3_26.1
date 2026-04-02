@@ -1,3 +1,11 @@
+# Titulo
+
+![Encoder](https://raw.githubusercontent.com/pepeu321/PI3_26.1/main/etapa_1/encoders2.jpg)
+
+
+![as5600](https://github.com/pepeu321/PI3_26.1/blob/main/etapa_1/imagens/gif_as5600.gif)
+
+
 Etapa 1
 #######
 
