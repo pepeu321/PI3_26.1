@@ -98,6 +98,7 @@ A Figura 1 apresenta a placa de desenvolvimento utilizada neste trabalho, enquan
 <img width="689" height="399" alt="image" src="https://github.com/user-attachments/assets/7d9ca061-11d3-4417-a52b-ce152140052d" />
 
 
+
 <img width="547" height="439" alt="image" src="https://github.com/user-attachments/assets/db991ea7-6fee-4f3e-a795-37030df3db52" />
 
 A Figura 3 apresenta o diagrama de pinos da placa baseada no módulo ESP32-S3-WROOM-1 N16R8. Nela são ilustradas as principais conexões elétricas disponíveis, incluindo os pinos de entrada e saída digital (GPIO), interfaces de comunicação, alimentação e funções especiais.
@@ -107,6 +108,20 @@ A imagem também mostra os pinos dedicados a funções específicas, como USB, i
 Esse tipo de representação é fundamental pois permite identificar corretamente os pinos e periféricos a serem utilizados no desenvolvimento do projeto.
 
 <img width="659" height="496" alt="image" src="https://github.com/user-attachments/assets/93d0558f-d51a-4957-a928-ded282aa9ea5" />
+
+A Figura 4 apresenta uma visão geral da arquitetura interna do módulo, destacando seus principais blocos, incluindo unidades de processamento, circuitos de radiofrequência, periféricos, módulos de segurança e subsistemas de baixo consumo.
+No bloco de processamento e memória, observa-se a presença de um processador dual-core, acompanhado de memória SRAM, ROM, cache e a matriz de interrupções, responsável pelo gerenciamento eficiente de eventos assíncronos.
+
+O bloco de radiofrequência (RF) inclui os componentes necessários para comunicação sem fio na faixa de 2,4 GHz, como receptor, transmissor, sintetizador de frequência e circuitos de oscilação, sendo responsável pela implementação das funcionalidades de Wi-Fi. 
+Os periféricos constituem uma parte significativa do sistema, incluindo interfaces de comunicação como UART, SPI, I2C e USB, além de módulos especializados como MCPWM (controle de motores), LED PWM, temporizadores de uso geral, contadores de pulso, ADCs e interfaces para câmera e display. Esses recursos permitem a integração direta com sensores, atuadores e dispositivos externos, reduzindo a necessidade de circuitos adicionais.
+
+Outro bloco relevante é o subsistema RTC (Real-Time Clock), que inclui memória dedicada, unidade de gerenciamento de energia (PMU) e um coprocessador de ultra baixo consumo (ULP). Esse conjunto permite a operação em modos de baixo consumo energético.
+Em especial, destaca-se o modo de deep sleep, no qual a maior parte dos blocos do sistema, como CPU, periféricos digitais e circuitos de radiofrequência, é desativada, permanecendo ativos apenas os módulos pertencentes ao domínio RTC. Na Figura 4, esses elementos são representados em destaque mais escuro, indicando sua capacidade de operar durante o modo de baixo consumo.
+Esse modo é interessante em aplicações que demandam operação contínua com restrição de energia, permitindo que o sistema permaneça inativo por longos períodos e seja reativado por eventos específicos, como temporizadores, sinais externos ou interrupções do subsistema RTC.
+
+
+<img width="541" height="486" alt="image" src="https://github.com/user-attachments/assets/83814b92-ac2d-4b09-98ec-3cd44445963e" />
+
 
 
 
