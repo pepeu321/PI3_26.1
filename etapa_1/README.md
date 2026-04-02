@@ -186,6 +186,11 @@ O soft start é a técnica de partida suave do motor, onde o PWM (ou tensão/cor
 Ele é necessário na esteira porque a carga pode variar (peso), e uma partida brusca gera picos de corrente, trancos mecânicos e desgaste.
 Sem soft start, o motor pode sofrer quedas de tensão, aquecimento e até perda de controle de velocidade inicial.
 
+<p align="center">
+  <img src="imagens/motor.jpg" width="250" height="300"/><br/>
+  <em>Motor utilizado no projeto</em>
+</p>
+
 Para implementar, usa-se uma rampa no sinal de controle (PWM), aumentando-o ao longo do tempo até atingir o valor desejado.
 Essa rampa pode ser baseada em tempo ou em referência de RPM, usando o encoder como feedback.
 
@@ -225,11 +230,11 @@ ESPRESSIF SYSTEMS. ESP32-S3 Datasheet. [S.l.]: Espressif Systems, 2023. Disponí
 
 ESPRESSIF SYSTEMS. ESP32-S3-DevKitC-1 User Guide v1.0. Disponível em: https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html. Acesso em: 31 mar. 2026. 
 
-DYNAPAR. Encoder: funcionamento. Disponível em: https://dynaparencoders.com.br/encoder-funcionamento/. Acesso em: 29 abr. 2026. 
+DYNAPAR. Encoder: funcionamento. Disponível em: https://dynaparencoders.com.br/encoder-funcionamento/. Acesso em: 29 mar. 2026. 
 
 DYNAPAR. Encoder óptico: comparativo com encoder magnético. Disponível em: https://dynaparencoders.com.br/encoder-optico-comparativo-com-encoder-magnetico/. Acesso em: 29 mar. 2026. 
 
-AUTOMAÇÃO GLOBAL. Como funcionam os encoders. Disponível em: https://www.automacaoglobal.com.br/como-funcionam-os-encoders. Acesso em: 29 abr. 2026. 
+AUTOMAÇÃO GLOBAL. Como funcionam os encoders. Disponível em: https://www.automacaoglobal.com.br/como-funcionam-os-encoders. Acesso em: 29 mar. 2026. 
 
 VOLTIMUM BRASIL. Soft Starter: O que é? Como funciona? E quais são as vantagens ao utilizá-las? Disponível em: https://www.voltimum.com.br/artigos/noticias/soft-starter. Acesso em: 01 abr. 2026. 
 
