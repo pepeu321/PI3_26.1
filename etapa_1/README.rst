@@ -1,15 +1,28 @@
 Etapa 1
 #######
 
-.. contents::
-   :local:
-   :depth: 2
+- Visão Geral
+- Desenvolvimento
+      - Diagrama de blocos do sistema 
+      - Estudo e configuração do ESP IDF para aplicar no projeto
+      - Definição do sensor de efeito hall
+      - Rampa de aceleração linear ou rampa em S
+- Referências(links/datasheets/livros)
 
 
 Visão geral
 ***********
 
-A etapa 1 ...
+A etapa 1 consiste numa fase de estudo para o desenvolvimento do projeto. As atividades a serem desenvolvidas nesta etapa são:
+
+📌 Estudo e configuração do ESP IDF para aplicar no projeto
+
+📌 Definição do sensor de efeito hall
+
+📌 Rampa de aceleração linear ou rampa em S
+
+📌 Diagrama de blocos do sistema 
+
 
 
 Desenvolvimento
@@ -18,14 +31,26 @@ Desenvolvimento
 Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Adicionar pesqusisas realizadas bem como testes realizados.
 
 
-Testes
+1. Diagrama de blocos do sistema
 ======
 
-Descrição dos testes/validações realizadas.
+Essa tarefa está apresentada primeiro porque apresenta uma visão geral do funcionamento do projeto quando ficar pronto.
 
 
-(Outras subseções se necessário)
-================================
+2. Estudo e configuração do ESP IDF para aplicar no projeto
+=======
+
+Editar
+
+3. Definição do sensor de efeito hall
+=======
+
+Essa atividade tem por objetivo definir o sensor de velocidade do motor. Desse modo o microcontrolador terá o rpm do motor e decidirá se é necessário aumentar ou diminuir a corrente do driver do motor para que o motor gire na rotação pré-determinada.
+
+4. Rampa de aceleração linear ou rampa em S
+=======
+
+Editar
 
 
 Referências (links/datasheets/livros)
