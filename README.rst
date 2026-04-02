@@ -1,8 +1,9 @@
 Desenvolvimento de Sistema de Acionamento e Controle de Velocidade para Motor CC Escovado com PID e Telemetria IOT via Protocolo COAP Aplicado a Esteira Transportadora do Laboratório LPAE
 #####################################################################
 
-.. image:: imagens/Esteira.png
-
+.. image:: etapa_1/imagens/Esteira.png
+   :width: 600px
+   :align: right
 
 .. contents::
    :local:
