@@ -205,6 +205,9 @@ Esse comportamento elimina descontinuidades, reduzindo significativamente esfor�
 Portanto, embora a rampa linear seja mais simples de implementar, ela pode causar impactos indesejados no sistema, enquanto a rampa em S, é capaz de oferecer uma variação mais suave de velocidade, melhorando o desempenho de controle do sistema.
 
 O sistema a ser controlado é a velocidade de uma esteira, por meio do feedback do sensor de velocidade. Portanto será utilizado a rampa em "S", já que contribui para uma melhor estabilidade e precisão, além de ter uma melhor resposta dinâmica do sistema, limita a corrente de partida e melhora a estabilidade com carga variável. Garantindo um controle e acionamento suave do motor.
+A principal vantagem desse perfil está no controle do jerk, que representa a taxa de variação da aceleração. Na rampa em S, o jerk é limitado e contínuo, evitando variações bruscas na aceleração. As curvas de jerk abaixo mostram esse comportamento da variação da aceleração, sendo vermelho a rampa linear e em laranja em S.
+
+<img width="752" height="181" alt="image" src="https://github.com/user-attachments/assets/66c1245c-d868-4bdd-90e8-6194bebf3341" />
 
 
 
