@@ -169,7 +169,7 @@ idf.py size -> verifica o uso de memória
 Tarefas que executam em plano de fundo podem ser vistas na tabela abaixo:
 
 <p align="center">
-  <img src="imagens/tabela1.jpg" width="500" height="300"/><br/>
+  <img src="imagens/tabela1.jpg" width="600" height="400"/><br/>
   <em>Tabela 1>
 </p>
 
@@ -180,7 +180,7 @@ As tarefas de compartilhamento de dados não executam apenas processamento ativo
 Cada tarefa definida no projeto, assim como suas respectivas funções, parâmetros e valores de retorno, pode ser observada na tabela abaixo:
 
 <p align="center">
-  <img src="imagens/tabela2.jpg" width="500" height="300"/><br/>
+  <img src="imagens/tabela2.jpg" width="500" height="400"/><br/>
   <em>Tabela 2</em>
 </p>
 
