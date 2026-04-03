@@ -304,6 +304,12 @@ VOLTIMUM BRASIL. Soft Starter: O que é? Como funciona? E quais são as vantagen
 
 LEWIN, Chuck. S-curve motion profiles: vital for optimizing machine performance. Performance Motion Devices, 11 maio 2025. Disponível em:https://www.pmdcorp.com/resources/type/articles/get/s-curve-profiles-deep-dive-article?utm_source=chatgpt.com. Acesso em: 01 abr. 2026. 
 
+ESPRESSIF SYSTEMS. FreeRTOS (ESP-IDF Programming Guide). Disponível em:
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos.html.
+Acesso em: 2 abr. 2026.
 
+ESPRESSIF SYSTEMS. FreeRTOS (IDF) – ESP-IDF Programming Guide. Disponível em:
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos_idf.html.
+Acesso em: 2 abr. 2026.
 
 
