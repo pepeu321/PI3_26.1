@@ -170,7 +170,6 @@ Tarefas que executam em plano de fundo podem ser vistas na tabela abaixo:
 
 <p align="center">
   <img src="imagens/tabela1.jpg" width="600" height="400"/><br/>
-  <em>Tabela 1>
 </p>
 
 Para este projeto, serão utilizadas cinco categorias de tarefas para o funcionamento do sistema operacional. Dentre elas, duas tarefas serão responsáveis pelo controle e comunicação do sistema, uma será dedicada à execução periódica de rotinas, outra terá a função de depuração e monitoramento do estado das demais tarefas, e haverá também tarefas voltadas ao compartilhamento de dados entre diferentes partes do sistema.
@@ -181,7 +180,6 @@ Cada tarefa definida no projeto, assim como suas respectivas funções, parâmet
 
 <p align="center">
   <img src="imagens/tabela2.jpg" width="500" height="400"/><br/>
-  <em>Tabela 2</em>
 </p>
 
 #### Exemplo de criação de tarefa conforme as necessidades de projeto:
