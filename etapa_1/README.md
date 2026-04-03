@@ -122,7 +122,73 @@ Esse modo é interessante em aplicações que demandam operação contínua com 
 
 <img width="541" height="486" alt="image" src="https://github.com/user-attachments/assets/83814b92-ac2d-4b09-98ec-3cd44445963e" />
 
+#### Esp e sua integração com o FreeRTOS
 
+O ESP-IDF (Espressif IoT Development Framework) é o framework oficial para
+desenvolvimento de aplicações de Internet das Coisas (IoT) nos microcontroladores da
+Espressif Systems, como o ESP32-S3. Por meio da documentação técnica fornecida pela
+Espressif, é possível acessar drivers para os diversos periféricos disponíveis, além de pilhas de
+comunicação como Wi-Fi, Bluetooth e protocolos de aplicação, como CoAP. Um estudo mais
+aprofundado dessa documentação será realizado em uma etapa posterior (Etapa II).
+
+Para programar o ESP32-S3, é fundamental compreender o funcionamento do sistema
+operacional embarcado. O sistema utilizado é baseado no FreeRTOS, porém adaptado pela
+Espressif para suportar recursos específicos do hardware, como processamento multicore,
+conectividade Wi-Fi e Bluetooth, além de outras otimizações e extensões.
+
+No ESP-IDF, não é necessário inicializar manualmente o escalonador (scheduler) do
+FreeRTOS, pois ele é iniciado automaticamente durante o processo de boot do sistema. Após
+essa inicialização, a função principal app_main() é executada, servindo como ponto de entrada
+da aplicação do usuário.
+
+Diferentemente de implementações tradicionais do FreeRTOS, no ESP-IDF o arquivo
+FreeRTOSConfig.h não é diretamente acessível ao desenvolvedor, pois suas configurações são
+gerenciadas internamente pelo framework. A personalização do kernel é feita por meio da
+ferramenta menuconfig, acessada via terminal. As configurações definidas são armazenadas no
+arquivo sdkconfig (e não sdkconfig.h, que é gerado automaticamente a partir dele).
+
+Para este projeto, será configurada a utilização de apenas um núcleo (core 0). Essa decisão foi
+tomada visando reduzir a complexidade do desenvolvimento, uma vez que o uso de múltiplos
+núcleos exige cuidados adicionais com sincronização, concorrência e possíveis condições de
+corrida.
+
+Além disso, não é necessário modificar manualmente arquivos de build como o CMake, pois o
+sistema de compilação do ESP-IDF já gerencia automaticamente essas configurações. O
+ambiente também inclui diversas tarefas internas executadas em segundo plano, responsáveis
+por funções como gerenciamento de comunicação, temporização e manutenção do sistema.
+Alguns comandos da interface em linha de comando para o ESP IDF podem ser vistos abaixo.
+
+idf.py build -> compila o código
+idf.py flash -> grava o código no microcontrolador
+idf.py monitor -> depura o código
+idf.py menuconfig -> acessa a interface de configuração do Kernel
+idf.py clean -> limpa o terminal
+idf.py size -> verifica o uso de memória
+
+
+Tarefas que executam em plano de fundo podem ser vistas na tabela abaixo:
+
+<p align="center">
+  <img src="imagens/tabela1.jpg" width="500" height="300"/><br/>
+  <em>Tabela 1>
+</p>
+
+Para este projeto, serão utilizadas cinco categorias de tarefas para o funcionamento do sistema operacional. Dentre elas, duas tarefas serão responsáveis pelo controle e comunicação do sistema, uma será dedicada à execução periódica de rotinas, outra terá a função de depuração e monitoramento do estado das demais tarefas, e haverá também tarefas voltadas ao compartilhamento de dados entre diferentes partes do sistema.
+
+As tarefas de compartilhamento de dados não executam apenas processamento ativo, mas atuam em conjunto com mecanismos de sincronização e comunicação do FreeRTOS, como filas (queues), semáforos e mutexes, garantindo a integridade e a consistência das informações trocadas entre as tarefas concorrentes.
+
+Cada tarefa definida no projeto, assim como suas respectivas funções, parâmetros e valores de retorno, pode ser observada na tabela abaixo:
+
+<p align="center">
+  <img src="imagens/tabela2.jpg" width="500" height="300"/><br/>
+  <em>Tabela 2</em>
+</p>
+
+#### Exemplo de criação de tarefa conforme as necessidades de projeto:
+
+**xTaskCreate(controleTask, "Controle", 2048, NULL, 5, NULL);**
+
+**xTaskCreate(comunicacaoTask, "Comunicacao", 4096, NULL, 3, NULL);**
 
 
 ### 3. Definição do sensor de efeito hall
