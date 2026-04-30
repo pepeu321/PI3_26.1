@@ -9,7 +9,15 @@ Etapa 2
 Visão geral
 ***********
 
+Na Etapa 2, foram realizados testes individuais com os sensores que serão utilizados com o microcontrolador, e o desenvolvimento dos esquemáticos dos hardwares do sistema. As principais atividades desenvolvidas nesta etapa são:
 
+📌 Teste do encoder óptico no microcontrolador
+
+📌 Teste do sensor de corrente no microcontrolador
+
+📌 Esquemátco da placa de potência
+
+📌 Esquemátco da placa de controle
 
 Desenvolvimento
 ***************
