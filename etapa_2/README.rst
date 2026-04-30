@@ -18,17 +18,25 @@ Desenvolvimento
 Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Adicionar pesqusisas realizadas bem como testes realizados.
 
 
-Testes
+Teste do encoder óptico no microcontrolador.
 ======
 
-Descrição dos testes/validações realizadas.
+Teste do sensor de corrente no microcontrolador.
+======
+
+Esquemátco da placa de potência.
+======
+
+Esquemátco da placa de controle.
+======
+
 
 
 (Outras subseções se necessário)
 ================================
 
 
-Referências (links/datasheets/livros)
+Referências
 *************************************
 
 - `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
