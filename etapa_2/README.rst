@@ -328,7 +328,7 @@ Esquemátco da placa de potência.
 Esquemátco da placa de controle.
 ======
 
-.. image:: Imagens/Teste_ADC_corrente.jpg
+.. image:: Imagens/EsquemáticoCircuitoControle.jpeg
    :height: 400px
    :align: center
 
