@@ -9,7 +9,6 @@ Etapa 2
 Visão geral
 ***********
 
-A etapa 2 ...
 
 
 Desenvolvimento
