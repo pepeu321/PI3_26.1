@@ -27,6 +27,22 @@ Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se h
 
 Teste do encoder óptico no microcontrolador.
 ======
+
+
+.. image:: Imagens/Teste_encoder1-osc.png
+   :width: 400px
+   :align: center
+
+
+
+
+
+
+.. image:: Imagens/Teste_encoder2.jpg
+   :width: 400px
+   :align: center
+
+
 wheel.h
 
 .. code-block:: vhdl
@@ -167,10 +183,143 @@ Main.c
 Teste do sensor de corrente no microcontrolador.
 ======
 
+.. image:: Imagens/Teste_ADC_corrente.jpg
+   :height: 400px
+   :align: center
+
+Para a medição de corrente, foi inicialmente considerado o uso do sensor ACS712, que opera com alimentação de 5 V. No entanto, como o microcontrolador utilizado possui entradas limitadas a 3,3 V, pode causar danos ao microcontrolador. Embora seja possível utilizar um divisor resistivo para adequar os níveis de tensão, optou-se por testar o ADC, já que o driver que será utilizado também é capaz de fazer a leitura de corrente.
+
+Foi considerado o sensor será o ACS758, adequado para sistemas de 3,3 V. Enquanto sensor não está disponível, o teste de leitura do ADC foi feito utilizando um potenciômetro. 
+
+Para validar, foi feita a comparação entre os valores medidos pelo ADC e as tensões medidas no multímetro.  Para uma leitura correta  foi considerada a característica desses sensores, onde a saída apresenta um offset aproximadamente igual à metade da tensão de alimentação (Vcc/2). Para 3,3 V, esse valor é teoricamente próximo de 1,65 V.
+
+No software foi implementado um procedimento de calibração automática do offset, realizado no instante da inicialização do sistema, na ausência de corrente. Esse processo permite determinar o valor real do offset experimentalmente, já que pode ter pequenas variações
+
+
 Main.c
    
 .. code-block:: vhdl  
 
+   #include <stdio.h>
+   #include "freertos/FreeRTOS.h"
+   #include "freertos/task.h"
+   #include "esp_adc/adc_oneshot.h"
+   #include "esp_adc/adc_cali.h"
+   #include "esp_adc/adc_cali_scheme.h"
+   
+   // CONFIGURAÇÕES 
+   #define ADC_CHANNEL        ADC_CHANNEL_0   // GPIO1 (ajuste se necessário)
+   #define ADC_UNIT           ADC_UNIT_1
+   #define ADC_ATTEN          ADC_ATTEN_DB_11 // até ~3.3V
+   #define ADC_BITWIDTH       ADC_BITWIDTH_DEFAULT
+   
+   #define NUM_SAMPLES        200             // média
+   #define SENSITIVITY        0.04f           // 40 mV/A (ACS758 típico)
+   #define VCC                3.3f
+   
+   // VARIÁVEIS GLOBAIS
+   adc_oneshot_unit_handle_t adc_handle;
+   adc_cali_handle_t adc_cali_handle = NULL;
+   
+   float offset_voltage = 1.65; // 1.65 valor tipico -> vcc/2
+   
+   
+   // FUNÇÃO PARA LER TENSÃO 
+   float read_voltage()
+   {
+       int adc_raw = 0;
+       int voltage = 0;
+   
+       int soma = 0;
+   
+   	//for, pra ler ADC melhor, tirando medias
+       for (int i = 0; i < NUM_SAMPLES; i++) {
+           adc_oneshot_read(adc_handle, ADC_CHANNEL, &adc_raw);
+           soma += adc_raw;
+       }
+   
+       adc_raw = soma / NUM_SAMPLES;
+   
+       adc_cali_raw_to_voltage(adc_cali_handle, adc_raw, &voltage);
+   
+       return voltage / 1000.0; // mV -> V
+   }
+   
+   // CALIBRAÇÃO DE OFFSET 
+   void calibrate_offset()
+   {
+       printf("Calibrando offset... NÃO passe corrente!\n");
+   
+       vTaskDelay(pdMS_TO_TICKS(2000));
+   
+       float soma = 0;
+   
+       for (int i = 0; i < 100; i++) {
+           soma += read_voltage();
+           vTaskDelay(pdMS_TO_TICKS(10));
+       }
+   
+       offset_voltage = soma / 100.0;
+   
+       printf("Offset calibrado: %.3f V\n\n", offset_voltage);
+   }
+   
+   // APP MAIN 
+   void app_main(void)
+   {
+       // Inicializa ADC
+       adc_oneshot_unit_init_cfg_t init_config = {
+           .unit_id = ADC_UNIT,
+       };
+       adc_oneshot_new_unit(&init_config, &adc_handle);
+   
+       adc_oneshot_chan_cfg_t config = {
+           .bitwidth = ADC_BITWIDTH,
+           .atten = ADC_ATTEN_DB_12,
+       };
+       adc_oneshot_config_channel(adc_handle, ADC_CHANNEL, &config);
+   
+       // Calibração do ADC
+       adc_cali_curve_fitting_config_t cali_config = {
+           .unit_id = ADC_UNIT,
+           .atten = ADC_ATTEN_DB_12,
+           .bitwidth = ADC_BITWIDTH,
+       };
+       adc_cali_create_scheme_curve_fitting(&cali_config, &adc_cali_handle);
+   
+       // Calibra offset
+       calibrate_offset();
+   
+       while (1) {
+   
+           float voltage = read_voltage();
+   
+           // Corrente = (Vout - offset) / sensibilidade
+           float current = (voltage - offset_voltage) / SENSITIVITY;
+   
+           printf("Tensao: %.3f V | Corrente: %.2f A\n", voltage, current);
+   
+           vTaskDelay(pdMS_TO_TICKS(500));
+       }
+   }
+
+Os valores de tensão e corrente obtidos pelo ADC ficaram bem próximos do mostrados no multímetro e calculados de forma teórica para a corrente aumentando linearmente conforme o esperado. Sendo possível ajustar a sensibilidade de 40mV/A para que os valores se aproximem ainda mais.
+
++---------------+------------------+--------------+------------------+-------------+
+| Multímetro (V)| ADC (V)          | Corrente exp | Corrente medida  | Erro        |
++===============+==================+==============+==================+=============+
+| 1.00          | 1.00             | -15.15 A     | -16.40 A         | ~8%         |
++---------------+------------------+--------------+------------------+-------------+
+| 1.65          | 1.65             | ~0 A         | 0 A              | OK          |
++---------------+------------------+--------------+------------------+-------------+
+| 2.00          | 2.00             | 7.58 A       | 8.70 A           | ~15%        |
++---------------+------------------+--------------+------------------+-------------+
+| 2.50          | 2.51             | 18.94 A      | 21.43 A          | ~13%        |
++---------------+------------------+--------------+------------------+-------------+
+| 3.00          | 3.03             | 30.30 A      | 34.48 A          | ~14%        |
++---------------+------------------+--------------+------------------+-------------+
+| 2.50          | 2.51             | 18.94 A      | 21.43 A          | ~13%        |
++---------------+------------------+--------------+------------------+-------------+
 
 
 Esquemátco da placa de potência.
