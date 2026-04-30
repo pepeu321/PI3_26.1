@@ -21,6 +21,7 @@ Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se h
 Teste do encoder óptico no microcontrolador.
 ======
 Main.c
+
 .. code-block:: vhdl
 
    #include <stdio.h>
