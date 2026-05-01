@@ -186,7 +186,11 @@ Então como é possível observar, foi utilizado um cursor para medir o período
 
 O que ficou bem próximo ao valor obtido pelo código do esp32, no qual o valor encontrado foi igual a 420 rpm. Conforme indica a figura abaixo:
 
+.. image:: Imagens/resultado.png
+   :width: 400px
+   :align: center
 
+Uma observação a ser feita é que dependendo da posição do disco do encoder, pode haver imprecisões na leitura. Ou seja, o valor não fica cravado em um valor, ele pode apresentar oscilações.
 
 
 
