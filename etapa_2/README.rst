@@ -376,8 +376,6 @@ Esquemátco da placa de controle.
 Referências
 *************************************
 
-. Referências das Imagens - Todas as imagens foram autorais
-
 . HART, Daniel W. Power electronics. New York: McGraw-Hill, 2011.
 
 . ALLEGRO MICROSYSTEMS. ACS758: Thermally enhanced, fully integrated Hall-effect-based linear current sensor IC. Worcester, 2011. Disponível em: https://www.allegromicro.com/~/media/files/datasheets/acs758 datasheet.ashx. Acesso em: 30 abr. 2026.
@@ -399,8 +397,10 @@ ALICEDEW. ACS712 current sensor – working, specs, Arduino interfacing & projec
 . Acesso em: 29 abr. 2026.
 
 
+Referências das Imagens
+*************************************
 
-
+.Todas as imagens foram autorais
 
 
 
