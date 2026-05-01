@@ -204,10 +204,6 @@ Uma observação a ser feita é que dependendo da posição do disco do encoder,
 Teste do sensor de corrente no microcontrolador.
 ======
 
-.. image:: Imagens/Teste_ADC_corrente.jpg
-   :height: 400px
-   :align: center
-
 Para a medição de corrente, foi inicialmente considerado o uso do sensor ACS712, que opera com alimentação de 5 V, enquanto o microcontrolador utilizado possui entradas limitadas a 3,3 V. Embora seja possível utilizar um divisor resistivo para adequar os níveis de tensão, optou-se por testar o ADC, já que o driver que será utilizado também é capaz de fazer a leitura de corrente.
 
 Foi considerado o sensor ACS758, adequado para sistemas de 3,3 V. Enquanto sensor não está disponível, o teste de leitura do ADC foi feito utilizando um potenciômetro. 
