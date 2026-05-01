@@ -448,11 +448,6 @@ ALICEDEW. ACS712 current sensor – working, specs, Arduino interfacing & projec
 . Acesso em: 29 abr. 2026.
 
 
-Referências das Imagens
-*************************************
-
-.Todas as imagens foram autorais
-
 
 
 
