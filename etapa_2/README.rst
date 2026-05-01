@@ -357,35 +357,52 @@ Esquemátco da placa de potência.
 ======
 
 Esquemático de potência
+
 .. image:: Imagens/Circuito_Potencia.png
    :height: 400px
    :align: center
 
 
  Esquemático recomendado do circuito de aplicação 
+
 .. image:: Imagens/Esq_Potencia2.png
-   :height: 400px
+   :height: 200px
    :align: center
 
 Drive Ponte H
+
 .. image:: Imagens/DrivePonteH.png
-   :height: 400px
+   :height: 200px
    :align: center
 
 Modificações futuras 
 
 
 Acoplador Óptico
+
 .. image:: Imagens/AcopladorOptico.png
-   :height: 400px
+   :height: 200px
    :align: center
 
 
 Amplificador operacional diferencial isolado 
+
 .. image:: Imagens/Isolado.png
-   :height: 400px
+   :height: 200px
    :align: center
 
+
+Conversor Flyback 
+
+.. image:: Imagens/ConvFlyback.png
+   :height: 200px
+   :align: center
+
+Gabinete Metálico 
+
+.. image:: Imagens/Gabinete.png
+   :height: 200px
+   :align: center
 
 
 Esquemátco da placa de controle.
