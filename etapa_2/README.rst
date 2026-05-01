@@ -67,10 +67,10 @@ wheel.c
        ESP_LOGI(TAG, "Inicializando PCNT...");
    
        pcnt_unit_config_t unit_config = {
-           .low_limit  = -32768,   // ✔️ obrigatório no IDF v6
+           .low_limit  = -32768,   // obrigatório
            .high_limit = 32767,
            .flags = {
-               .accum_count = true, // ✔️ obrigatório
+               .accum_count = true, // obrigatório
            },
        };
    
@@ -80,7 +80,7 @@ wheel.c
    
        pcnt_chan_config_t chan_config = {
            .edge_gpio_num = ENCODER_GPIO,
-           .level_gpio_num = -1, // ✔️ encoder simples (D0)
+           .level_gpio_num = -1, // encoder simples (D0), só borda de subida
        };
    
        ESP_ERROR_CHECK(pcnt_new_channel(pcnt_unit, &chan_config, &chan));
