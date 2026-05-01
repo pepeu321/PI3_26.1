@@ -187,13 +187,13 @@ Teste do sensor de corrente no microcontrolador.
    :height: 400px
    :align: center
 
-Para a medição de corrente, foi inicialmente considerado o uso do sensor ACS712, que opera com alimentação de 5 V. No entanto, como o microcontrolador utilizado possui entradas limitadas a 3,3 V, pode causar danos ao microcontrolador. Embora seja possível utilizar um divisor resistivo para adequar os níveis de tensão, optou-se por testar o ADC, já que o driver que será utilizado também é capaz de fazer a leitura de corrente.
+Para a medição de corrente, foi inicialmente considerado o uso do sensor ACS712, que opera com alimentação de 5 V. No entanto, como o microcontrolador utilizado possui entradas limitadas a 3,3 V. Embora seja possível utilizar um divisor resistivo para adequar os níveis de tensão, optou-se por testar o ADC, já que o driver que será utilizado também é capaz de fazer a leitura de corrente.
 
-Foi considerado o sensor será o ACS758, adequado para sistemas de 3,3 V. Enquanto sensor não está disponível, o teste de leitura do ADC foi feito utilizando um potenciômetro. 
+Foi considerado o sensor ACS758, adequado para sistemas de 3,3 V. Enquanto sensor não está disponível, o teste de leitura do ADC foi feito utilizando um potenciômetro. 
 
 Para validar, foi feita a comparação entre os valores medidos pelo ADC e as tensões medidas no multímetro.  Para uma leitura correta  foi considerada a característica desses sensores, onde a saída apresenta um offset aproximadamente igual à metade da tensão de alimentação (Vcc/2). Para 3,3 V, esse valor é teoricamente próximo de 1,65 V.
 
-No software foi implementado um procedimento de calibração automática do offset, realizado no instante da inicialização do sistema, na ausência de corrente. Esse processo permite determinar o valor real do offset experimentalmente, já que pode ter pequenas variações
+No software foi implementado um procedimento de calibração automática do offset, realizado no instante da inicialização do sistema, na ausência de corrente. Esse processo permite determinar o valor real do offset experimentalmente, já que pode ter pequenas variações. Para o cálculo de corrente, foi levado em conta uma sensibilidade de 40mV/A, um valor típico para o ACS758, que poderá ser ajustado posteriormente. 
 
 
 Main.c
@@ -208,13 +208,13 @@ Main.c
    #include "esp_adc/adc_cali_scheme.h"
    
    // CONFIGURAÇÕES 
-   #define ADC_CHANNEL        ADC_CHANNEL_0   // GPIO1 (ajuste se necessário)
+   #define ADC_CHANNEL        ADC_CHANNEL_0   // GPIO1 
    #define ADC_UNIT           ADC_UNIT_1
    #define ADC_ATTEN          ADC_ATTEN_DB_11 // até ~3.3V
    #define ADC_BITWIDTH       ADC_BITWIDTH_DEFAULT
    
    #define NUM_SAMPLES        200             // média
-   #define SENSITIVITY        0.04f           // 40 mV/A (ACS758 típico)
+   #define SENSITIVITY        0.04f           // 40 mV/A (típico do ACS758)
    #define VCC                3.3f
    
    // VARIÁVEIS GLOBAIS
