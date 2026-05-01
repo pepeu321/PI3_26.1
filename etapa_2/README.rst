@@ -26,23 +26,11 @@ Desenvolvimento
 Teste do encoder óptico no microcontrolador.
 ======
 
-O código do encoder óptico foi realizado com base no código disponibilizado pelo Professor Matheus Leitzke Pinto no “RôboJuca”. Então foi reaproveitada a lógica e estrutura do código wheel.c e wheel.h. Foram mantidas as funções “wheel_Init” e “wheel_GetEncoderPulses”.
-como pode ser observada no wheel.h abaixo:
+O código do encoder óptico foi realizado com base no código disponibilizado pelo Professor Matheus Leitzke Pinto no “RôboJuca”. Então foi reaproveitada a lógica e estrutura do código wheel.c e wheel.h. Foram mantidas as funções “wheel_Init” e “wheel_GetEncoderPulses”. 
 
+Mudanças no código precisaram ser feitas para adaptar ao nosso encoder, pois o código disponibilizado usa um encoder com quadratura. Dois sinais são gerados, um com um sinal adiantado em relação ao outro. O nosso só utiliza um canal, gera um pulso com 1 quando o sinal passa pela ranhura. 
 
-.. image:: Imagens/Teste_encoder1-osc.png
-   :width: 400px
-   :align: center
-
-
-
-
-
-
-.. image:: Imagens/Teste_encoder2.jpg
-   :width: 400px
-   :align: center
-
+Então o “wheel_init” faz a configuração do pcnt e o “wheel_GetEncoderPulses” retorna o valor atual do contador pcnt. Como pode ser observado nos códigos abaixo: 
 
 wheel.h
 
@@ -136,6 +124,23 @@ wheel.c
            *pulsos = 0;
        }
    }
+
+
+
+.. image:: Imagens/Teste_encoder1-osc.png
+   :width: 400px
+   :align: center
+
+
+
+
+
+
+.. image:: Imagens/Teste_encoder2.jpg
+   :width: 400px
+   :align: center
+
+
 
 
 Main.c
