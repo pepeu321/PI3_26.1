@@ -380,6 +380,31 @@ Referências
 . ALLEGRO MICROSYSTEMS. ACS758: Thermally Enhanced, Fully Integrated, Hall Effect-Based Linear Current Sensor IC. Datasheet. 2014. Disponível em: https://www.alldatasheet.com/datasheet-pdf/pdf/533468/ALLEGRO/ACS758.html. Acesso em: 28 abr. 2026.
 
 . PINTO, Matheus. wheel.c. Repositório: Juca. GitHub, [s.d.]. Disponível em: https://github.com/MatheusPinto/Juca/blob/main/firmware/go_and_avoid/main/wheel.c
-. Acesso em: 30 abr. 2026.
+. Acesso em: 26 abr. 2026.
+
+MAIN, John. ACS758: how to measure up to ±50A with this magnetic sensor. Best Microcontroller Projects, [s.d.]. Disponível em: https://www.best-microcontroller-projects.com/acs758.html
+. Acesso em: 29 abr. 2026.
+
+SWAGATAM. 50A high current sensor IC ACS758: circuit diagram. Homemade Circuit Projects, 2025. Disponível em: https://www.homemade-circuits.com/50a-high-current-sensor-ic-acs758-circuit-diagram/
+. Acesso em: 28 abr. 2026.
+
+ALICEDEW. ACS712 current sensor – working, specs, Arduino interfacing & projects. Electrical Info, 27 fev. 2026. Disponível em: https://www.electrical-info.net/2026/02/ACS712-Current-Sensor.html
+. Acesso em: 29 abr. 2026.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
