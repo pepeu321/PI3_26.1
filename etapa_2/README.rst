@@ -325,6 +325,10 @@ Os valores de tensão e corrente obtidos pelo ADC ficaram bem próximos do mostr
 Esquemátco da placa de potência.
 ======
 
+.. image:: Imagens/Circuito_Potencia.png
+   :height: 400px
+   :align: center
+
 Esquemátco da placa de controle.
 ======
 
