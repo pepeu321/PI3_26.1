@@ -182,6 +182,9 @@ Para saber se o valor calculado do rpm pelo esp32 está condizente com o valor d
    :width: 400px
    :align: center
 
+Então como é possível observar, foi utilizado um cursor para medir o período de 5 pulsos. O valor do período entre 5 pulsos obtidos foi igual a 35,40 ms. Como o disco do encoder tem 20 ranhuras, esse tempo precisa ser multiplicado por 4, o que dá 141,6 ms. Então o período de uma volta completa do disco encoder(20 ranhuras) calculado foi igual a 141,6 ms. O que em frequência é igual a 7 Hz aproximadamente, e passando para rpm o valor final obtido foi igual a 423,72 rpm.
+
+O que ficou bem próximo ao valor obtido pelo código do esp32, no qual o valor encontrado foi igual a 420 rpm. Conforme indica a figura abaixo:
 
 
 
