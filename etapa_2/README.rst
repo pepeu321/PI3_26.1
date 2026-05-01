@@ -353,7 +353,7 @@ Imagem dos testes realizados:
 
 
 
-Esquemátco da placa de potência.
+Esquemático da placa de potência.
 ======
 
 Esquemático de potência
@@ -369,7 +369,6 @@ Esquemático de potência
    :height: 400px
    :align: center
 
-Esquemático recomendado do circuito de aplicação
 Para confeccionar o esquemático do driver ponte H foi seguida a recomendação da folha de dados conforme o circuito de aplicação fornecido vide figura 3. O circuito inclui a conexão dos dois drivers meia ponte, circuito de proteção regenerativa, filtragem e configurações dos drivers. O esquemático do circuito de potência é idêntico ao esquemático fornecido pelo fabricante. O esquemático confeccionado pode ser visto na figura.
 
 Drive Meia Ponte
@@ -419,7 +418,6 @@ Esquemátco da placa de controle.
    :align: center
 
 
-Esquemático de controle
 O esquemático de controle consiste em realizar a alimentação segura e eficiente do ESP32S3 e sensores. A alimentação passa por um regulador de baixa queda de tensão reduzindo de 5v para 3v3. Os sensores compartilham do mesmo GND e enviam os dados para o microcontrolador. O esquemático de controle pode ser visto na figura.
 
 
