@@ -201,7 +201,7 @@ Teste do sensor de corrente no microcontrolador.
    :height: 400px
    :align: center
 
-Para a medição de corrente, foi inicialmente considerado o uso do sensor ACS712, que opera com alimentação de 5 V. No entanto, como o microcontrolador utilizado possui entradas limitadas a 3,3 V. Embora seja possível utilizar um divisor resistivo para adequar os níveis de tensão, optou-se por testar o ADC, já que o driver que será utilizado também é capaz de fazer a leitura de corrente.
+Para a medição de corrente, foi inicialmente considerado o uso do sensor ACS712, que opera com alimentação de 5 V, enquanto o microcontrolador utilizado possui entradas limitadas a 3,3 V. Embora seja possível utilizar um divisor resistivo para adequar os níveis de tensão, optou-se por testar o ADC, já que o driver que será utilizado também é capaz de fazer a leitura de corrente.
 
 Foi considerado o sensor ACS758, adequado para sistemas de 3,3 V. Enquanto sensor não está disponível, o teste de leitura do ADC foi feito utilizando um potenciômetro. 
 
@@ -316,6 +316,14 @@ Main.c
            vTaskDelay(pdMS_TO_TICKS(500));
        }
    }
+
+
+A função read_voltage é responsável por realizar a leitura do ADC. Nela, são coletadas várias amostras do sinal, calculada a média e, em seguida, aplicado o processo de calibração para converter o valor bruto (raw) em tensão. Afunção retorna o valor em volts. Além disso, foi implementado um procedimento de calibração automática do offset por meio da função calibrate_offset. Essa calibração é realizada no instante da inicialização do sistema, na ausência de corrente, permitindo determinar experimentalmente o valor real do offset do sensor. 
+
+Na aplicação principal (main.c), a corrente é calculada a partir da tensão medida subtraída do offset e dividida pela sensibilidade do sensor. Para os testes, foi adotado um valor típico de sensibilidade de 40 mV/A, correspondente ao ACS758. 
+
+O cálculo pode ser descrito como: 
+
 
 Os valores de tensão e corrente obtidos pelo ADC ficaram bem próximos do mostrados no multímetro e calculados de forma teórica para a corrente aumentando linearmente conforme o esperado. Sendo possível ajustar a sensibilidade de 40mV/A para que os valores se aproximem ainda mais.
 
