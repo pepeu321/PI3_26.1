@@ -170,6 +170,12 @@ Main.c
        }
    }
 
+Para validar o código foi realizado uma montagem do esp32s3 juntamente com o encoder óptico. E o disco do encoder óptico foi acoplado a um motor DC disponibilizado no LPT. Conforme a figura abaixo: 
+
+.. image:: Imagens/Teste_encoder2.jpg
+   :width: 400px
+   :align: center
+
 .. image:: Imagens/Teste_encoder1-osc.png
    :width: 400px
    :align: center
@@ -179,9 +185,7 @@ Main.c
 
 
 
-.. image:: Imagens/Teste_encoder2.jpg
-   :width: 400px
-   :align: center
+
 
 
 
