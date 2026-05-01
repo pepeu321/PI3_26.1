@@ -125,23 +125,7 @@ wheel.c
        }
    }
 
-
-
-.. image:: Imagens/Teste_encoder1-osc.png
-   :width: 400px
-   :align: center
-
-
-
-
-
-
-.. image:: Imagens/Teste_encoder2.jpg
-   :width: 400px
-   :align: center
-
-
-
+Na main é printado o valor do rpm no terminal do espressif. Esse valor é calculado com base no número de pulsos do contador do pcnt menos o valor do número de pulsos do contador do pcnt anterior. Este valor então é divido por “PULSOS_POR_VOLTA”, que nada mais é que o número de ranhuras do disco encoder: 20 ranhuras, 20 pulsos é uma volta. E então esse valor é dividido por 0,1. Porque a tarefa de printar no terminal o valor do rpm só acontece de 100ms em 100ms. E por fim é multiplicado tudo por 60 para dar o valor em RPM. Isso pode ser observado no código da main.c abaixo:
 
 Main.c
 
@@ -185,6 +169,24 @@ Main.c
            vTaskDelay(pdMS_TO_TICKS(50));
        }
    }
+
+.. image:: Imagens/Teste_encoder1-osc.png
+   :width: 400px
+   :align: center
+
+
+
+
+
+
+.. image:: Imagens/Teste_encoder2.jpg
+   :width: 400px
+   :align: center
+
+
+
+
+
 
 Teste do sensor de corrente no microcontrolador.
 ======
