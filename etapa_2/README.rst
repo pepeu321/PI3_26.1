@@ -26,6 +26,9 @@ Desenvolvimento
 Teste do encoder óptico no microcontrolador.
 ======
 
+O código do encoder óptico foi realizado com base no código disponibilizado pelo Professor Matheus Leitzke Pinto no “RôboJuca”. Então foi reaproveitada a lógica e estrutura do código wheel.c e wheel.h. Foram mantidas as funções “wheel_Init” e “wheel_GetEncoderPulses”.
+como pode ser observada no wheel.h abaixo:
+
 
 .. image:: Imagens/Teste_encoder1-osc.png
    :width: 400px
