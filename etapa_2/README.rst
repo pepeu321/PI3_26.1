@@ -380,32 +380,31 @@ Drive Meia Ponte
 
 O driver BTN89282TA escolhido faz parte da família de componentes automotivos utilizados na indústria. Esse driver já possui todas as proteções necessárias integradas e a robustez necessária para operação em alta potência. Tanto o diagrama do componente quanto o encapsulamento podem ser vistos na figura.
 
-Modificações futuras 
+Modificações futuras: 
 
-Modificações futuras
 Para blindar o circuito de controle completamente de interferência eletromagnética conduzida e irradiada pensou-se em realizar modificações futuras a fim de evitar qualquer operação errônea do microcontrolador considerado um circuito muito sensível a interferência. As modificações incluem a colocação de dois acopladores ópticos HCPL2631 para isolar os sinais de lógica. A colocação de dois amplificadores operacionais diferenciais isolados para leitura dos sensores. Um conversor Flyback capaz de isolar completamente a alimentação sem gerar ruído. E, por fim, um gabinete metálico para evitar que a interferência eletromagnética irradiada atrapalhe o funcionamento do circuito de controle. As modificações podem ser vistas nas figuras abaixo de seção.
 
-Acoplador Óptico
+Acoplador Óptico:
 
 .. image:: Imagens/AcopladorOptico.png
    :height: 200px
    :align: center
 
 
-Amplificador operacional diferencial isolado 
+Amplificador operacional diferencial isolado: 
 
 .. image:: Imagens/Isolado.png
    :height: 200px
    :align: center
 
 
-Conversor Flyback 
+Conversor Flyback: 
 
 .. image:: Imagens/ConvFlyback.png
    :height: 200px
    :align: center
 
-Gabinete Metálico 
+Gabinete Metálico:
 
 .. image:: Imagens/Gabinete.png
    :height: 200px
