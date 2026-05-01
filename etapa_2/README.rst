@@ -408,7 +408,7 @@ Gabinete Metálico:
    :align: center
 
 
-Esquemátco da placa de controle.
+Esquemático da placa de controle.
 ======
 
 .. image:: Imagens/Esq_controle.png
