@@ -176,6 +176,8 @@ Para validar o código foi realizado uma montagem do esp32s3 juntamente com o en
    :width: 400px
    :align: center
 
+Para saber se o valor calculado do rpm pelo esp32 está condizente com o valor do rpm do motor girando foi utilizado um osciloscópio. Com isso é possível verificar a frequência do sinal de D0 do encoder, ou seja, os pulsos que o encoder gera ao passar pela ranhura. Conforme a figura retirada pelo osciloscópio abaixo mostra: 
+
 .. image:: Imagens/Teste_encoder1-osc.png
    :width: 400px
    :align: center
