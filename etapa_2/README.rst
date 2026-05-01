@@ -362,7 +362,7 @@ Esquemátco da placa de potência.
 Esquemátco da placa de controle.
 ======
 
-.. image:: Imagens/EsquemáticoCircuitoControle.jpeg
+.. image:: Imagens/Circuito_controle.png
    :height: 400px
    :align: center
 
