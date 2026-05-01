@@ -379,4 +379,7 @@ Referências
 
 . ALLEGRO MICROSYSTEMS. ACS758: Thermally Enhanced, Fully Integrated, Hall Effect-Based Linear Current Sensor IC. Datasheet. 2014. Disponível em: https://www.alldatasheet.com/datasheet-pdf/pdf/533468/ALLEGRO/ACS758.html. Acesso em: 28 abr. 2026.
 
+. PINTO, Matheus. wheel.c. Repositório: Juca. GitHub, [s.d.]. Disponível em: https://github.com/MatheusPinto/Juca/blob/main/firmware/go_and_avoid/main/wheel.c
+. Acesso em: 30 abr. 2026.
+
 
