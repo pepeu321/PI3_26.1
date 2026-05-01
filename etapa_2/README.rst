@@ -350,6 +350,11 @@ Os valores de tensão e corrente obtidos pelo ADC ficaram bem próximos do mostr
 +---------------+------------------+-------------------+------------------+-------------+
 
 
+Imagem dos testes realizados:
+
+.. image:: Imagens/Teste_corrente1.png
+.. image:: Imagens/Teste_corrente2.png
+
 
 
 Esquemátco da placa de potência.
@@ -371,6 +376,8 @@ Esquemátco da placa de controle.
 Referências
 *************************************
 
+. Referências das Imagens - Todas as imagens foram autorais
+
 . HART, Daniel W. Power electronics. New York: McGraw-Hill, 2011.
 
 . ALLEGRO MICROSYSTEMS. ACS758: Thermally enhanced, fully integrated Hall-effect-based linear current sensor IC. Worcester, 2011. Disponível em: https://www.allegromicro.com/~/media/files/datasheets/acs758 datasheet.ashx. Acesso em: 30 abr. 2026.
@@ -390,7 +397,6 @@ SWAGATAM. 50A high current sensor IC ACS758: circuit diagram. Homemade Circuit P
 
 ALICEDEW. ACS712 current sensor – working, specs, Arduino interfacing & projects. Electrical Info, 27 fev. 2026. Disponível em: https://www.electrical-info.net/2026/02/ACS712-Current-Sensor.html
 . Acesso em: 29 abr. 2026.
-
 
 
 
