@@ -356,14 +356,42 @@ Imagem dos testes realizados:
 Esquemátco da placa de potência.
 ======
 
+Esquemático de potência
 .. image:: Imagens/Circuito_Potencia.png
    :height: 400px
    :align: center
 
+
+ Esquemático recomendado do circuito de aplicação 
+.. image:: Imagens/Esq_Potencia2.png
+   :height: 400px
+   :align: center
+
+Drive Ponte H
+.. image:: Imagens/DrivePonteH.png
+   :height: 400px
+   :align: center
+
+Modificações futuras 
+
+
+Acoplador Óptico
+.. image:: Imagens/AcopladorOptico.png
+   :height: 400px
+   :align: center
+
+
+Amplificador operacional diferencial isolado 
+.. image:: Imagens/Isolado.png
+   :height: 400px
+   :align: center
+
+
+
 Esquemátco da placa de controle.
 ======
 
-.. image:: Imagens/Circuito_controle.png
+.. image:: Imagens/Esq_controle.png
    :height: 400px
    :align: center
 
