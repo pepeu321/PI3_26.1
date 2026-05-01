@@ -366,17 +366,24 @@ Esquemático de potência
  Esquemático recomendado do circuito de aplicação 
 
 .. image:: Imagens/Esq_Potencia2.png
-   :height: 200px
+   :height: 400px
    :align: center
 
-Drive Ponte H
+Esquemático recomendado do circuito de aplicação
+Para confeccionar o esquemático do driver ponte H foi seguida a recomendação da folha de dados conforme o circuito de aplicação fornecido vide figura 3. O circuito inclui a conexão dos dois drivers meia ponte, circuito de proteção regenerativa, filtragem e configurações dos drivers. O esquemático do circuito de potência é idêntico ao esquemático fornecido pelo fabricante. O esquemático confeccionado pode ser visto na figura.
+
+Drive Meia Ponte
 
 .. image:: Imagens/DrivePonteH.png
    :height: 200px
    :align: center
 
+O driver BTN89282TA escolhido faz parte da família de componentes automotivos utilizados na indústria. Esse driver já possui todas as proteções necessárias integradas e a robustez necessária para operação em alta potência. Tanto o diagrama do componente quanto o encapsulamento podem ser vistos na figura.
+
 Modificações futuras 
 
+Modificações futuras
+Para blindar o circuito de controle completamente de interferência eletromagnética conduzida e irradiada pensou-se em realizar modificações futuras a fim de evitar qualquer operação errônea do microcontrolador considerado um circuito muito sensível a interferência. As modificações incluem a colocação de dois acopladores ópticos HCPL2631 para isolar os sinais de lógica. A colocação de dois amplificadores operacionais diferenciais isolados para leitura dos sensores. Um conversor Flyback capaz de isolar completamente a alimentação sem gerar ruído. E, por fim, um gabinete metálico para evitar que a interferência eletromagnética irradiada atrapalhe o funcionamento do circuito de controle. As modificações podem ser vistas nas figuras abaixo de seção.
 
 Acoplador Óptico
 
@@ -412,6 +419,9 @@ Esquemátco da placa de controle.
    :height: 400px
    :align: center
 
+
+Esquemático de controle
+O esquemático de controle consiste em realizar a alimentação segura e eficiente do ESP32S3 e sensores. A alimentação passa por um regulador de baixa queda de tensão reduzindo de 5v para 3v3. Os sensores compartilham do mesmo GND e enviam os dados para o microcontrolador. O esquemático de controle pode ser visto na figura.
 
 
 Referências
