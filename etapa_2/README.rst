@@ -371,7 +371,6 @@ Esquemático de potência
 
 Para confeccionar o esquemático do driver ponte H foi seguida a recomendação da folha de dados conforme o circuito de aplicação fornecido vide figura 3. O circuito inclui a conexão dos dois drivers meia ponte, circuito de proteção regenerativa, filtragem e configurações dos drivers. O esquemático do circuito de potência é idêntico ao esquemático fornecido pelo fabricante. O esquemático confeccionado pode ser visto na figura.
 
-Drive Meia Ponte
 
 .. image:: Imagens/DrivePonteH.png
    :height: 200px
