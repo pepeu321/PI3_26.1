@@ -22,8 +22,6 @@ Na Etapa 2, foram realizados testes individuais com os sensores que serão utili
 Desenvolvimento
 ***************
 
-Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Adicionar pesqusisas realizadas bem como testes realizados.
-
 
 Teste do encoder óptico no microcontrolador.
 ======
@@ -336,25 +334,17 @@ Esquemátco da placa de controle.
    :height: 400px
    :align: center
 
-(Outras subseções se necessário)
-================================
 
 
 Referências
 *************************************
 
+. HART, Daniel W. Power electronics. New York: McGraw-Hill, 2011.
 
-- HART, Daniel W. Power electronics. New York: McGraw-Hill, 2011.
+. ALLEGRO MICROSYSTEMS. ACS758: Thermally enhanced, fully integrated Hall-effect-based linear current sensor IC. Worcester, 2011. Disponível em: https://www.allegromicro.com/~/media/files/datasheets/acs758 datasheet.ashx. Acesso em: 30 abr. 2026.
 
-- ALLEGRO MICROSYSTEMS. ACS758: Thermally enhanced, fully integrated Hall-effect-based linear current
-sensor IC. Worcester, 2011. Disponível em: https://www.allegromicro.com/~/media/files/datasheets/acs758-datasheet.ashx. Acesso em: 30 abr. 2026.
+. SHARP CORPORATION. PC817XxNSZ1B Series: Photocoupler. Japão, 2018. Disponível em: https://global.sharp/products/device/lineup/data/pdf/datasheet/PC817XxNSZ1B_e.pdf. Acesso em: 29 abr. 2026.
 
-- SHARP CORPORATION. PC817XxNSZ1B Series: Photocoupler. Japão, 2018. Disponível em:
-https://global.sharp/products/device/lineup/data/pdf/datasheet/PC817XxNSZ1B_e.pdf. Acesso em: 29 abr.
-2026.
-
-- ALLEGRO MICROSYSTEMS. ACS758: Thermally Enhanced, Fully Integrated, Hall Effect-Based Linear
-Current Sensor IC. Datasheet. 2014. Disponível em:
-https://www.alldatasheet.com/datasheet-pdf/pdf/533468/ALLEGRO/ACS758.html. Acesso em: 28 abr. 2026.
+. ALLEGRO MICROSYSTEMS. ACS758: Thermally Enhanced, Fully Integrated, Hall Effect-Based Linear Current Sensor IC. Datasheet. 2014. Disponível em: https://www.alldatasheet.com/datasheet-pdf/pdf/533468/ALLEGRO/ACS758.html. Acesso em: 28 abr. 2026.
 
 
