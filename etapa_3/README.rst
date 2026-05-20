@@ -89,7 +89,7 @@ O payload recebido era extraído com coap_get_data(), permitindo interpretar men
 
 Por fim, para validar o funcionamento do servido COAP, foi feito um cliente externo em Python usando a bilbioteca "aiocoap". Onde é enviado requisições post, para o recuso "/vel", com valores no payload como "100"
 
-Ao receber a requisição, era imprimido no terminal e respondia o cliente com "Ok", utilizando o código de resposta CoAP 2.04 Changed.
+Ao receber a requisição, era imprimido no terminal e respondia o cliente com "Ok"
 Imagem
 
 
