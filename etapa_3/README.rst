@@ -87,7 +87,35 @@ Para tratar as requisições recebidas foi implementada a função hnd_post_vel(
 
 O payload recebido era extraído com coap_get_data(), permitindo interpretar mensagens externas enviadas ao micro.
 
-Por fim, para validar o funcionamento do servido COAP, foi feito um cliente externo em Python usando a bilbioteca "aiocoap". Onde é enviado requisições post, para o recuso "/vel", com valore no payload de "100"
+Por fim, para validar o funcionamento do servido COAP, foi feito um cliente externo em Python usando a bilbioteca "aiocoap". Onde é enviado requisições post, para o recuso "/vel", com valor no payload de "100"
+
+.. code-block:: vhdl
+
+   import asyncio
+   from aiocoap import *
+   
+   async def main():
+   
+       payload = b"100"
+   
+       request = Message(
+           code=POST,
+           payload=payload,
+           uri="coap://192.168.1.135/vel"
+       )
+   
+       protocol = await Context.create_client_context()
+   
+       response = await protocol.request(request).response
+   
+       print("Resposta:")
+       print(response.payload.decode())
+   
+   asyncio.run(main())
+
+
+
+
 
 Ao receber a requisição, era imprimido no terminal e respondia o cliente com "Ok"
 
