@@ -59,7 +59,7 @@ Teste de acionamento do motor
 Firmware preliminar com teste de comunicação COAP
 ======
 
-Nesta etapa do projeto foi desenvolvido um sistema de comunicação utilizando o protocolo CoAP com objetivo de fazer com que o microcontrolador envie e receba mensagens do servidor. 
+Nesta etapa do projeto foi desenvolvido um sistema de comunicação utilizando o protocolo CoAP com objetivo de fazer com que o microcontrolador envie e receba mensagens do servidor, que posteriormente será adptado, para conseguir acompanhar a velocidade atual da esteira e setar uma nova velocidade desejada. 
 
 Inicialmente foi feita a configuração da conexão wi-fi em modo Station (WIFI_MODE_STA). Foram utilizados os módulos: esp_wifi, esp_event e esp_netif. A conexão foi feita usando os eventos do sistema, fazendo com que o esp: inicializasse automaticamente o wifi, conectasse ao roteador, pega o endereço IP, e caso perca o sinal, seja capaz de se reconectar.
 
@@ -69,59 +69,72 @@ Antes de implementar o COAP em si, foi feito um teste usando comunicação UDP p
 
 Com essa comunicação validada, foi adicionada a bbilbioteca "libcoap", que é a responsável pela implementação do protocolo. A implementação foi feita através do arquivo "idf_component.yml" e adicionada na pasta do projeto. 
 
-Com a biblioteca adicionada, foi feito a criação da tarefa principal do cliente COAP, responsável por inicializar a biblioteca, criar o contexo COAP, estabelecer sessões e enviar requisições ao servidor externo. A inicialização da pilha CoAP foi realizada com "coap_startup()", enquanto o contexto principal foi criado utilizando "coap_new_context(NULL)"
+Com a biblioteca adicionada, foi feito a criação da tarefa principal "coap_client_task()", responsável por inicializar a biblioteca CoAP utilizando coap_startup() e criar o contexto principal do protocolo pela da função coap_new_context(NULL). Esse contexto é o núcelo da comunicação COAP, responsável pelo gerenciamento de sessões, sockets e processar as mensagens.
 
-Posteriormente foi estabelecida uma sessão cliente UDP direcionada ao servidor público coap.me, utilizando a porta padrão CoAP 5683. Essa sessão passou a permitir o envio de requisições CoAP diretamente para servidores externos.
+Em seguida foi implementado um servidor CoAP local dentro do ESP32-S3. Para isso foi criada uma estrutura de endereço utilizando coap_address_t, configurada para utilizar IPv4 (AF_INET), protocolo UDP e a porta padrão do CoAP (5683). O servidor foi então criado utilizando a função coap_new_endpoint(), permitindo que outros dispositivos da rede enviassem requisições diretamente para o ESP.
 
-O primeiro método implementado foi o "GET", foi criado um pacote PDU (Protocolo Data Unit), utlizando "coap_pdu_init()", configurado com uma requisição confirmável "COAP_MESSAGE_CON" do tipo GET "COAP_REQUEST_CODE_GET". Em seguida foi adicionada a URI "/test" através da função "coap_add_option()".
+Com o servidor criado, foi implementado o recurso "/vel", que vai representar uma URI responsável pelo controle e monitoramento da velocidade da esteira. Foi criado com coap_resource_init() e adicionado ao contexto COAP, pela função coap_add_resource().
 
-Após o GET, foi implementado o método "post". O pacote COAP foi modificado para utilizar COAP_REQUEST_CODE_POST, e um payload contendo a string "Hello from ESP32 POST" foi adicionado ao pacote através da função coap_add_data().
-A requisição POST foi enviada ao servidor coap.me, que respondeu com a mensagem "POST OK", confirmando que o ESP32-S3 já conseguia enviar dados via COAP, usando um payload definido.
+Para tratar as requisições foi implementado dois handlers: hnd_post_vel() e hnd_get_vel().
 
-Com o cliente COAP implementado, foi feito um servidor COAP no esp-32 para que consiga receber mensaagens também.
-Foi criado um endpoint local utilizando "coap_new_endpoint()", fazendo com que outros dispositivos da rede enviassem requisições diretamente ao ESP.
+A função post, é exectuada quando o esp receber uma mensagem no recusro /vel, ela vai extrair o payload enviado pelo cliente, extrair os dados com coap_get_data() , converter os bytes em string e transformar em inteiro. Após receber e processar o valor, o esp envia uma resposta ao client com "OK", indicando o recebimento da mensagem.  
 
-Em seguida foi criado o recurso "/vel", representando uma URI responsável pelo recebimento de comandos externos relacionados à velocidade. Esse recurso foi registrado utilizando coap_resource_init() e coap_add_resource().
+Para hnd_get_value, foi implementada para que quando o notebook realiza um GET no recurso /vel, o ESP monta uma string contendo o estado atual da variável velocidade e envia essa informação de volta ao cliente CoAP
 
-Para tratar as requisições recebidas foi implementada a função hnd_post_vel(), responsável por: receber requisições POST, extrair o payload enviado imprimir os dados recebidos no terminal e enviar respostas ao cliente CoAP.
+Para manter o funcionamento continuo foi feito um laço com a função coap_io_process(ctx, COAP_IO_WAIT), essa função é responsável por processar continuamente os eventos da pilha CoAP, como recebimento de requisições, envio de respostas e gerenciamento do protocolo.
 
-O payload recebido era extraído com coap_get_data(), permitindo interpretar mensagens externas enviadas ao micro.
-
-Por fim, para validar o funcionamento do servido COAP, foi feito um cliente externo em Python usando a bilbioteca "aiocoap". Onde é enviado requisições post, para o recuso "/vel", com valor no payload de "100"
+Para validar o funcionamento, foi criado um cliente CoAP em Python utilizando a biblioteca aiocoap. O programa em Python atua como cliente da aplicação, permitindo enviar requisições POST para alterar a velocidade da esteira e requisições GET para consultar o valor atual armazenado no ESP32-S3.
 
 .. code-block:: vhdl
 
-   import asyncio
-   from aiocoap import *
-   
-   async def main():
-   
-       payload = b"100"
-   
-       request = Message(
-           code=POST,
-           payload=payload,
-           uri="coap://192.168.1.135/vel"
-       )
-   
-       protocol = await Context.create_client_context()
-   
-       response = await protocol.request(request).response
-   
-       print("Resposta:")
-       print(response.payload.decode())
-   
-   asyncio.run(main())
+   from aiocoap import *    #implementa o protocolo CoAP em Python
+   import asyncio		 #sistema assíncrono do Python
+
+   async def main():        #cria funcao assincrona, para usar o await
+
+   protocol = await Context.create_client_context()    #cria o cliente CoAP
 
 
+   while True:
+
+   #Post
+        vel = input("Digite a velocidade: ")
+
+        request = Message(      #cria uma requisição Post
+            code=POST,		#defini o tipo(post)
+            payload=vel.encode(),  #converte string em bytes
+            uri="coap://192.168.1.119/vel"   #destino
+        )
+	
+	#Envia requisição e espera resposta do esp com ok
+        response = await protocol.request(request).response
+
+        print("Resposta do ESP que recebeu:")
+        print(response.payload.decode())  #converte dnv bytes em string
 
 
+   #GET
+        request_get = Message(     #cria uma requisição GET
+            code=GET,
+            uri="coap://192.168.1.119/vel"
+        )
 
-Ao receber a requisição, era imprimido no terminal e respondia o cliente com "Ok"
+        response_get = await protocol.request(request_get).response
 
-.. image:: Imagens/Termina_EspIDF_COAP.png
+	            
+        print("Resposta GET:")
+        print(response_get.payload.decode())
 
-.. image:: Imagens/Prompt-RespostaCOAP.png
+    asyncio.run(main())
+
+
+No cliente Python, o usuário digita a velocidade desejada pelo prompt. O valor é convertido para bytes e enviado ao ESP através de uma requisição POST direcionada para a URI coap://IP_DO_ESP/vel. 
+Em seguida, o programa Python realiza automaticamente uma requisição GET para o mesmo recurso /vel, recebendo do ESP a velocidade atual e imprimindo no mesmo prompt de comando
+
+
+.. image:: 
+
+.. image:: 
 
 
 
