@@ -56,14 +56,27 @@ Apresentação do gabinete desenvolvido em software 3D
 Layout da placa de potência
 ======
 
+O layout da placa de circuito impresso (PCI) foi desenvolvido no Kicad 10, com os componentes importados diretamente do esquemático criado na Etapa II. O posicionamento dos componentes, as trilhas de conexão e as áreas de plano foram baseados na placa de teste (demoboard) recomendada na documentação da fabricante Infineon para o driver meia-ponte BTN8982TA. O layout de referência e a respectiva placa física finalizada são apresentados conforme a Figura 1 da esquerda para direita como: top layer, bottom layer e demoboard.
+
 .. image:: Imagens/LayoutDemo.png
    :width: 600px
    :align: center
 
 
+Observa-se uma largura significativa nas trilhas de potência, projetadas para suportar correntes contínuas de até 55A. Essa largura é de 20mm por camada com espessura de cobre de 4oz/ft² total, totalizando uma seção transversal equivalente a 40mm de largura combinada. No protótipo desenvolvido (Figura 2), manteve-se a largura combinada de 40mm, porém com espessura restrita a 2oz/ft² somando ambas as faces, devido às limitações de matéria-prima disponíveis no IFSC. 
+
+A validação dimensional foi realizada por meio de cálculos baseados na norma IPC-2221. Embora a largura nominal atenda aos critérios na maior parte da extensão, o layout inevitavelmente apresenta estreitamentos geométricos e reduções na área de condução próximos aos terminais do componente. Para mitigar o surgimento de pontos quentes (hotspots) nesses gargalos e proteger o substrato de fenolite, cuja temperatura de transição vítrea e a resistência térmica são substancialmente inferiores às do padrão FR-4 recomendado —, previu-se a remoção da máscara de solda ao longo das trilhas de potência para a aplicação de uma camada de estanho adicional. Essa técnica reduz a resistência ôhmica equivalente e melhora a dissipação térmica do circuito. 
+
+Por fim, ressalta-se que foram realizadas alterações pontuais em relação ao projeto original da demoboard, tais como a remoção de conectores auxiliares redundantes e a substituição de componentes SMD por equivalentes PTH (Through-Hole). Essa decisão de projeto justificou-se pela necessidade de otimizar o processo de confecção manual local do protótipo e facilitar futuras manutenções corretivas em laboratório, sem comprometer a integridade e o funcionamento do circuito. A placa desenvolvida pode ser vista conforme a Figura 2, da esquerda para a direita como: top layer e bottom layer.
+
+
 .. image:: Imagens/LayoutPCB_Pot.png
    :width: 450px
    :align: center
+
+
+O circuito foi projetado para operar com uma corrente contínua de 35A sob tensão nominal de 24V, totalizando uma capacidade de potência de até 840W. De acordo com os critérios de isolamento para a faixa de 0V a 30V CC, o distanciamento mínimo (clearance) entre as trilhas deve ser de aproximadamente 0,13mm, validando a segurança operacional do protótipo nesta faixa de tensão. A confecção da placa seguiu estritamente os parâmetros técnicos recomendados pelo manual de desenvolvimento para fresa mecânica do IFSC, cujas especificações de fabricação estão detalhadas na Tabela 1. Para o dimensionamento térmico das trilhas de potência, os cálculos baseados na norma IPC-2221 resultaram em uma largura recomendada de 677 mil (aproximadamente 17,2mm, arredondados para 20mm no layout), considerando uma elevação de temperatura limite de 40°C em relação ao ambiente. A interface da ferramenta utilizada para essa validação é apresentada na Figura 3.
+
 
 
 .. image:: Imagens/Calc_trilha.png
@@ -91,6 +104,9 @@ Configurações da placa desenvolvida:
 | Camada de cobre                   | 1 oz/ft²         |
 +-----------------------------------+------------------+
 
+
+
+Para a fabricação por fresa mecânica, é indispensável a geração dos arquivos em formato Gerber, os quais mapeiam com precisão as coordenadas de furação, o dimensionamento das trilhas e as distâncias de isolamento. Estes arquivos foram exportados e serão encaminhados ao técnico responsável pelo setor de fresa durante a Etapa IV para a execução da usinagem. Uma pré-visualização tridimensional do circuito, simulada no ambiente Kicad, é apresentada da esquerda para direita na Figura 4, como: top layer e bottom layer. Após a entrega da placa física, os componentes listados na Tabela 2 serão soldados para que o protótipo seja submetido aos testes de validação, procedimentos que também integrarão o escopo da Etapa IV.
 
 
 .. image:: Imagens/PreVisu3D.png
@@ -595,4 +611,7 @@ Referências (links/datasheets/livros)
 
 - `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
 
+INFINEON TECHNOLOGIES AG. NovalithIC™ H-Bridge Demo Board: Version 2.2 (BTN89xxTA) – Demo Board Description. Munich: Infineon Technologies AG, 2011. Disponível em: https://www.infineon.com/assets/row/public/documents/10/57/novalithic-demoboard-v2.2-h-bridge-btn89xxta-2011-09-23.pdf. Acesso em: 27 maio 2026.
+
+ALTIUM. IPC-2221 Calculator for PCB Trace Current and Heating. Altium Resources, 26 jun. 2025. Disponível em: https://resources.altium.com/p/ipc-2221-calculator-pcb-trace-current-and-heating. Acesso em: 27 mai. 2026.
 
