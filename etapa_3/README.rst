@@ -88,11 +88,16 @@ Ajustando os valores é possível observar que o Kp (ganho proporcional) influen
 	
 	step(FTMF)
 
-                                                                                                    Equação FTMF obtida para valores de Kp e Ki de testes:
 
-            0.125 s + 0.5
- y1:  -------------------------
-      0.291 s^2 + 1.125 s + 0.5
+
+
+Equação FTMF obtida para valores de Kp e Ki de testes:
+
+.. code-block:: c
+
+	            0.125 s + 0.5
+	 y1:  -------------------------
+	      0.291 s^2 + 1.125 s + 0.5
 
 
 Resposta ao degrau FMTF:
