@@ -43,12 +43,70 @@ Implementação preliminar do controle PID no microcontrolador.
 Apresentação do gabinete desenvolvido em software 3D
 ======
 
+Para a confecção do gabinete por meio de impressão 3D, fez-se necessária a
+verificação das dimensões de cada placa, bem como das furações para os
+parafusos de fixação. A placa de potência possui dimensões de 9 cm x 9 cm x
+4 cm, enquanto a placa de controle mede 8 cm x 7 cm x 2 cm. Com base nisso,
+estimou-se uma altura total de 8 cm para o gabinete, considerando os 6 cm
+somados da altura das placas e 2 cm de folga distribuídos entre elas, a base e
+o teto. O comprimento e a largura externos do gabinete foram fixados em 13
+cm. Como cada parede possui uma espessura de 0,5 cm, a área útil interna
+resultante é de 12 cm x 12 cm. A tampa e a base também foram projetadas
+com espessura de 0,5 cm. No modelo, foram integradas outras formas
+geométricas tridimensionais, tais como:
+
+. Cilindros: para fixação da placa de potência e para fixação do gabinete
+(pés);
+
+. Paralelepípedos em &quot;L&quot;: para o suporte de encaixe da placa de controle;
+
+. Paralelepípedo plano: para a composição da tampa;
+
+. Prismas: atuando como reforços e suportes para o travamento da
+tampa.
+
+Para a criação das aberturas e detalhes por meio de operações de subtração,
+utilizaram-se blocos inclinados para os rasgos de ventilação (respiros) laterais
+e da base, e extrusões invertidas para a gravação em relevo de identificação
+do gabinete. Vale ressaltar que todas as furações destinadas aos parafusos de
+fixação foram padronizadas com diâmetro de 3 mm, utilizando cilindros como
+orifícios de subtração. Conforme apresentado na Figura 6, as numerações
+correspondem a:
+
+. 1 e 2: Acessórios do gabinete (tampa e pés, respectivamente);
+
+. 3: Gabinete completo montado;
+
+. 4: Modelos volumétricos (simulação) das placas utilizados como
+referência dimensional.
+
+Todo o desenvolvimento do projeto 3D foi realizado no software online e
+gratuito Tinkercad.
+
+
 .. image:: Imagens/Gabinete-acessorio3D.png
    :width: 600px
    :align: center
 *Figura  – Projeto do gabinete e acessórios 3D no software Tinkercad*
 
 *Fonte: autoria própria*
+
+
+O software Ultimaker Cura foi utilizado para o fatiamento dos modelos. Por
+meio dele, gerou-se uma prévia dos trabalhos a serem executados na
+impressora 3D Creality Ender 3 — equipamento disponível no laboratório do
+IFSC e amplamente adotado no mercado de impressão 3D. Os dois trabalhos
+somados (gabinete e acessórios) apresentam um tempo total estimado de
+execução de aproximadamente 48 horas, devido à complexidade da geometria
+e à alta densidade de preenchimento (infill) selecionada para garantir maior
+robustez mecânica às peças. Este tempo de produção pode ser otimizado
+reduzindo-se parâmetros como a porcentagem de preenchimento e perímetros.
+Como a confecção física do gabinete e de seus acessórios ficará a cargo da
+Etapa IV, a definição final desses parâmetros de impressão — bem como a
+avaliação de possíveis reduções na altura do gabinete — será decidida
+futuramente. A prévia do fatiamento realizado no Ultimaker Cura pode ser
+visualizada na Figura 7, disposta da esquerda para a direita com o gabinete e
+seus respectivos acessórios.
 
 
 .. image:: Imagens/Visu3D.png
