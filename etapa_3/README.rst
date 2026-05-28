@@ -35,7 +35,68 @@ Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se h
 Projeto do controlador PID
 ======
 
+A partir dos ensaios experimentais realizados, aplicando um degrau na entrada, foi possível obter um modelo aproximado da planta do sistema, representando a dinâmica do motor DC acionando a esteira.
 
+.. image:: Code_Plot_CurvaResposta/Codigo_final/Planta_motor.png
+   :width: 600px
+   :align: center
+*Figura  – Curva de respsota da Planta do motor*
+
+*Fonte: Autoria propria*
+
+Após alguns ajustes, foi obtido a curva de resposta final do sistema, apresentado na figura abaixo:
+
+.. image:: Code_Plot_CurvaResposta/Codigo_final/valid_planta.png
+   :width: 600px
+   :align: center
+*Figura  – Resposta ao degrau final do motor*
+
+*Fonte: Autoria propria*
+
+Com base na resposta ao degrau apresentada na Figura , o comportamento do sistema foi aproximado por um modelo de primeira ordem, dado por:
+G(s) = 2.5 / (0.291s + 1)
+
+Onde 2,5 representa o ganhp estático K do sistema e 0,291*s a constante de tempo da planta
+
+Para o controle de velocidade do motor, será usado um controlador do tipo Proporcional-Integral (PI), devido suas características de eliminação do erro em regime permanente e simplicidade de implementação em sistemas embarcados.
+
+O controlador PI é descrito por:
+C(s) = Kp + Ki/s
+
+Para ver a ação de controle, é necessário fechar malha e observar a resposta da curva de 2 ordem, a equação da FTMF pode ser escrita como:
+FTMF = FTMD/(1+FTMA)
+
+A simulação do sistema foi feito com o matlab, onde inicalmente foi adotado valores para Kp e KI para observar o comportamento do sistema em malha fechada, esses valores foram usados como ponto de partida para análise do sistema, para então serem ajustados na implementação do controlador.
+
+Ajustando os valores é possível observar que o Kp (ganho proporcional) influencia diretamente na velocidade da resposta do sistema enquando o Ki (ganho integral), atua eliminando o erro em regime permanente 
+
+.. code-block:: c
+
+	pkg load control
+	Gs= tf(2.5,[0.291 1])
+	step(Gs)
+	
+	% controlador PI
+	Kp = 0.05;
+	Ki = 0.2;
+	
+	Cs = tf([Kp Ki],[1 0])
+		
+	% malha fechada
+	FTMF = feedback(Cs*Gs,1)
+	
+	step(FTMF)
+
+                                                                                                    Equação FTMF obtida para valores de Kp e Ki de testes:
+
+            0.125 s + 0.5
+ y1:  -------------------------
+      0.291 s^2 + 1.125 s + 0.5
+
+
+Resposta ao degrau FMTF:
+
+Imagem
 
 
 Implementação preliminar do controle PID no microcontrolador.
