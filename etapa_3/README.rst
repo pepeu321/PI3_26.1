@@ -167,19 +167,22 @@ GPIO2    → IN3 LF293N (Sentido)
 
 GPIO21  → IN4 LF293N (Sentido)
 
+O timer do PWM foi criado com a estrutura ledc_timer_config_t, ele foi configurado com uma frequência de 1kHz e uma resolução de 10bits, o que dá uma faixa para o PWM de 0 a 1023.
 Para validar foram realizadas medições com o osciloscópio tanto na saída PWM do microcontrolador quanto na saída do driver conectada ao motor. 
 
 A Figura  mostra o sinal PWM medido na saída do microcontrolador. Possui um sinal PWM com frequência aproximada de 1 kHz e amplitude próxima de 3,3V, que corresponde com o esperado.
 
-Figura
+.. image:: Imagens/PWM-Micro.PNG
+   :width: 450px
+   :align: center
 
-A figura apresenta o sinal medido na saída do driver conectado ao motor da esteira. Ele reproduz o PWM aplicado, com uma amplitude maior, algumas deformações e quedas de tensão características do L293N.
+O sinal medido na saída do driver conectado ao motor da esteira é mostrado na figura abaixo. Ele reproduz o PWM aplicado, com uma amplitude maior, algumas deformações e quedas de tensão características do L293N.
 
-Figura
+.. image:: Imagens/Saida_Driver.PNG
+   :width: 450px
+   :align: center
 
-Inicialmente foi criado o timer do PWM com a estrutura ledc_timer_config_t, ele foi configurado com uma frequência de 1kHz e uma resolução de 10bits, o que dá uma faixa para o PWM de 0 a 1023.
-A função motor_SetDuty(), foi feita alterar o valor do duty cycle, fazendo com que a tensão média aplicada no motor varie, e como consequência a velocidade.
-
+A função motor_SetDuty(), foi feita para alterar o valor do duty cycle, fazendo com que a tensão média aplicada no motor varie, e como consequência a velocidade.
 Foram feitos diversos testes alterando o PWM e o sentido da esteira, e visivelmente a velocidade se alterava, no terminal, imprimia a velocidade atual com uma certa variação, não sendo possível dectectar uma velocidade especifica e sim uma faixa.
 
 Tabela – Comparação entre RPM teórico e medições práticas
@@ -199,8 +202,7 @@ Tabela – Comparação entre RPM teórico e medições práticas
 +------+--------+--------------+----------------------+------------------------+
 
 
-
-
+Os valores da tabela mostram que o resultado está compatível com o esperado e o driver está sendo capaz de acionar o motor da esteira.
 
 
 Firmware preliminar com teste de comunicação COAP
