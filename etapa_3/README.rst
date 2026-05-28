@@ -220,6 +220,12 @@ O sinal medido na saída do driver conectado ao motor da esteira é mostrado na 
 A função motor_SetDuty(), foi feita para alterar o valor do duty cycle, fazendo com que a tensão média aplicada no motor varie, e como consequência a velocidade.
 Foram feitos diversos testes alterando o PWM e o sentido da esteira, e visivelmente a velocidade se alterava, no terminal, imprimia a velocidade atual com uma certa variação, não sendo possível dectectar uma velocidade especifica e sim uma faixa.
 
+O modelo teórico utilizado para estimar a velocidade do motor foi baseado na relação entre a tensão média aplicada e a velocidade angular, sendo aproximado por:
+
+RPM ≈ 37 · (D − 0.33)
+
+Onde D representa o duty cycle normalizado (PWM/1023), o modelo considera a existência de uma tensão mínima necessária para iniciar o movimento do motor, representada pelo termo de offset.
+
 Comparação entre RPM teórico e medições práticas
 
 +------+--------+--------------+----------------------+------------------------+
@@ -239,7 +245,11 @@ Comparação entre RPM teórico e medições práticas
 
 *Fonte : Autoria própria*
 
-Os valores da tabela mostram que o resultado está compatível com o esperado e o driver está sendo capaz de acionar o motor da esteira, a partir de um sinal PWM definido.
+A partir dos resultados, foi observado uma zona morta para valores próximo a 33% (PWM = 350), onde o motor não consegue ser acionado. Para baixos valores como em PWM = 550, a leitura da velocidade varia bastante, devido ao erro de leitura para baixas velocidades.
+
+Para valores de PWM maiores ou a 750, o sistema apresenta um comportamento próxmio de linear, além de que os valores não variam tando, tendo dado bem próximo do teórico.
+
+Por fim, o teste em sentido reverso, realizado com PWM máximo, confirmou o correto funcionamento do controle de direção, apresentando valores de velocidade compatíveis com o acionamento direto
 
 
 Firmware preliminar com teste de comunicação COAP
