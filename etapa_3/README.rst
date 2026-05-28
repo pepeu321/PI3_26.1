@@ -216,6 +216,7 @@ O sinal medido na saída do driver conectado ao motor da esteira é mostrado na 
 
 *Fonte : Autoria própria*
 
+
 A função motor_SetDuty(), foi feita para alterar o valor do duty cycle, fazendo com que a tensão média aplicada no motor varie, e como consequência a velocidade.
 Foram feitos diversos testes alterando o PWM e o sentido da esteira, e visivelmente a velocidade se alterava, no terminal, imprimia a velocidade atual com uma certa variação, não sendo possível dectectar uma velocidade especifica e sim uma faixa.
 
