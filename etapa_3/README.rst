@@ -43,17 +43,148 @@ Implementação preliminar do controle PID no microcontrolador.
 Apresentação do gabinete desenvolvido em software 3D
 ======
 
+.. image:: Imagens/Gabinete-acessorio3D.png
+   :width: 600px
+   :align: center
+
+.. image:: Imagens/Visu3D.png
+   :width: 400px
+   :align: center
+
+
 
 Layout da placa de potência
 ======
+
+.. image:: Imagens/LayoutDemo.png
+   :width: 600px
+   :align: center
+
+
+.. image:: Imagens/LayoutPCB_Pot.png
+   :width: 450px
+   :align: center
+
+
+.. image:: Imagens/Calc_trilha.png
+   :width: 250px
+   :align: center
+
+
+Configurações da placa desenvolvida:
+
++-----------------------------------+------------------+
+| Parâmetro                         | Valor            |
++===================================+==================+
+| Isolamento entre trilhas          | 8 mil            |
++-----------------------------------+------------------+
+| Isolamento entre borda e cobre    | 12 mil           |
++-----------------------------------+------------------+
+| Isolamento de furo a furo         | 16 mil           |
++-----------------------------------+------------------+
+| Largura mínima de trilha          | 20 mil           |
++-----------------------------------+------------------+
+| Diâmetro mínimo de furo           | 40 mil           |
++-----------------------------------+------------------+
+| Diâmetro mínimo de cobre          | 80 mil           |
++-----------------------------------+------------------+
+| Camada de cobre                   | 1 oz/ft²         |
++-----------------------------------+------------------+
+
+
+
+.. image:: Imagens/PreVisu3D.png
+   :width: 500px
+   :align: center
+
+
+Lista de componentes:
+
++----------------+----------------------+-------------------------------------------+
+| Tipo           | Quantidade           | Valor                                     |
++================+======================+===========================================+
+| Resistores     | 2x, 2x, 5x           | 1 kΩ, 5,1 kΩ@1%, 10 kΩ                    |
++----------------+----------------------+-------------------------------------------+
+| Capacitores    | 2x, 5x, 4x, 1x       | 1nF, 100nF, 220nF, 1000uF (low ESR)       |
++----------------+----------------------+-------------------------------------------+
+| Semicondutores | 2x, 1x, 1x           | BTN8982TA, IPD90P03P4L04, Diodo 10V@1W    |
++----------------+----------------------+-------------------------------------------+
+| Conectores     | 4x, 1x               | Furo AWG8, Molex 5 pinos                  |
++----------------+----------------------+-------------------------------------------+
+| Total          | 25                   |                                           |
++----------------+----------------------+-------------------------------------------+
+
+
+
 
 
 Layout da placa de controle
 ======
 
+Inicialmente, cogitou-se o desenvolvimento de uma segunda placa de circuito impresso dedicada exclusivamente aos circuitos de controle, de modo a isolá-los fisicamente da etapa de potência. Contudo, devido à relativa simplicidade do circuito de controle e mediante o aval do corpo docente, optou-se pela utilização de uma placa adaptadora comercial para o ESP32 dotada de terminais de saída. A integração dessa solução justificou-se pelo fato de o módulo comercial possuir padrão de fabricação industrial, o que confere elevada robustez e confiabilidade elétrica ao sistema. Desse modo, evitou-se a replicação manual de um circuito integrado cujas especificações de qualidade em laboratório não igualariam o padrão industrial disponível. 
+O diagrama completo das interconexões do sistema é apresentado na Figura 5, ilustrando, da esquerda para a direita, a placa adaptadora e o respectivo diagrama esquemático.
+
+
+.. image:: Imagens/PCB-Controle.png
+   :width: 500px
+   :align: center
+
 
 Teste de acionamento do motor
 ======
+
+Para testar o acionamento do motor da esteira, foi desenvolvido um firmware responsável pela geração do sinal PWM, controle do driver e aquisição da velocidade utilizando o encoder acoplado ao eixo do motor.
+
+Para a parte de leitura e aquisição da velocidade em RPM, foi utilizado como base o código desenvolvido anteriormente para o encoder, reutilizando o módulo “wheel”. Porém, a forma de aquisição dos dados foi alterada para melhorar a medição em baixas velocidades, já que para valores baixos de RPM a quantidade de pulsos gerados pelo encoder em pequenos intervalos de tempo é reduzida, tornando a leitura sensível, mostrando valores falsos.
+
+Para fins de teste e validação do acionamento, foi utilizado o driver L293N. Apesar de não ser o driver mais adequado para o motor da esteira (BDC - Brushed DC Motor), ele permitiu validar o funcionamento do acionamento inicial do sistema. O L293N possui limitação de tensão máxima em torno de 12V e apresenta uma queda de tensão significativa internamente, normalmente entre 2V e 4V. O motor da esteira, por outro lado, é capaz de operar com até 24V, valor no qual atingiria sua velocidade máxima nominal.
+
+No firmware foi desenvolvido o módulo “Motor”, que utiliza o periférico LEDC para geração do PWM. Foi configurado com frequência de 1 kHz e resolução de 10 bits, permitindo um duty cycle na faixa de 0 a 1023. 
+
+Conexões:
+
+GPIO14  → D0 encoder
+
+GPIO18  → ENB LF293N (PWM)
+
+GPIO2    → IN3 LF293N (Sentido)
+
+GPIO21  → IN4 LF293N (Sentido)
+
+Para validar foram realizadas medições com o osciloscópio tanto na saída PWM do microcontrolador quanto na saída do driver conectada ao motor. 
+
+A Figura  mostra o sinal PWM medido na saída do microcontrolador. Possui um sinal PWM com frequência aproximada de 1 kHz e amplitude próxima de 3,3V, que corresponde com o esperado.
+
+Figura
+
+A figura apresenta o sinal medido na saída do driver conectado ao motor da esteira. Ele reproduz o PWM aplicado, com uma amplitude maior, algumas deformações e quedas de tensão características do L293N.
+
+Figura
+
+Inicialmente foi criado o timer do PWM com a estrutura ledc_timer_config_t, ele foi configurado com uma frequência de 1kHz e uma resolução de 10bits, o que dá uma faixa para o PWM de 0 a 1023.
+A função motor_SetDuty(), foi feita alterar o valor do duty cycle, fazendo com que a tensão média aplicada no motor varie, e como consequência a velocidade.
+
+Foram feitos diversos testes alterando o PWM e o sentido da esteira, e visivelmente a velocidade se alterava, no terminal, imprimia a velocidade atual com uma certa variação, não sendo possível dectectar uma velocidade especifica e sim uma faixa.
+
+Tabela – Comparação entre RPM teórico e medições práticas
+
++------+--------+--------------+----------------------+------------------------+
+| PWM  | Duty   | RPM Teórico  | RPM Médio (Prático)  | Faixa (Min – Max)      |
++======+========+==============+======================+========================+
+| 350  | 0.34   | ~0           | 0                    | Não acionou            |
++------+--------+--------------+----------------------+------------------------+
+| 550  | 0.54   | ~7.8         | ~9.5                 | 6.48 – 12.54           |
++------+--------+--------------+----------------------+------------------------+
+| 750  | 0.73   | ~15.0        | ~14.8                | 10.50 – 18.97          |
++------+--------+--------------+----------------------+------------------------+
+| 950  | 0.93   | ~22.2        | ~19.8                | 17.34 – 21.82          |
++------+--------+--------------+----------------------+------------------------+
+| 1023 | 1.00   | ~25.0        | ~23.5                | 21.36 – 26.02          |
++------+--------+--------------+----------------------+------------------------+
+
+
+
+
 
 
 Firmware preliminar com teste de comunicação COAP
