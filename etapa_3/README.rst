@@ -46,12 +46,17 @@ Apresentação do gabinete desenvolvido em software 3D
 .. image:: Imagens/Gabinete-acessorio3D.png
    :width: 600px
    :align: center
+*Figura 6 – Projeto do gabinete e acessórios 3D no software Tinkercad*
+
+*Fonte: autoria própria*
+
 
 .. image:: Imagens/Visu3D.png
    :width: 400px
    :align: center
+*Figura 7 – Pré-visualização do trabalho no software Ulti Maker*
 
-
+*Fonte: autoria própria*
 
 Layout da placa de potência
 ======
@@ -61,7 +66,9 @@ O layout da placa de circuito impresso (PCI) foi desenvolvido no Kicad 10, com o
 .. image:: Imagens/LayoutDemo.png
    :width: 600px
    :align: center
+*Figura  – Layout da placa de demonstração para o BTN8982TA*
 
+*Fonte: Adaptado de Infineon Technologies AG (2011)*
 
 Observa-se uma largura significativa nas trilhas de potência, projetadas para suportar correntes contínuas de até 55A. Essa largura é de 20mm por camada com espessura de cobre de 4oz/ft² total, totalizando uma seção transversal equivalente a 40mm de largura combinada. No protótipo desenvolvido (Figura 2), manteve-se a largura combinada de 40mm, porém com espessura restrita a 2oz/ft² somando ambas as faces, devido às limitações de matéria-prima disponíveis no IFSC. 
 
@@ -73,7 +80,9 @@ Por fim, ressalta-se que foram realizadas alterações pontuais em relação ao 
 .. image:: Imagens/LayoutPCB_Pot.png
    :width: 450px
    :align: center
+*Figura - Layout da placa desenvolvida*
 
+*Fonte: Autoria própria*
 
 O circuito foi projetado para operar com uma corrente contínua de 35A sob tensão nominal de 24V, totalizando uma capacidade de potência de até 840W. De acordo com os critérios de isolamento para a faixa de 0V a 30V CC, o distanciamento mínimo (clearance) entre as trilhas deve ser de aproximadamente 0,13mm, validando a segurança operacional do protótipo nesta faixa de tensão. A confecção da placa seguiu estritamente os parâmetros técnicos recomendados pelo manual de desenvolvimento para fresa mecânica do IFSC, cujas especificações de fabricação estão detalhadas na Tabela 1. Para o dimensionamento térmico das trilhas de potência, os cálculos baseados na norma IPC-2221 resultaram em uma largura recomendada de 677 mil (aproximadamente 17,2mm, arredondados para 20mm no layout), considerando uma elevação de temperatura limite de 40°C em relação ao ambiente. A interface da ferramenta utilizada para essa validação é apresentada na Figura 3.
 
@@ -82,6 +91,9 @@ O circuito foi projetado para operar com uma corrente contínua de 35A sob tens�
 .. image:: Imagens/Calc_trilha.png
    :width: 250px
    :align: center
+*Figura 3 – Ferramenta de cálculo de largura de trilha IPC-2221*
+
+*Fonte: Altium (2025)*
 
 
 Configurações da placa desenvolvida:
@@ -103,7 +115,9 @@ Configurações da placa desenvolvida:
 +-----------------------------------+------------------+
 | Camada de cobre                   | 1 oz/ft²         |
 +-----------------------------------+------------------+
+*Tabela 1 – Configurações da placa desenvolvida*
 
+*Fonte: Autoria própria*
 
 
 Para a fabricação por fresa mecânica, é indispensável a geração dos arquivos em formato Gerber, os quais mapeiam com precisão as coordenadas de furação, o dimensionamento das trilhas e as distâncias de isolamento. Estes arquivos foram exportados e serão encaminhados ao técnico responsável pelo setor de fresa durante a Etapa IV para a execução da usinagem. Uma pré-visualização tridimensional do circuito, simulada no ambiente Kicad, é apresentada da esquerda para direita na Figura 4, como: top layer e bottom layer. Após a entrega da placa física, os componentes listados na Tabela 2 serão soldados para que o protótipo seja submetido aos testes de validação, procedimentos que também integrarão o escopo da Etapa IV.
@@ -112,6 +126,9 @@ Para a fabricação por fresa mecânica, é indispensável a geração dos arqui
 .. image:: Imagens/PreVisu3D.png
    :width: 500px
    :align: center
+*Figura - Visualização 3D e esquema de furação*
+
+*Fonte: autoria própria*
 
 
 Lista de componentes:
@@ -129,8 +146,9 @@ Lista de componentes:
 +----------------+----------------------+-------------------------------------------+
 | Total          | 25                   |                                           |
 +----------------+----------------------+-------------------------------------------+
+*Tabela 2 – Lista de componentes*
 
-
+*Fonte: autoria própria*
 
 
 
@@ -144,6 +162,9 @@ O diagrama completo das interconexões do sistema é apresentado na Figura 5, il
 .. image:: Imagens/PCB-Controle.png
    :width: 500px
    :align: center
+*Figura 5 – Esquema de conexões da placa de controle*
+
+*Fonte: autoria própria*
 
 
 Teste de acionamento do motor
@@ -154,6 +175,13 @@ Para testar o acionamento do motor da esteira, foi desenvolvido um firmware resp
 Para a parte de leitura e aquisição da velocidade em RPM, foi utilizado como base o código desenvolvido anteriormente para o encoder, reutilizando o módulo “wheel”. Porém, a forma de aquisição dos dados foi alterada para melhorar a medição em baixas velocidades, já que para valores baixos de RPM a quantidade de pulsos gerados pelo encoder em pequenos intervalos de tempo é reduzida, tornando a leitura sensível, mostrando valores falsos.
 
 Para fins de teste e validação do acionamento, foi utilizado o driver L293N. Apesar de não ser o driver mais adequado para o motor da esteira (BDC - Brushed DC Motor), ele permitiu validar o funcionamento do acionamento inicial do sistema. O L293N possui limitação de tensão máxima em torno de 12V e apresenta uma queda de tensão significativa internamente, normalmente entre 2V e 4V. O motor da esteira, por outro lado, é capaz de operar com até 24V, valor no qual atingiria sua velocidade máxima nominal.
+
+.. image:: Imagens/L298N.jpg
+   :width: 450px
+   :align: center
+*Figura  – Módulo driver L298N*  
+
+*Fonte: Components101*
 
 No firmware foi desenvolvido o módulo “Motor”, que utiliza o periférico LEDC para geração do PWM. Foi configurado com frequência de 1 kHz e resolução de 10 bits, permitindo um duty cycle na faixa de 0 a 1023. 
 
@@ -175,17 +203,23 @@ A Figura  mostra o sinal PWM medido na saída do microcontrolador. Possui um sin
 .. image:: Imagens/PWM-Micro.PNG
    :width: 450px
    :align: center
+*Figura - Sinal PWM gerado microcontrolador*
+
+*Fonte : Autoria própria*
 
 O sinal medido na saída do driver conectado ao motor da esteira é mostrado na figura abaixo. Ele reproduz o PWM aplicado, com uma amplitude maior, algumas deformações e quedas de tensão características do L293N.
 
 .. image:: Imagens/Saida_Driver.PNG
    :width: 450px
    :align: center
+*Figura - Sinal na saída do driver*
+
+*Fonte : Autoria própria*
 
 A função motor_SetDuty(), foi feita para alterar o valor do duty cycle, fazendo com que a tensão média aplicada no motor varie, e como consequência a velocidade.
 Foram feitos diversos testes alterando o PWM e o sentido da esteira, e visivelmente a velocidade se alterava, no terminal, imprimia a velocidade atual com uma certa variação, não sendo possível dectectar uma velocidade especifica e sim uma faixa.
 
-Tabela – Comparação entre RPM teórico e medições práticas
+Comparação entre RPM teórico e medições práticas
 
 +------+--------+--------------+----------------------+------------------------+
 | PWM  | Duty   | RPM Teórico  | RPM Médio (Prático)  | Faixa (Min – Max)      |
@@ -200,7 +234,9 @@ Tabela – Comparação entre RPM teórico e medições práticas
 +------+--------+--------------+----------------------+------------------------+
 | 1023 | 1.00   | ~25.0        | ~23.5                | 21.36 – 26.02          |
 +------+--------+--------------+----------------------+------------------------+
+*Tabela 3 - Comparação de valores*
 
+*Fonte : Autoria própria*
 
 Os valores da tabela mostram que o resultado está compatível com o esperado e o driver está sendo capaz de acionar o motor da esteira, a partir de um sinal PWM definido.
 
@@ -588,11 +624,18 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/PromptCOAP.png
    :width: 600px
    :align: center
+*Figura - Prompt, cliente*
+
+*Fonte : Autoria própria*
+
+
 
 .. image:: Imagens/TerminalCOAP.png
    :width: 600px
    :align: center
+*Figura - Terminal esp-idf*
 
+*Fonte : Autoria própria*
 
 
 
