@@ -202,7 +202,7 @@ Tabela – Comparação entre RPM teórico e medições práticas
 +------+--------+--------------+----------------------+------------------------+
 
 
-Os valores da tabela mostram que o resultado está compatível com o esperado e o driver está sendo capaz de acionar o motor da esteira.
+Os valores da tabela mostram que o resultado está compatível com o esperado e o driver está sendo capaz de acionar o motor da esteira, a partir de um sinal PWM definido.
 
 
 Firmware preliminar com teste de comunicação COAP
