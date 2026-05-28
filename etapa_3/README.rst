@@ -436,11 +436,13 @@ Para validar o funcionamento, foi criado um cliente CoAP em Python utilizando a 
 No cliente Python, o usuário digita a velocidade desejada pelo prompt. O valor é convertido para bytes e enviado ao ESP através de uma requisição POST direcionada para a URI coap://IP_DO_ESP/vel. 
 Em seguida, o programa Python realiza automaticamente uma requisição GET para o mesmo recurso /vel, recebendo do ESP a velocidade atual e imprimindo no mesmo prompt de comando
 
+.. image:: Imagens/PromptCOAP.png
+   :width: 600px
+   :align: center
 
-.. image:: 
-
-.. image:: 
-
+.. image:: Imagens/TerminalCOAP.png
+   :width: 600px
+   :align: center
 
 
 
