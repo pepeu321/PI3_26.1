@@ -108,13 +108,13 @@ futuramente. A prévia do fatiamento realizado no Ultimaker Cura pode ser
 visualizada na Figura 7, disposta da esquerda para a direita com o gabinete e
 seus respectivos acessórios.
 
-
-.. image:: Imagens/Visu3D.png
-   :width: 400px
+.. image:: Imagens/PreVisu3D.png
+   :width: 500px
    :align: center
-*Figura  – Pré-visualização do trabalho no software Ulti Maker*
+*Figura - Visualização 3D e esquema de furação*
 
 *Fonte: autoria própria*
+
 
 Layout da placa de potência
 ======
@@ -180,13 +180,13 @@ Configurações da placa desenvolvida:
 
 Para a fabricação por fresa mecânica, é indispensável a geração dos arquivos em formato Gerber, os quais mapeiam com precisão as coordenadas de furação, o dimensionamento das trilhas e as distâncias de isolamento. Estes arquivos foram exportados e serão encaminhados ao técnico responsável pelo setor de fresa durante a Etapa IV para a execução da usinagem. Uma pré-visualização tridimensional do circuito, simulada no ambiente Kicad, é apresentada da esquerda para direita na Figura 4, como: top layer e bottom layer. Após a entrega da placa física, os componentes listados na Tabela 2 serão soldados para que o protótipo seja submetido aos testes de validação, procedimentos que também integrarão o escopo da Etapa IV.
 
-
-.. image:: Imagens/PreVisu3D.png
-   :width: 500px
+.. image:: Imagens/Visu3D.png
+   :width: 400px
    :align: center
-*Figura - Visualização 3D e esquema de furação*
+*Figura  – Pré-visualização do trabalho no software Ulti Maker*
 
 *Fonte: autoria própria*
+
 
 
 Lista de componentes:
