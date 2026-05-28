@@ -46,7 +46,7 @@ Apresentação do gabinete desenvolvido em software 3D
 .. image:: Imagens/Gabinete-acessorio3D.png
    :width: 600px
    :align: center
-*Figura 6 – Projeto do gabinete e acessórios 3D no software Tinkercad*
+*Figura  – Projeto do gabinete e acessórios 3D no software Tinkercad*
 
 *Fonte: autoria própria*
 
@@ -54,7 +54,7 @@ Apresentação do gabinete desenvolvido em software 3D
 .. image:: Imagens/Visu3D.png
    :width: 400px
    :align: center
-*Figura 7 – Pré-visualização do trabalho no software Ulti Maker*
+*Figura  – Pré-visualização do trabalho no software Ulti Maker*
 
 *Fonte: autoria própria*
 
