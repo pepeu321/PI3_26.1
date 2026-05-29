@@ -227,39 +227,52 @@ Então a diferença maior foi feita na main.c, o wheel.c e wheel.h não foram al
 	        NULL);
 	}
 
-Os destaques para esse código são o tempo de total de leitura, 4s, o que é mais do que suficiente para o motor atingir o regime permanente e o início da leitura é informado na tela para gerar o degrau(ligar a fonte) e então as amostras serem obtidas durante esses 4 segundos totais. O período de amostras foi definido em 100 ms, e com isso você terá um número total de amostras em 4 segundos, que está sendo feito automaticamente. Então 100 ms o número total de amostras é 40. Esse será o tamanho do vetor de velocidades capturadas. 
+Os destaques para esse código são o tempo total de leitura, 4s, o que é mais do que suficiente para o motor atingir o regime permanente e o início da leitura é informado na tela para gerar o degrau(ligar a fonte) e então as amostras serem obtidas durante esses 4 segundos totais. O período de amostras foi definido em 100 ms, e com isso você terá um número total de amostras em 4 segundos, que está sendo feito automaticamente. Então 100 ms o número total de amostras é 40. Esse será o tamanho do vetor de velocidades capturadas. 
 As capturas são feitas através de uma tarefa “task_aquisicao”, a lógica é semelhante à do código da etapa anterior. E após a leitura é printado na tela os valores de tempo e rpm para cada instante.
 
 .. image:: Imagens/pontos_obtidos.png
    :width: 800px
    :align: center
 *Figura 1  – Pontos obtidos*
+
 *Fonte: Autoria própria*
 
+Com os pontos obtidos utilizamos o matlab para traçar as curvas com os testes realizados.
 
+.. image:: Imagens/curva_amostrada.jpg
+   :width: 550px
+   :align: center
+*Figura 2  – Curva amostrada*
 
-A partir dos ensaios experimentais realizados, aplicando um degrau na entrada, foi possível obter um modelo aproximado da planta do sistema, representando a dinâmica do motor DC acionando a esteira.
+*Fonte: Autoria própria*
+
+Como cada instante de tempo do início do degrau muda, porque somos nós que ligamos a fonte, foi necessário normalizar as curvas para todas iniciarem no t = 0. E com as curvas traçadas foi criada uma curva que faz a média delas, esta curva está na cor preta. 
+
 
 .. image:: Imagens/Planta_motor.jpg
    :width: 800px
    :align: center
-*Figura 1  – Curva de respsota da Planta do motor*
+*Figura 3  – Curva de resposta da Planta do motor*
 
-*Fonte: Autoria propria*
+*Fonte: Autoria própria*
 
-Após alguns ajustes, foi obtido a curva de resposta final do sistema, apresentado na figura abaixo:
+Essa curva média apresenta algumas inconsistências na leitura, então foi "limpada" a curva para eliminar esses valores discrepantes, como mostra a curva em vermelho da figura 3. Com base na resposta ao degrau apresentada na Figura 3 da curva em vermelho, o comportamento do sistema foi aproximado por um modelo de primeira ordem, dado por:
+
+**G(s) = 2.5 / (0.291s + 1)**
+
+Onde 2,5 representa o ganho estático K do sistema e 0,291*s a constante de tempo da planta
+
+
+E com essa planta foi feita a resposta ao degrau no matlab para comparar com a curva "limpa" e a da média:
 
 .. image:: Imagens/valid_planta.jpg
    :width: 800px
    :align: center
-*Figura 2  – Resposta ao degrau final do motor*
+*Figura 4  – Resposta ao degrau final do motor*
 
-*Fonte: Autoria propria*
+*Fonte: Autoria própria*
 
-Com base na resposta ao degrau apresentada na Figura , o comportamento do sistema foi aproximado por um modelo de primeira ordem, dado por:
-G(s) = 2.5 / (0.291s + 1)
-
-Onde 2,5 representa o ganhp estático K do sistema e 0,291*s a constante de tempo da planta
+E pode ser verificado que as curvas da planta "limpa" e a de resposta ao degrau coincidem. E com isso podemos começar a projetar  o controle do tipo PID.
 
 Para o controle de velocidade do motor, será usado um controlador do tipo Proporcional-Integral (PI), devido suas características de eliminação do erro em regime permanente e simplicidade de implementação em sistemas embarcados.
 
@@ -312,6 +325,10 @@ Resposta ao degrau FMTF:
 .. image:: Imagens/RespostaFTMF.png
    :width: 500px
    :align: center
+*Figura 5  – Resposta ao degrau final do motor*
+
+*Fonte: Autoria própria*
+
 
 
 
@@ -368,7 +385,7 @@ gratuito Tinkercad.
 .. image:: Imagens/Gabinete-acessorio3D.png
    :width: 600px
    :align: center
-*Figura 3 – Projeto do gabinete e acessórios 3D no software Tinkercad*
+*Figura 6 – Projeto do gabinete e acessórios 3D no software Tinkercad*
 
 *Fonte: autoria própria*
 
@@ -392,7 +409,7 @@ seus respectivos acessórios.
 .. image:: Imagens/PreVisu3D.png
    :width: 500px
    :align: center
-*Figura 4 - Visualização 3D e esquema de furação*
+*Figura 7 - Visualização 3D e esquema de furação*
 
 *Fonte: autoria própria*
 
@@ -405,7 +422,7 @@ O layout da placa de circuito impresso (PCI) foi desenvolvido no Kicad 10, com o
 .. image:: Imagens/LayoutDemo.png
    :width: 600px
    :align: center
-*Figura 5 – Layout da placa de demonstração para o BTN8982TA*
+*Figura 8 – Layout da placa de demonstração para o BTN8982TA*
 
 *Fonte: Adaptado de Infineon Technologies AG (2011)*
 
@@ -419,7 +436,7 @@ Por fim, ressalta-se que foram realizadas alterações pontuais em relação ao 
 .. image:: Imagens/LayoutPCB_Pot.png
    :width: 450px
    :align: center
-*Figura 6 - Layout da placa desenvolvida*
+*Figura 9 - Layout da placa desenvolvida*
 
 *Fonte: Autoria própria*
 
@@ -430,7 +447,7 @@ O circuito foi projetado para operar com uma corrente contínua de 35A sob tens�
 .. image:: Imagens/Calc_trilha.png
    :width: 250px
    :align: center
-*Figura 7 – Ferramenta de cálculo de largura de trilha IPC-2221*
+*Figura 10 – Ferramenta de cálculo de largura de trilha IPC-2221*
 
 *Fonte: Altium (2025)*
 
@@ -464,7 +481,7 @@ Para a fabricação por fresa mecânica, é indispensável a geração dos arqui
 .. image:: Imagens/Visu3D.png
    :width: 400px
    :align: center
-*Figura 8  – Pré-visualização do trabalho no software Ulti Maker*
+*Figura 11  – Pré-visualização do trabalho no software Ulti Maker*
 
 *Fonte: autoria própria*
 
@@ -501,7 +518,7 @@ O diagrama completo das interconexões do sistema é apresentado na Figura 5, il
 .. image:: Imagens/PCB-Controle.png
    :width: 500px
    :align: center
-*Figura 9 – Esquema de conexões da placa de controle*
+*Figura 12 – Esquema de conexões da placa de controle*
 
 *Fonte: autoria própria*
 
@@ -518,7 +535,7 @@ Para fins de teste e validação do acionamento, foi utilizado o driver L293N. A
 .. image:: Imagens/L298N.jpg
    :width: 450px
    :align: center
-*Figura 10 – Módulo driver L298N*  
+*Figura 13 – Módulo driver L298N*  
 
 *Fonte: Components101*
 
@@ -542,7 +559,7 @@ A Figura  mostra o sinal PWM medido na saída do microcontrolador. Possui um sin
 .. image:: Imagens/PWM-Micro.PNG
    :width: 450px
    :align: center
-*Figura 11 - Sinal PWM gerado microcontrolador*
+*Figura 14 - Sinal PWM gerado microcontrolador*
 
 *Fonte : Autoria própria*
 
@@ -551,7 +568,7 @@ O sinal medido na saída do driver conectado ao motor da esteira é mostrado na 
 .. image:: Imagens/Saida_Driver.PNG
    :width: 450px
    :align: center
-*Figura 12 - Sinal na saída do driver*
+*Figura 15 - Sinal na saída do driver*
 
 *Fonte : Autoria própria*
 
@@ -974,7 +991,7 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/PromptCOAP.png
    :width: 600px
    :align: center
-*Figura 14 - Prompt, cliente*
+*Figura 16 - Prompt, cliente*
 
 *Fonte : Autoria própria*
 
@@ -983,7 +1000,7 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/TerminalCOAP.png
    :width: 600px
    :align: center
-*Figura 15 - Terminal esp-idf*
+*Figura 17 - Terminal esp-idf*
 
 *Fonte : Autoria própria*
 
