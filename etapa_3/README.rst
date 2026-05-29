@@ -29,9 +29,6 @@ Na Etapa 3, foram realizados
 Desenvolvimento
 ***************
 
-Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Adicionar pesqusisas realizadas bem como testes realizados.
-
-
 Projeto do controlador PID
 ======
 
