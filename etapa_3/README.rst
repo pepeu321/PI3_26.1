@@ -49,7 +49,7 @@ Após alguns ajustes, foi obtido a curva de resposta final do sistema, apresenta
 .. image:: Imagens/valid_planta.jpg
    :width: 800px
    :align: center
-*Figura  – Resposta ao degrau final do motor*
+*Figura 2  – Resposta ao degrau final do motor*
 
 *Fonte: Autoria propria*
 
@@ -158,7 +158,7 @@ gratuito Tinkercad.
 .. image:: Imagens/Gabinete-acessorio3D.png
    :width: 600px
    :align: center
-*Figura  – Projeto do gabinete e acessórios 3D no software Tinkercad*
+*Figura 3 – Projeto do gabinete e acessórios 3D no software Tinkercad*
 
 *Fonte: autoria própria*
 
@@ -182,7 +182,7 @@ seus respectivos acessórios.
 .. image:: Imagens/PreVisu3D.png
    :width: 500px
    :align: center
-*Figura - Visualização 3D e esquema de furação*
+*Figura 4 - Visualização 3D e esquema de furação*
 
 *Fonte: autoria própria*
 
@@ -195,7 +195,7 @@ O layout da placa de circuito impresso (PCI) foi desenvolvido no Kicad 10, com o
 .. image:: Imagens/LayoutDemo.png
    :width: 600px
    :align: center
-*Figura  – Layout da placa de demonstração para o BTN8982TA*
+*Figura 5 – Layout da placa de demonstração para o BTN8982TA*
 
 *Fonte: Adaptado de Infineon Technologies AG (2011)*
 
@@ -209,7 +209,7 @@ Por fim, ressalta-se que foram realizadas alterações pontuais em relação ao 
 .. image:: Imagens/LayoutPCB_Pot.png
    :width: 450px
    :align: center
-*Figura - Layout da placa desenvolvida*
+*Figura 6 - Layout da placa desenvolvida*
 
 *Fonte: Autoria própria*
 
@@ -220,7 +220,7 @@ O circuito foi projetado para operar com uma corrente contínua de 35A sob tens�
 .. image:: Imagens/Calc_trilha.png
    :width: 250px
    :align: center
-*Figura 3 – Ferramenta de cálculo de largura de trilha IPC-2221*
+*Figura 7 – Ferramenta de cálculo de largura de trilha IPC-2221*
 
 *Fonte: Altium (2025)*
 
@@ -254,7 +254,7 @@ Para a fabricação por fresa mecânica, é indispensável a geração dos arqui
 .. image:: Imagens/Visu3D.png
    :width: 400px
    :align: center
-*Figura  – Pré-visualização do trabalho no software Ulti Maker*
+*Figura 8  – Pré-visualização do trabalho no software Ulti Maker*
 
 *Fonte: autoria própria*
 
@@ -291,7 +291,7 @@ O diagrama completo das interconexões do sistema é apresentado na Figura 5, il
 .. image:: Imagens/PCB-Controle.png
    :width: 500px
    :align: center
-*Figura 5 – Esquema de conexões da placa de controle*
+*Figura 9 – Esquema de conexões da placa de controle*
 
 *Fonte: autoria própria*
 
@@ -308,7 +308,7 @@ Para fins de teste e validação do acionamento, foi utilizado o driver L293N. A
 .. image:: Imagens/L298N.jpg
    :width: 450px
    :align: center
-*Figura  – Módulo driver L298N*  
+*Figura 10 – Módulo driver L298N*  
 
 *Fonte: Components101*
 
@@ -332,7 +332,7 @@ A Figura  mostra o sinal PWM medido na saída do microcontrolador. Possui um sin
 .. image:: Imagens/PWM-Micro.PNG
    :width: 450px
    :align: center
-*Figura - Sinal PWM gerado microcontrolador*
+*Figura 11 - Sinal PWM gerado microcontrolador*
 
 *Fonte : Autoria própria*
 
@@ -341,7 +341,7 @@ O sinal medido na saída do driver conectado ao motor da esteira é mostrado na 
 .. image:: Imagens/Saida_Driver.PNG
    :width: 450px
    :align: center
-*Figura - Sinal na saída do driver*
+*Figura 12 - Sinal na saída do driver*
 
 *Fonte : Autoria própria*
 
@@ -764,7 +764,7 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/PromptCOAP.png
    :width: 600px
    :align: center
-*Figura - Prompt, cliente*
+*Figura 14 - Prompt, cliente*
 
 *Fonte : Autoria própria*
 
@@ -773,7 +773,7 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/TerminalCOAP.png
    :width: 600px
    :align: center
-*Figura - Terminal esp-idf*
+*Figura 15 - Terminal esp-idf*
 
 *Fonte : Autoria própria*
 
