@@ -112,6 +112,10 @@ Resposta ao degrau FMTF:
 Implementação preliminar do controle PID no microcontrolador.
 ======
 
+O controlador PI implementado possui ação proporcional para resposta rápida às variações de velocidade, ação integral para reduzir o erro em regime permanente e verificação de saturação do sinal PWM
+
+Durante os testes preliminares foi possível verificar o funcionamento do sistema de controle, observando a capacidade do controlador em aumentar automaticamente o PWM quando cargas adicionais eram aplicadas sobre a esteira, buscando manter a velocidade próxima ao valor de referência definido.
+
 
 Apresentação do gabinete desenvolvido em software 3D
 ======
@@ -802,3 +806,4 @@ INFINEON TECHNOLOGIES AG. NovalithIC™ H-Bridge Demo Board: Version 2.2 (BTN89x
 
 ALTIUM. IPC-2221 Calculator for PCB Trace Current and Heating. Altium Resources, 26 jun. 2025. Disponível em: https://resources.altium.com/p/ipc-2221-calculator-pcb-trace-current-and-heating. Acesso em: 27 mai. 2026.
 
+ESPRESSIF SYSTEMS. ESP-IDF Programming Guide. Disponível em:
