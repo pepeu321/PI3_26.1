@@ -32,6 +32,17 @@ Desenvolvimento
 Projeto do controlador PID
 ======
 
+A primeira parte para o desenvolvimento do projeto de controle PID é a obtenção da planta do motor da esteira. Com a planta saberemos a resposta que o motor tem para uma resposta ao degrau, como é o comportamento da velocidade do motor(RPM) ao longo do tempo até atingir o regime permanente. 
+
+Para obter a planta configuramos uma fonte de bancada com 12V e corrente limitada em 2A, depois disso é necessário conectar os pinos do encoder no esp32, como feito na etapa anterior. Com o encoder conectado ao esp32 é preciso gerar um sinal de degrau, e o degrau é gerado ligando a fonte de bancada. E para obter o gráfico da curva do rpm será preciso fazer as leituras do rpm através do esp, e então para cada instante de tempo amostrado e a leitura do rpm obtida será printada na tela. Depois copiamos esses valores para geração do gráfico no matlab.
+
+O código anterior utilizado para medir o rpm com o encoder óptico estava certo para a configuração da etapa anterior, nesta etapa precisamos modificar o código da leitura do encoder porque no momento em que o rpm era amostrado também era printado na tela. E a função print tem um atraso, isso acarretava na perda de eventos. O rpm medido era defasado, então para velocidades que não variam até funciona, mas para obter uma curva é preciso retirar o print. E é o que foi feito.
+
+Também foi retirada a função delay 100 ms, porque nós queremos ter uma precisão na leitura dos rpms. Para fazer isso foi necessário configurar um timer para contar até 100ms e quando chegar nesse período de tempo é gerado um sinal para calcular o rpm e armazenar em um vetor. Então depois de fazer a leitura, será printado o vetor de velocidades, com isso resolvemos o problema do print e também temos a precisão na leitura das amostras.
+
+Então a diferença maior foi feita na main.c, o wheel.c e wheel.h não foram alterados. O código da main.c pode ser visto abaixo:
+
+
 A partir dos ensaios experimentais realizados, aplicando um degrau na entrada, foi possível obter um modelo aproximado da planta do sistema, representando a dinâmica do motor DC acionando a esteira.
 
 .. image:: Imagens/Planta_motor.jpg
