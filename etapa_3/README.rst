@@ -984,20 +984,8 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 
 
 
-Testes
-======
-
-Descrição dos testes/validações realizadas.
-
-
-(Outras subseções se necessário)
-================================
-
-
 Referências (links/datasheets/livros)
 *************************************
-
-- `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
 
 INFINEON TECHNOLOGIES AG. NovalithIC™ H-Bridge Demo Board: Version 2.2 (BTN89xxTA) – Demo Board Description. Munich: Infineon Technologies AG, 2011. Disponível em: https://www.infineon.com/assets/row/public/documents/10/57/novalithic-demoboard-v2.2-h-bridge-btn89xxta-2011-09-23.pdf. Acesso em: 27 maio 2026.
 
