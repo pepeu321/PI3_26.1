@@ -234,6 +234,9 @@ As capturas são feitas através de uma tarefa “task_aquisicao”, a lógica �
    :width: 800px
    :align: center
 *Figura 1  – Pontos obtidos*
+*Fonte: Autoria própria*
+
+
 
 A partir dos ensaios experimentais realizados, aplicando um degrau na entrada, foi possível obter um modelo aproximado da planta do sistema, representando a dinâmica do motor DC acionando a esteira.
 
