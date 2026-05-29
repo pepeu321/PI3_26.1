@@ -72,18 +72,21 @@ Ajustando os valores é possível observar que o Kp (ganho proporcional) influen
 
 .. code-block:: c
 
+	clc; clear all
+	
 	pkg load control
 	Gs= tf(2.5,[0.291 1])
-	step(Gs)
+	%step(Gs)
+	
 	
 	% controlador PI
-	Kp = 0.05;
-	Ki = 0.2;
+	Kp = 0.78;
+	Ki = 6.67;
 	
 	Cs = tf([Kp Ki],[1 0])
-		
+	
 	% malha fechada
-	FTMF = feedback(Cs*Gs,1)
+	FTMF = Gs/(1+Gs*Cs)
 	
 	step(FTMF)
 
