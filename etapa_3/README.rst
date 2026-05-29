@@ -94,9 +94,11 @@ Equação FTMF obtida para valores de Kp e Ki de testes:
 
 .. code-block:: c
 
-	            0.125 s + 0.5
-	 y1:  -------------------------
-	      0.291 s^2 + 1.125 s + 0.5
+
+                 0.7275 s^2 + 2.5 s
+ y1:  -----------------------------------------
+      0.08468 s^3 + 1.149 s^2 + 7.802 s + 16.68
+
 
 
 Resposta ao degrau FMTF:
