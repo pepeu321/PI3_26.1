@@ -230,7 +230,10 @@ Então a diferença maior foi feita na main.c, o wheel.c e wheel.h não foram al
 Os destaques para esse código são o tempo de total de leitura, 4s, o que é mais do que suficiente para o motor atingir o regime permanente e o início da leitura é informado na tela para gerar o degrau(ligar a fonte) e então as amostras serem obtidas durante esses 4 segundos totais. O período de amostras foi definido em 100 ms, e com isso você terá um número total de amostras em 4 segundos, que está sendo feito automaticamente. Então 100 ms o número total de amostras é 40. Esse será o tamanho do vetor de velocidades capturadas. 
 As capturas são feitas através de uma tarefa “task_aquisicao”, a lógica é semelhante à do código da etapa anterior. E após a leitura é printado na tela os valores de tempo e rpm para cada instante.
 
-
+.. image:: Imagens/pontos_obtidos.jpg
+   :width: 800px
+   :align: center
+*Figura 1  – Pontos obtidos*
 
 A partir dos ensaios experimentais realizados, aplicando um degrau na entrada, foi possível obter um modelo aproximado da planta do sistema, representando a dinâmica do motor DC acionando a esteira.
 
