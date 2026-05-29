@@ -256,21 +256,31 @@ Como cada instante de tempo do início do degrau muda, porque somos nós que lig
 
 *Fonte: Autoria própria*
 
-Essa curva média apresenta algumas inconsistências na leitura, então foi "limpada" a curva para eliminar esses valores discrepantes, como mostra a curva em vermelho da figura 3. Com base na resposta ao degrau apresentada na Figura 3 da curva em vermelho, o comportamento do sistema foi aproximado por um modelo de primeira ordem, dado por:
+Essa curva média apresenta algumas inconsistências na leitura, então foi "limpada" a curva para eliminar esses valores discrepantes, como mostra a curva em vermelho da figura 3. Fizemos isto, pois a leitura do encoder no regime permanente está certa, verificamos no osciloscópio que o seu valor é 30 rpm. Na figura abaixo foi contado 10 pulsos, mas como o encoder tem 20 ranhuras, dividimos por 2 a frequência que foi obtida no osciloscópio (aproximadamente 1Hz).
+
+.. image:: Imagens/osciloscopio.jpg
+   :width: 550px
+   :align: center
+*Figura 4  – Frequência regime permanente(30 RPM)*
+
+*Fonte: Autoria própria*
+
+
+E Com base na resposta ao degrau apresentada na Figura 3 da curva em vermelho, o comportamento do sistema foi aproximado por um modelo de primeira ordem, dado por:
 
 **G(s) = 2.5 / (0.291s + 1)**
 
 Onde 2,5 representa o ganho estático K do sistema e 0,291*s a constante de tempo da planta
-
 
 E com essa planta foi feita a resposta ao degrau no matlab para comparar com a curva "limpa" e a da média:
 
 .. image:: Imagens/valid_planta.jpg
    :width: 800px
    :align: center
-*Figura 4  – Resposta ao degrau final do motor*
+*Figura 5  – Resposta ao degrau final do motor*
 
 *Fonte: Autoria própria*
+
 
 E pode ser verificado que as curvas da planta "limpa" e a de resposta ao degrau coincidem. E com isso podemos começar a projetar  o controle do tipo PID.
 
@@ -325,7 +335,7 @@ Resposta ao degrau FMTF:
 .. image:: Imagens/RespostaFTMF.png
    :width: 500px
    :align: center
-*Figura 5  – Resposta ao degrau final do motor*
+*Figura 6  – Resposta ao degrau final do motor*
 
 *Fonte: Autoria própria*
 
@@ -385,7 +395,7 @@ gratuito Tinkercad.
 .. image:: Imagens/Gabinete-acessorio3D.png
    :width: 600px
    :align: center
-*Figura 6 – Projeto do gabinete e acessórios 3D no software Tinkercad*
+*Figura 7 – Projeto do gabinete e acessórios 3D no software Tinkercad*
 
 *Fonte: autoria própria*
 
@@ -409,7 +419,7 @@ seus respectivos acessórios.
 .. image:: Imagens/PreVisu3D.png
    :width: 500px
    :align: center
-*Figura 7 - Visualização 3D e esquema de furação*
+*Figura 8 - Visualização 3D e esquema de furação*
 
 *Fonte: autoria própria*
 
@@ -422,7 +432,7 @@ O layout da placa de circuito impresso (PCI) foi desenvolvido no Kicad 10, com o
 .. image:: Imagens/LayoutDemo.png
    :width: 600px
    :align: center
-*Figura 8 – Layout da placa de demonstração para o BTN8982TA*
+*Figura 9 – Layout da placa de demonstração para o BTN8982TA*
 
 *Fonte: Adaptado de Infineon Technologies AG (2011)*
 
@@ -436,7 +446,7 @@ Por fim, ressalta-se que foram realizadas alterações pontuais em relação ao 
 .. image:: Imagens/LayoutPCB_Pot.png
    :width: 450px
    :align: center
-*Figura 9 - Layout da placa desenvolvida*
+*Figura 10 - Layout da placa desenvolvida*
 
 *Fonte: Autoria própria*
 
@@ -447,7 +457,7 @@ O circuito foi projetado para operar com uma corrente contínua de 35A sob tens�
 .. image:: Imagens/Calc_trilha.png
    :width: 250px
    :align: center
-*Figura 10 – Ferramenta de cálculo de largura de trilha IPC-2221*
+*Figura 11 – Ferramenta de cálculo de largura de trilha IPC-2221*
 
 *Fonte: Altium (2025)*
 
@@ -481,7 +491,7 @@ Para a fabricação por fresa mecânica, é indispensável a geração dos arqui
 .. image:: Imagens/Visu3D.png
    :width: 400px
    :align: center
-*Figura 11  – Pré-visualização do trabalho no software Ulti Maker*
+*Figura 12  – Pré-visualização do trabalho no software Ulti Maker*
 
 *Fonte: autoria própria*
 
@@ -518,7 +528,7 @@ O diagrama completo das interconexões do sistema é apresentado na Figura 5, il
 .. image:: Imagens/PCB-Controle.png
    :width: 500px
    :align: center
-*Figura 12 – Esquema de conexões da placa de controle*
+*Figura 13 – Esquema de conexões da placa de controle*
 
 *Fonte: autoria própria*
 
@@ -535,7 +545,7 @@ Para fins de teste e validação do acionamento, foi utilizado o driver L293N. A
 .. image:: Imagens/L298N.jpg
    :width: 450px
    :align: center
-*Figura 13 – Módulo driver L298N*  
+*Figura 14 – Módulo driver L298N*  
 
 *Fonte: Components101*
 
@@ -559,7 +569,7 @@ A Figura  mostra o sinal PWM medido na saída do microcontrolador. Possui um sin
 .. image:: Imagens/PWM-Micro.PNG
    :width: 450px
    :align: center
-*Figura 14 - Sinal PWM gerado microcontrolador*
+*Figura 15 - Sinal PWM gerado microcontrolador*
 
 *Fonte : Autoria própria*
 
@@ -568,7 +578,7 @@ O sinal medido na saída do driver conectado ao motor da esteira é mostrado na 
 .. image:: Imagens/Saida_Driver.PNG
    :width: 450px
    :align: center
-*Figura 15 - Sinal na saída do driver*
+*Figura 16 - Sinal na saída do driver*
 
 *Fonte : Autoria própria*
 
@@ -991,7 +1001,7 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/PromptCOAP.png
    :width: 600px
    :align: center
-*Figura 16 - Prompt, cliente*
+*Figura 17 - Prompt, cliente*
 
 *Fonte : Autoria própria*
 
@@ -1000,7 +1010,7 @@ Em seguida, o programa Python realiza automaticamente uma requisição GET para 
 .. image:: Imagens/TerminalCOAP.png
    :width: 600px
    :align: center
-*Figura 17 - Terminal esp-idf*
+*Figura 18 - Terminal esp-idf*
 
 *Fonte : Autoria própria*
 
