@@ -817,4 +817,6 @@ INFINEON TECHNOLOGIES AG. NovalithIC™ H-Bridge Demo Board: Version 2.2 (BTN89x
 
 ALTIUM. IPC-2221 Calculator for PCB Trace Current and Heating. Altium Resources, 26 jun. 2025. Disponível em: https://resources.altium.com/p/ipc-2221-calculator-pcb-trace-current-and-heating. Acesso em: 27 mai. 2026.
 
-ESPRESSIF SYSTEMS. ESP-IDF Programming Guide. Disponível em:
+ESPRESSIF SYSTEMS. ESP-IDF Programming Guide. Disponível em: https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/
+
+LIBCOAP PROJECT. libcoap GitHub Repository. GitHub. Disponível em: https://github.com/obgm/libcoap
