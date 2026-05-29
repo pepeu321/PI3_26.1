@@ -37,18 +37,17 @@ Projeto do controlador PID
 
 A partir dos ensaios experimentais realizados, aplicando um degrau na entrada, foi possível obter um modelo aproximado da planta do sistema, representando a dinâmica do motor DC acionando a esteira.
 
-.. image:: Imagens/Planta_motor.png
-   :width: 600px
+.. image:: Imagens/Planta_motor.jpg
+   :width: 800px
    :align: center
-
-*Figura  – Curva de respsota da Planta do motor*
+*Figura 1  – Curva de respsota da Planta do motor*
 
 *Fonte: Autoria propria*
 
 Após alguns ajustes, foi obtido a curva de resposta final do sistema, apresentado na figura abaixo:
 
-.. image:: Imagens/valid_planta.png
-   :width: 600px
+.. image:: Imagens/valid_planta.jpg
+   :width: 800px
    :align: center
 *Figura  – Resposta ao degrau final do motor*
 
