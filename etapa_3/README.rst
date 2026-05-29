@@ -104,9 +104,8 @@ Equação FTMF obtida para valores de Kp e Ki de testes:
 Resposta ao degrau FMTF:
 
 .. image:: Imagens/RespostaFTMF.png
-   :width: 800px
+   :width: 500px
    :align: center
-*Figura 2  – Resposta ao degrau final do motor*
 
 
 
