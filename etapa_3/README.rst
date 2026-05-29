@@ -103,7 +103,11 @@ Equação FTMF obtida para valores de Kp e Ki de testes:
 
 Resposta ao degrau FMTF:
 
-Imagem
+.. image:: Imagens/RespostaFTMF.png
+   :width: 800px
+   :align: center
+*Figura 2  – Resposta ao degrau final do motor*
+
 
 
 Implementação preliminar do controle PID no microcontrolador.
