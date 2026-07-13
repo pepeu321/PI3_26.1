@@ -104,7 +104,13 @@ Descrição da problemática...
 2.2.3 Alterações técnicas no design do gabinete
 -----------------------------------------------
 
-Descrição das alterações...
+
+.. image:: Gabinete.png
+   :width: 800px
+   :align: center
+*Figura 1  – Alterações técnicas para melhoria de design do gabinete*
+
+*Fonte: Autoria própria*
 
 
 2.2.4 Apresentação definitiva do gabinete
