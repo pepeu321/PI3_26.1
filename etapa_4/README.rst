@@ -19,44 +19,44 @@ Apresentação do protótipo definitivo da placa de circuito impresso confeccion
 ==============
 
 
-Transferência térmica
+*Transferência térmica*
 ------------------
 
-Corrosão
+*Corrosão*
 ------------------
 
-Furação
+*Furação*
 ------------------
 
-Solda
+*Solda*
 ------------------
 
-Verificação de curto-circuito
+*Problemática*
 ------------------
 
-Problemática
+*Verificação de curto-circuito*
 ------------------
 
-Apresentação definitiva
+*Apresentação definitiva*
 ------------------
 
 
 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ==============
 
-Processo de impressão
+*Processo de impressão*
 ------------------
 
-Problemática
+*Problemática*
 ------------------
 
-Alterações técnicas no design do gabinete
+*Alterações técnicas no design do gabinete*
 ------------------
 
-Apresentação definitiva do gabinete
+*Apresentação definitiva do gabinete*
 ------------------
 
-Apresentação definitiva do sistema acomodado
+*Apresentação definitiva do sistema acomodado*
 ------------------
 
 Testes
