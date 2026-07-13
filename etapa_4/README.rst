@@ -38,7 +38,7 @@ Nesta etapa, o percloreto de ferro...
 2.1.3 Furação
 -------------
 
-.. image:: Furadeira.png
+.. image:: FuradeiraESSA.png
    :width: 800px
    :align: center
 *Figura 1  – Furadeira de bancada*
