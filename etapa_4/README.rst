@@ -9,8 +9,7 @@ Etapa 4
 1. Visão geral
 **************
 
-A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, resultando na entrega de um protótipo físico e operacional em estado alfa. Esta fase materializa as características e funcionalidades idealizadas no escopo inicial do projeto. O escopo desta etapa compreende a confecção da placa de circuito impresso (PCI), a manufatura aditiva do gabinete via impressão 3D, a integração do firmware definitivo, a execução dos testes de validação e, por fim, a análise crítica dos resultados obtidos.
-
+A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, resultando na entrega de um protótipo físico e operacional em estado alfa. Esta fase materializa as características e funcionalidades idealizadas no escopo inicial do projeto. O escopo desta etapa compreende a confecção da placa de circuito impresso (PCI), a manufatura aditiva do gabinete via impressão 3D, a integração do firmware definitivo, a execução dos testes de validação e, por fim, a análise crítica dos resultados obtidos. É inerente dizer que equívocos e imperícias ocorreram ao longo do desenvolvimento do projeto e que soluções alternativas foram incorporadas para atingir o objetivo final e o sucesso do trabalho.
 
 2. Desenvolvimento
 ******************
@@ -150,25 +149,25 @@ Descrição do firmware definitivo...
 3.1 Acionamento remoto
 ======================
 
-Descrição do teste de acionamento remoto...
+MOSTRAR GIF DE ACIONAMENTO NORMAL E REMOTO DA ESTEIRA
 
 
 3.2 Controle de velocidade
 ==========================
 
-Descrição do controle de velocidade...
+MOSTRAR GIF DE DIFERENTES VELOCIDADES ENVIADAS PELO O USUÁRIO E ALTERAÇÃO DE VELOCIDADE DA ESTEIRA
 
 
 3.3 Proteção de sobrecarga
 ==========================
 
-Descrição da proteção de sobrecarga...
+MOSTRAR GIF DA PROTEÇÃO DO SISTEMA VIA LIMITE DIGITAL APÓS SOBREPESO
 
 
 3.4 Inversão de sentido
 =======================
 
-Descrição do teste de inversão de sentido...
+MOSTRAR GIF DO ACIONAMENTO PARA SENTIDO FRENTE E TRÁS
 
 
 4. Resultados finais
