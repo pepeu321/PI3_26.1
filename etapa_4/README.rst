@@ -85,13 +85,6 @@ Nesta etapa, o percloreto de ferro...
 
 Descrição dos testes de curto-circuito...
 
-
-2.1.7 Apresentação definitiva
------------------------------
-
-Resultados da apresentação definitiva...
-
-
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
 
