@@ -66,8 +66,19 @@ Nesta etapa, o percloreto de ferro...
 2.1.5 Problemática
 ------------------
 
-Descrição da problemática encontrada...
+.. image:: Prob2.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – Tentativa falha de solda*
 
+*Fonte: Autoria própria*
+
+.. image:: Prob1.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – Excesso de temperatura e carbonização da PCI*
+
+*Fonte: Autoria própria*
 
 2.1.6 Verificação de curto-circuito
 -----------------------------------
