@@ -18,52 +18,7 @@ A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, r
 2.1 Fabricação da PCI
 ====================================================================================
 
-
-2.1.1 Transferência térmica
----------------------------
-
-.. image:: Prensa.png
-   :width: 800px
-   :align: center
-*Figura 1  – Prensa térmica*
-
-*Fonte: Autoria própria*
-
-2.1.2 Corrosão
---------------
-
-Nesta etapa, o percloreto de ferro...
-
-
-2.1.3 Furação
--------------
-
-.. image:: FuradeiraESSA.png
-   :width: 800px
-   :align: center
-*Figura 1  – Furadeira de bancada*
-
-*Fonte: Autoria própria*
-
-2.1.4 Solda
------------
-
-.. image:: PCI1.jpeg
-   :width: 800px
-   :align: center
-*Figura 1  – PCI camada inferior*
-
-*Fonte: Autoria própria*
-
-.. image:: PCI2.jpeg
-   :width: 800px
-   :align: center
-*Figura 1  – PCI camada superior*
-
-*Fonte: Autoria própria*
-
-
-2.1.5 Problemática
+2.1.1 Problemática
 ------------------
 
 .. image:: Prob2.jpeg
@@ -77,6 +32,50 @@ Nesta etapa, o percloreto de ferro...
    :width: 800px
    :align: center
 *Figura 1  – Excesso de temperatura e carbonização da PCI*
+
+*Fonte: Autoria própria*
+
+
+2.1.2 Transferência térmica
+---------------------------
+
+.. image:: Prensa.png
+   :width: 800px
+   :align: center
+*Figura 1  – Prensa térmica*
+
+*Fonte: Autoria própria*
+
+2.1.3 Corrosão
+--------------
+
+Nesta etapa, o percloreto de ferro...
+
+
+2.1.4 Furação
+-------------
+
+.. image:: FuradeiraESSA.png
+   :width: 800px
+   :align: center
+*Figura 1  – Furadeira de bancada*
+
+*Fonte: Autoria própria*
+
+2.1.5 Solda
+-----------
+
+.. image:: PCI1.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – PCI camada inferior*
+
+*Fonte: Autoria própria*
+
+.. image:: PCI2.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – PCI camada superior*
 
 *Fonte: Autoria própria*
 
