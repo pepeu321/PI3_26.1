@@ -86,7 +86,7 @@ Nesta etapa, o percloreto de ferro...
 2.2.1 Processo de impressão
 ---------------------------
 
-.. image:: Impressora.jpeg
+.. image:: Impressora.png
    :width: 800px
    :align: center
 *Figura 1  – Impressoras utilizadas para impressão 3D*
