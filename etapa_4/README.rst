@@ -1,4 +1,4 @@
-Etapa 4
+#Etapa 4
 #######
 
 .. contents::
@@ -15,7 +15,7 @@ A etapa 1 ...
 Desenvolvimento
 ***************
 
-Apresentação do protótipo definitivo da placa de circuito impresso confeccionada
+##Apresentação do protótipo definitivo da placa de circuito impresso confeccionada
 ==============
 
 
