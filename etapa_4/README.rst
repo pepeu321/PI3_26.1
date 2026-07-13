@@ -95,10 +95,42 @@ Resultados do gabinete...
 Resultados do sistema...
 
 
-3. Testes
-*********
+2.3 Integração dos módulos de software e firmware final
+=======================================================
 
-Descrição dos testes/validações realizadas.
+
+2.3.1 Firmware definitivo
+-------------------------
+
+Descrição do firmware definitivo...
+
+
+3. Testes de validação
+**********************
+
+
+3.1 Acionamento remoto
+======================
+
+Descrição do teste de acionamento remoto...
+
+
+3.2 Controle de velocidade
+==========================
+
+Descrição do controle de velocidade...
+
+
+3.3 Proteção de sobrecarga
+==========================
+
+Descrição da proteção de sobrecarga...
+
+
+3.4 Inversão de sentido
+=======================
+
+Descrição do teste de inversão de sentido...
 
 
 4. Referências (links/datasheets/livros)
