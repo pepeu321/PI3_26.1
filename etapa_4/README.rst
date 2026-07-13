@@ -56,9 +56,9 @@ Apresentação definitiva
 -----------------------
 
 
-
 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ================================================================================
+
 
 Processo de impressão
 ---------------------
@@ -79,19 +79,14 @@ Apresentação definitiva do gabinete
 Apresentação definitiva do sistema acomodado
 --------------------------------------------
 
+
 Testes
-======
+******
 
 Descrição dos testes/validações realizadas.
-
-
-(Outras subseções se necessário)
-================================
 
 
 Referências (links/datasheets/livros)
 *************************************
 
-- `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
-
-
+* `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
