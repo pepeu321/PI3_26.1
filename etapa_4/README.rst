@@ -9,7 +9,7 @@ Etapa 4
 1. Visão geral
 **************
 
-A etapa 1 ...
+A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, resultando na entrega de um protótipo físico e operacional em estado alfa. Esta fase materializa as características e funcionalidades idealizadas no escopo inicial do projeto. O escopo desta etapa compreende a confecção da placa de circuito impresso (PCI), a manufatura aditiva do gabinete via impressão 3D, a integração do firmware definitivo, a execução dos testes de validação e, por fim, a análise crítica dos resultados obtidos.
 
 
 2. Desenvolvimento
