@@ -184,6 +184,9 @@ FAZER TABELA DE ERRO PARA DIFERENTES VALORES DE VELOCIDADE E CARGA BAIXA
 FAZER TABELA DE ERRO PARA DIFERENTES VALORES DE VELOCIDADE E CARGA ALTA
 FAZER TABELA PARA PESO MÁXIMO E VELOCIDADE PARA ERRO MÁXIMO PERMITIDO
 
+4.2 Melhorias futuras
+===================================================
+
 5. Referências (links/datasheets/livros)
 ****************************************
 
