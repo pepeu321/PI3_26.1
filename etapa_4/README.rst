@@ -16,53 +16,67 @@ Desenvolvimento
 ***************
 
 Apresentação do protótipo definitivo da placa de circuito impresso confeccionada
-==============
+================================================================================
 
 
-*Transferência térmica*
-------------------
+Transferência térmica
+---------------------
 
-*Corrosão*
-------------------
+A técnica de transferência térmica foi utilizada...
 
+
+Corrosão
+--------
+
+Nesta etapa, o percloreto de ferro...
+
+
+Furação
+-------
 
 aaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-*Furação*
-------------------
+
+Solda
+-----
 
 aaaaaaaaaaaaaaaaaaaaaaaaa
 
-*Solda*
-------------------
 
-*Problemática*
-------------------
+Problemática
+------------
 
-*Verificação de curto-circuito*
-------------------
 
-*Apresentação definitiva*
-------------------
+Verificação de curto-circuito
+-----------------------------
+
+
+Apresentação definitiva
+-----------------------
+
 
 
 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
-==============
+================================================================================
 
-_Processo de impressão_
-------------------
+Processo de impressão
+---------------------
 
-*Problemática*
-------------------
 
-*Alterações técnicas no design do gabinete*
-------------------
+Problemática
+------------
 
-*Apresentação definitiva do gabinete*
-------------------
 
-*Apresentação definitiva do sistema acomodado*
-------------------
+Alterações técnicas no design do gabinete
+-----------------------------------------
+
+
+Apresentação definitiva do gabinete
+-----------------------------------
+
+
+Apresentação definitiva do sistema acomodado
+--------------------------------------------
 
 Testes
 ======
