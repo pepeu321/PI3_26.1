@@ -98,7 +98,12 @@ Descrição do processo...
 2.2.2 Problemática
 ------------------
 
-Descrição da problemática...
+.. image:: AcomodacaoRuim.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – Incompatibilidade de espaço e posicionamento ruim das PCIs*
+
+*Fonte: Autoria própria*
 
 
 2.2.3 Alterações técnicas no design do gabinete
