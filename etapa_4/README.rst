@@ -1,12 +1,9 @@
 Etapa 4
 #######
 
-.. role:: preto
-   :class: text-dark
-
 .. contents:: Sumário
    :local:
-   :depth: 3
+   :depth: 2
 
 
 1. Visão geral
@@ -22,64 +19,52 @@ A etapa 1 ...
 ====================================================================================
 
 
-:preto:`2.1.1 Transferência térmica`
-------------------------------------
+**2.1.1 Transferência térmica**
 
 A técnica de transferência térmica foi utilizada...
 
 
-:preto:`2.1.2 Corrosão`
------------------------
+**2.1.2 Corrosão**
 
 Nesta etapa, o percloreto de ferro...
 
 
-:preto:`2.1.3 Furação`
-----------------------
+**2.1.3 Furação**
 
 aaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
-:preto:`2.1.4 Solda`
---------------------
+**2.1.4 Solda**
 
 aaaaaaaaaaaaaaaaaaaaaaaaa
 
 
-:preto:`2.1.5 Problemática`
----------------------------
+**2.1.5 Problemática**
 
 
-:preto:`2.1.6 Verificação de curto-circuito`
---------------------------------------------
+**2.1.6 Verificação de curto-circuito**
 
 
-:preto:`2.1.7 Apresentação definitiva`
---------------------------------------
+**2.1.7 Apresentação definitiva**
 
 
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
 
 
-:preto:`2.2.1 Processo de impressão`
-------------------------------------
+**2.2.1 Processo de impressão**
 
 
-:preto:`2.2.2 Problemática`
----------------------------
+**2.2.2 Problemática**
 
 
-:preto:`2.2.3 Alterações técnicas no design do gabinete`
---------------------------------------------------------
+**2.2.3 Alterações técnicas no design do gabinete**
 
 
-:preto:`2.2.4 Apresentação definitiva do gabinete`
---------------------------------------------------
+**2.2.4 Apresentação definitiva do gabinete**
 
 
-:preto:`2.2.5 Apresentação definitiva do sistema acomodado`
------------------------------------------------------------
+**2.2.5 Apresentação definitiva do sistema acomodado**
 
 
 3. Testes
