@@ -15,8 +15,49 @@ A etapa 1 ...
 Desenvolvimento
 ***************
 
-Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Adicionar pesqusisas realizadas bem como testes realizados.
+Apresentação do protótipo definitivo da placa de circuito impresso confeccionada
+==============
 
+
+Transferência térmica
+------------------
+
+Corrosão
+------------------
+
+Furação
+------------------
+
+Solda
+------------------
+
+Verificação de curto-circuito
+------------------
+
+Problemática
+------------------
+
+Apresentação definitiva
+------------------
+
+
+Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
+==============
+
+Processo de impressão
+------------------
+
+Problemática
+------------------
+
+Alterações técnicas no design do gabinete
+------------------
+
+Apresentação definitiva do gabinete
+------------------
+
+Apresentação definitiva do sistema acomodado
+------------------
 
 Testes
 ======
