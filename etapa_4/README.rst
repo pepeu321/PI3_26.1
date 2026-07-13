@@ -133,7 +133,17 @@ Descrição da proteção de sobrecarga...
 Descrição do teste de inversão de sentido...
 
 
-4. Referências (links/datasheets/livros)
+4. Resultados finais
+********************
+
+
+4.1 Comparação entre resultados esperados e obtidos
+===================================================
+
+Descrição da comparação entre os resultados...
+
+
+5. Referências (links/datasheets/livros)
 ****************************************
 
 * `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
