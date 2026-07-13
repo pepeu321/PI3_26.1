@@ -15,7 +15,7 @@ A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, r
 2. Desenvolvimento
 ******************
 
-2.1 Apresentação do protótipo definitivo da placa de circuito impresso confeccionada
+2.1 Fabricação da PCI
 ====================================================================================
 
 
@@ -79,11 +79,6 @@ Nesta etapa, o percloreto de ferro...
 *Figura 1  – Excesso de temperatura e carbonização da PCI*
 
 *Fonte: Autoria própria*
-
-2.1.6 Verificação de curto-circuito
------------------------------------
-
-Descrição dos testes de curto-circuito...
 
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
