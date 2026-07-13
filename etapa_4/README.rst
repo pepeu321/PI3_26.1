@@ -82,25 +82,23 @@ Nesta etapa, o percloreto de ferro...
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
 
-
-2.2.1 Processo de impressão
----------------------------
-
-.. image:: Impressora.png
-   :width: 800px
-   :align: center
-*Figura 1  – Impressoras utilizadas para impressão 3D*
-
-*Fonte: Autoria própria*
-
-
-2.2.2 Problemática
+2.2.1 Problemática
 ------------------
 
 .. image:: AcomodacaoRuim.jpeg
    :width: 800px
    :align: center
 *Figura 1  – Incompatibilidade de espaço e posicionamento ruim das PCIs*
+
+*Fonte: Autoria própria*
+
+2.2.2 Processo de impressão
+---------------------------
+
+.. image:: Impressora.png
+   :width: 800px
+   :align: center
+*Figura 1  – Impressoras utilizadas para impressão 3D*
 
 *Fonte: Autoria própria*
 
