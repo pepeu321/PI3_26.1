@@ -95,7 +95,7 @@ Resultados do gabinete...
 Resultados do sistema...
 
 
-2.3 Integração dos módulos de software e firmware finais
+2.3 Integração dos módulos de software e firmware final
 =======================================================
 
 
