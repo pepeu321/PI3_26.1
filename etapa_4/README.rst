@@ -112,6 +112,12 @@ Descrição da problemática...
 
 *Fonte: Autoria própria*
 
+.. image:: Case3.png
+   :width: 800px
+   :align: center
+*Figura 1  – Acessórios do gabinete*
+
+*Fonte: Autoria própria*
 
 2.2.4 Apresentação definitiva do gabinete
 -----------------------------------------
