@@ -1,9 +1,10 @@
 Etapa 4
 #######
 
-.. contents::
+.. contents:: Sumário
    :local:
-   :depth: 2
+   :depth: 3
+   :numbered:
 
 
 Visão geral
