@@ -48,7 +48,19 @@ Nesta etapa, o percloreto de ferro...
 2.1.4 Solda
 -----------
 
-aaaaaaaaaaaaaaaaaaaaaaaaa
+.. image:: PCI1.png
+   :width: 800px
+   :align: center
+*Figura 1  – PCI camada inferior*
+
+*Fonte: Autoria própria*
+
+.. image:: PCI2.png
+   :width: 800px
+   :align: center
+*Figura 1  – PCI camada superior*
+
+*Fonte: Autoria própria*
 
 
 2.1.5 Problemática
