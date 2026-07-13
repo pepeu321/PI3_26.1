@@ -44,7 +44,7 @@ Apresentação do protótipo definitivo da placa de circuito impresso confeccion
 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ==============
 
-*Processo de impressão*
+_Processo de impressão_
 ------------------
 
 *Problemática*
