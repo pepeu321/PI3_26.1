@@ -19,10 +19,10 @@ Apresentação do protótipo definitivo da placa de circuito impresso confeccion
 ==============
 
 
-**Transferência térmica
+**Transferência térmica**
 ------------------
 
-*Corrosão*
+**Corrosão**
 ------------------
 
 *Furação*
