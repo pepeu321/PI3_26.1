@@ -22,8 +22,12 @@ A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, r
 2.1.1 Transferência térmica
 ---------------------------
 
-A técnica de transferência térmica foi utilizada...
+.. image:: Prensa.png
+   :width: 800px
+   :align: center
+*Figura 1  – Prensa térmica*
 
+*Fonte: Autoria própria*
 
 2.1.2 Corrosão
 --------------
