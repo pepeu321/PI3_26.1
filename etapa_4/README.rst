@@ -182,7 +182,7 @@ Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55
 2.4 Teste de Controle Remoto do Sistema
 =======================================================
 
-O ponto de partida para realização desta tarefa foi a realização de novos testes para obtenção da planta da esteira, porque a curva obtida na etapa anterior apresentou algumas leituras dos valores de RPM inconsistentes. Foi necessário fazer uma “filtragem” desses valores muito divergentes para obter uma curva de resposta ao degrau mais “limpa”.
+O ponto de partida para realização desta tarefa foi a realização de novos testes para obtenção da planta da esteira, porque a curva obtida na etapa anterior apresentou algumas leituras dos valores de RPM inconsistentes. E Foi necessário fazer uma “filtragem” desses valores muito divergentes para obter uma curva de resposta ao degrau mais “limpa”. Com isso, a obtença de uma nova planta para o motor da esteira é interessante, pois o controle será PID, então ter um modelo mais "exato" da planta ajudará em seu controle.
 
 O processo foi repetido como comentado na etapa anterior: ajuste da fonte com 12V e ligação da mesma para gerar um degrau e coleta dos valores de RPM, com detalhe para um ajuste do período de amostragem com 100ms.
 
@@ -194,6 +194,18 @@ Foram 5 medições, as curvas dos valores obtidos podem ser vistas neste gráfic
 *Figura 1  – Novas medições para obtenção da planta da esteira*
 
 *Fonte: Autoria própria*
+
+Como pode ser visualizado no gráfico anterior, as curvas já são muito melhores, com curvas coincidentes. Ainda há presença de dois pontos com leituras de RPM inconsistentes, mas muito pouco em relação a curva inteira e ainda muito menor com relação a curva obtida na etapa anterior.
+Com a curva da média dessas medições foi encontrada uma curva de resposta ao degrau da esteira, conforme a figura abaixo.
+
+.. image:: Imagens/Nova_Planta.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – Curva da Média das medições e da nova planta obtida*
+
+*Fonte: Autoria própria*
+
+
 
 2.3.1 Firmware definitivo
 -------------------------
