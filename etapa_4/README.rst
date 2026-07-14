@@ -215,7 +215,7 @@ Com a curva da média dessas medições foi encontrada uma curva de resposta ao 
 
 *Fonte: Autoria própria*
 
-Planta obtida: 2,5/(0,305*s +1)
+**Planta obtida: 2,5/(0,305*s +1)**
 
 O tau encontrado é de 0,305 segundos, muito próximo do valor anteriormente encontrado, de 0,291 segundos. Um erro aproximado de 4,6 %.
 
