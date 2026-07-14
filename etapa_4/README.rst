@@ -232,7 +232,7 @@ Embora os requisitos do projeto tenham sido atendidos, foram identificadas diver
 
 As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 
-1. Hardware, layout e fonte de alimentação
+4.2.1 Hardware, layout e fonte de alimentação
 -------------------------
 
 •	Desenvolvimento de fonte chaveada integrada: Substituição das fontes atuais por uma única fonte chaveada robusta com proteções integradas, capaz de se conectar diretamente à rede elétrica comercial (tomadas de até 20 A) e fornecer saídas reguladas de 3,3 V e 5 V (para microcontrolador e sensores), além de barramentos de 12 V e 24 V (para alimentação do driver, ventoinha e LEDs).
@@ -243,7 +243,7 @@ As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 
 •	Conectores e acabamento elétrico profissional: Substituição de fiações sobressalentes por um projeto profissional de chicote elétrico, empregando organizadores, espirais de proteção e conectores industriais com travas de segurança.
 
-2. Eficiência térmica, ruído e iluminação
+4.2.2 Eficiência térmica, ruído e iluminação
 -------------------------
 
 •	Gerenciamento térmico ativo: Adição de uma ventoinha controlada pelo sistema para acelerar a troca de calor e resfriar os componentes de potência (como os drivers), garantindo maior vida útil ao circuito.
@@ -252,7 +252,7 @@ As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 
 •	Adequação às normas de EMI: Investigação e ensaios práticos sobre o ruído de interferência eletromagnética (EMI) gerado pelo circuito chaveado e pelo motor, seguidos de ações corretivas (filtros, blindagens e planos de terra adequados) para conformidade com as normas vigentes.
 
-3. Sensoriamento, proteções e algoritmos de controle
+4.2.3 Sensoriamento, proteções e algoritmos de controle
 -------------------------
 
 •	Análise de grandezas: Implementação de algoritmos matemáticos no firmware para estimar e monitorar grandezas mecânicas e elétricas como torque instantâneo, peso total carregado, potência média e horas de operação.
@@ -263,7 +263,7 @@ As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 
 •	Controle avançado e preditivo: Substituição de malhas clássicas de controle por malhas de controle preditivo, visando respostas mais dinâmicas e menor sobressinal diante de perturbações de carga.
 
-4. Conectividade, interface e telemetria
+4.2.4 Conectividade, interface e telemetria
 -------------------------
 
 •	Telemetria de dados: Criação de um sistema de geração e envio de logs de eventos e falhas em tempo real para armazenamento e visualização do usuário.
