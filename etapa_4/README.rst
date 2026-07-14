@@ -188,7 +188,7 @@ O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este
 *Fonte: Autoria própria*
 
 .. image:: Imagens/SobrecargaGIF_2.gif
-   :width: 1000px
+   :width: 400px
    :align: center
 *Figura 1  – Gif do Teste de Sobrecarga, porém a resolução é baixa para visualizar o terminal.*
 
