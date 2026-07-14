@@ -493,9 +493,22 @@ Além disso, foi configurado o filtro de glitch do periférico PCNT por meio do 
 Por fim, caso nenhuma variação seja detectada na contagem do PCNT (delta = 0), o código verifica o tempo decorrido desde o último pulso. Se esse intervalo ultrapassar 2 segundos, a variável rpm é atualizada para zero, indicando que o motor está parado.
 
 
+2.4.4 Implementação das Tasks para Controle Remoto do Sistema
+---------------------------
 
+O funcionamento do sistema foi dividido em três tarefas principais, executadas concorrentemente pelo FreeRTOS: uma responsável pela medição da velocidade do motor, outra pela execução do controlador PI e uma terceira pela comunicação remota via protocolo CoAP.
 
+**Medição da velocidade(task_encoder):**
 
+É responsável pela atualização da velocidade do motor. A cada 10 ms, essa tarefa chama a função wheel_UpdateRPM(), que realiza a leitura do encoder, calcula o tempo entre pulsos consecutivos e atualiza o valor da velocidade em RPM. Dessa forma, as demais tarefas sempre têm acesso a uma medição atualizada da velocidade da esteira.
+
+**Controlador(task_controle_PI):**
+
+É responsável pela execução do controlador PI. A cada 100 ms, a tarefa obtém a velocidade medida, calcula o erro em relação à referência recebida via rede e determina o novo valor de PWM a ser aplicado ao motor. O algoritmo também realiza a limitação do sinal de controle (DUTY_MIN e DUTY_MAX), aplica um valor mínimo de PWM para garantir o movimento do motor (DUTY_MIN_MOVIMENTO) e reinicializa a ação integral quando a referência de velocidade é igual a zero.
+
+**Comunicação(coap_server_task):**
+
+É responsável pela comunicação remota utilizando o protocolo CoAP. Essa tarefa é iniciada somente após a conexão do ESP32 à rede Wi-Fi e disponibiliza dois recursos: /vel, utilizado para enviar uma nova referência de velocidade (POST) e consultar o estado atual do sistema (GET), e /dir, responsável por alterar o sentido de rotação do motor. Sempre que uma nova referência ou direção é recebida, as variáveis do controlador são atualizadas para refletir o novo estado de operação.
 
 2.3.1 Firmware definitivo
 -------------------------
