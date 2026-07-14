@@ -63,6 +63,8 @@ A transferência térmica foi realizada empregando papel fotográfico (glossy), 
 
 Com o circuito desenhado e protegido pelas trilhas de toner, a placa foi submetida ao processo de corrosão química por meio da imersão em uma solução de percloreto de ferro. Essa etapa, que durou cerca de 1 hora, removeu o cobre exposto e preservou apenas as regiões protegidas pela tinta. Finalizado o ataque químico, a placa foi lavada abundantemente em água corrente para neutralizar o agente corrosivo e devidamente secada. Toda a tinta protetiva restante foi removida novamente com lã de aço para expor o cobre limpo. Por fim, o circuito foi levado à furadeira de bancada, onde se utilizou broca de 0,8 mm para os furos de menor diâmetro e broca de 3,0 mm para os furos de fixação e maior diâmetro, deixando a placa de fenolite perfeitamente usinada e pronta para a etapa de soldagem dos componentes eletrônicos.
 
+O processo completo descrito pode ser visto na Figura 3.
+
 
 .. image:: ProcessoPCI.png
    :width: 800px
