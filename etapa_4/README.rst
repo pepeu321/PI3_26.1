@@ -228,6 +228,50 @@ FAZER TABELA PARA PESO MÁXIMO E VELOCIDADE PARA ERRO MÁXIMO PERMITIDO
 4.2 Melhorias futuras
 ===================================================
 
+Embora os requisitos do projeto tenham sido atendidos, foram identificadas diversas oportunidades de aprimoramento técnico e funcional. Essas propostas visam otimizar a eficiência, a segurança, o controle e a robustez do sistema, aproximando o protótipo atual de um produto final comercializável.
+
+As melhorias sugeridas foram divididas em quatro pilares fundamentais:
+
+1. Hardware, layout e fonte de alimentação
+-------------------------
+
+•	Desenvolvimento de fonte chaveada integrada: Substituição das fontes atuais por uma única fonte chaveada robusta com proteções integradas, capaz de se conectar diretamente à rede elétrica comercial (tomadas de até 20 A) e fornecer saídas reguladas de 3,3 V e 5 V (para microcontrolador e sensores), além de barramentos de 12 V e 24 V (para alimentação do driver, ventoinha e LEDs).
+
+•	Manufatura industrial da PCI: Terceirização da fabricação da Placa de Circuito Impresso por empresas especializadas, reduzindo imperfeições de pistas e garantindo furações metalizadas (PTH) com acabamento profissional (máscara de solda e legenda).
+
+•	Otimização de layout e integração com microcontrolador: Redesenho com foco em compacidade física e integração do microcontrolador diretamente na placa, utilizando componentes de montagem em superfície (SMD) na sua totalidade para viabilizar um projeto de face única.
+
+•	Conectores e acabamento elétrico profissional: Substituição de fiações sobressalentes por um projeto profissional de chicote elétrico, empregando organizadores, espirais de proteção e conectores industriais com travas de segurança.
+
+2. Eficiência térmica, ruído e iluminação
+-------------------------
+
+•	Gerenciamento térmico ativo: Adição de uma ventoinha controlada pelo sistema para acelerar a troca de calor e resfriar os componentes de potência (como os drivers), garantindo maior vida útil ao circuito.
+
+•	Sinalização visual de alto brilho: Implementação de LEDs de alto brilho no gabinete para iluminação e visualização clara do funcionamento interno do sistema.
+
+•	Adequação às normas de EMI: Investigação e ensaios práticos sobre o ruído de interferência eletromagnética (EMI) gerado pelo circuito chaveado e pelo motor, seguidos de ações corretivas (filtros, blindagens e planos de terra adequados) para conformidade com as normas vigentes.
+
+3. Sensoriamento, proteções e algoritmos de controle
+-------------------------
+
+•	Análise de grandezas: Implementação de algoritmos matemáticos no firmware para estimar e monitorar grandezas mecânicas e elétricas como torque instantâneo, peso total carregado, potência média e horas de operação.
+
+•	Proteção por limite de corrente: Integração da leitura da corrente fornecida pelo driver com um mecanismo de segurança via by-pass por software, que limite ou interrompa a operação do motor caso uma sobrecorrente perigosa seja detectada.
+
+•	Ajuste em baixas rotações: Ajuste específico do perfil de controle para garantir a estabilidade e o torque da esteira em velocidades excessivamente baixas (inferiores a 20 RPM).
+
+•	Controle avançado e preditivo: Substituição de malhas clássicas de controle por malhas de controle preditivo, visando respostas mais dinâmicas e menor sobressinal diante de perturbações de carga.
+
+4. Conectividade, interface e telemetria
+-------------------------
+
+•	Telemetria de dados: Criação de um sistema de geração e envio de logs de eventos e falhas em tempo real para armazenamento e visualização do usuário.
+
+•	Controle remoto multipataforma: Desenvolvimento de uma aplicação móvel para acesso, monitoramento e controle dos parâmetros da esteira por meio de dispositivos móveis.
+
+•	Conectividade de longa distância: Expansão da interface de rede local para uma arquitetura em nuvem (IoT), permitindo o acionamento e supervisão do sistema de forma remota a partir de qualquer rede externa.
+
 5. Referências (links/datasheets/livros)
 ****************************************
 
