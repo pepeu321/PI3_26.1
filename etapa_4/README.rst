@@ -175,7 +175,25 @@ O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este
    :align: center
 *Figura 1  – Teste de Sobrecarga*
 
+*Fonte: Autoria própria*
+
 Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM (o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição do RPM remoto serão vistos a seguir.
+
+2.4 Teste de Controle Remoto do Sistema
+=======================================================
+
+O ponto de partida para realização desta tarefa foi a realização de novos testes para obtenção da planta da esteira, porque a curva obtida na etapa anterior apresentou algumas leituras dos valores de RPM inconsistentes. Foi necessário fazer uma “filtragem” desses valores muito divergentes para obter uma curva de resposta ao degrau mais “limpa”.
+
+O processo foi repetido como comentado na etapa anterior: ajuste da fonte com 12V e ligação da mesma para gerar um degrau e coleta dos valores de RPM, com detalhe para um ajuste do período de amostragem com 100ms.
+
+Foram 5 medições, as curvas dos valores obtidos podem ser vistas neste gráfico:
+
+.. image:: Imagens/Medicoes_planta.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – Novas medições para obtenção da planta da esteira*
+
+*Fonte: Autoria própria*
 
 2.3.1 Firmware definitivo
 -------------------------
