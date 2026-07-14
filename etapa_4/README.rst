@@ -224,6 +224,26 @@ O tau encontrado é de 0,305 segundos, muito próximo do valor anteriormente enc
 
 Isso indica que nossas observações sobre as inconsistências nas leituras e a filtragem desses valores estava correta. 
 
+2.4.2 No Projeto de Controle PID
+---------------------------
+
+Foi definido um novo controle PID com sobressinal de 10%, e tempo de acomodação de 0,4s. 
+
+.. image:: Imagens/Nova_Planta.jpeg
+   :width: 800px
+   :align: center
+*Figura 1  – Curva de resposta ao degrau da planta original e com ação do PID*
+
+Conforme o gráfico acima, o controle PID melhora bastante o tempo de resposta e o erro de regime permanente. Esse projeto fornece os valores bases de Kp e Ki, que podem ser ajustados posteriormente no código para ajustar a ação de controle posteriormente, um ajuste fino. 
+
+**Kp = 2,04**
+**Ki = 34,91**
+
+Estes valores e gráficos foram obtidos com o seguinte script matlab:
+
+
+*Fonte: Autoria própria*
+
 
 
 2.3.1 Firmware definitivo
