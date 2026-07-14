@@ -241,6 +241,63 @@ Conforme o gráfico acima, o controle PID melhora bastante o tempo de resposta e
 
 Estes valores e gráficos foram obtidos com o seguinte script matlab:
 
+.. code-block:: c
+
+   clear
+   clc
+   close all
+   
+   s = tf('s');
+   
+   %% Planta
+   G = 2.5/(0.305*s+1);
+   
+   %% Especificações
+   Mp = 0.10;
+   Ts = 0.40;
+   
+   zeta = -log(Mp)/sqrt(pi^2+log(Mp)^2);
+   wn = 4/(zeta*Ts);
+   
+   %% Projeto do controlador
+   Kd = 0;
+   
+   Kp = (2*zeta*wn*(0.305+2.5*Kd)-1)/2.5;
+   Ki = ((wn^2)*(0.305+2.5*Kd))/2.5;
+   
+   C = pid(Kp,Ki,Kd);
+   
+   %% Exibir ganhos do PID
+   
+   fprintf('\n==============================\n');
+   fprintf('GANHOS DO CONTROLADOR PID\n');
+   fprintf('==============================\n');
+   fprintf('Kp = %.6f\n', Kp);
+   fprintf('Ki = %.6f\n', Ki);
+   fprintf('Kd = %.6f\n', Kd);
+   fprintf('------------------------------\n');
+   fprintf('zeta = %.6f\n', zeta);
+   fprintf('wn = %.6f rad/s\n', wn);
+   fprintf('==============================\n\n');
+   
+   %% Malha fechada
+   T = feedback(C*G,1);
+   
+   %% Comparação
+   
+   figure
+   step(G,'b',T,'r',2)
+   grid on
+   legend('Planta','Sistema com PID','Location','southeast')
+   title('Comparação das respostas ao degrau')
+   xlabel('Tempo (s)')
+   ylabel('Saída')
+   
+   %% Informações da resposta
+   
+   disp('Informações da resposta do sistema controlado:')
+   stepinfo(T)
+
 
 *Fonte: Autoria própria*
 
