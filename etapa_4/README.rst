@@ -166,6 +166,8 @@ Esse teste foi feito para conferir se o driver estava funcionando corretamente a
 *Fonte: Autoria própria*
 
 O teste de sobrecarga foi feito adicionando pesos à esteira juntamente com o código de controle e monitoramento remoto da velocidade da esteira, o intuito deste teste foi verificar o comportamento da esteira quando é exigida sua potência máxima. Então foi definida a velocidade máxima de 60 RPM, e com a adição de pesos o que ocorreu foi o aumento da corrente na fonte de alimentação para manter essa velocidade. Como a fonte de alimentação estava com proteção para 2A, funcionou normalmente. Podendo ser visualizado nas 4 imagens seguintes que representam a medição do RPM da esteira sem peso e a medição do RPM após a adição do peso excedente.
+Essas 4 imagens foram capturas do vídeo que mostra esse comportamento. O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este link: https://github.com/pepeu321/PI3_26.1/blob/main/etapa_4/Imagens/Sobrecarga.mp4 
+
 
 .. image:: Imagens/Sobrecarga.jpg
    :width: 1000px
