@@ -508,7 +508,13 @@ O funcionamento do sistema foi dividido em três tarefas principais, executadas 
 
 **Comunicação(coap_server_task):**
 
-É responsável pela comunicação remota utilizando o protocolo CoAP. Essa tarefa é iniciada somente após a conexão do ESP32 à rede Wi-Fi e disponibiliza dois recursos: /vel, utilizado para enviar uma nova referência de velocidade (POST) e consultar o estado atual do sistema (GET), e /dir, responsável por alterar o sentido de rotação do motor. Sempre que uma nova referência ou direção é recebida, as variáveis do controlador são atualizadas para refletir o novo estado de operação.
+É responsável pela comunicação remota utilizando o protocolo CoAP. Essa tarefa é iniciada somente após o ESP32 estabelecer conexão com a rede Wi-Fi, criando um servidor CoAP que disponibiliza dois recursos: /vel e /dir.
+
+O recurso /vel permite que o usuário envie, por meio de uma requisição POST, a velocidade de referência do controlador em RPM. Ao receber esse valor, a variável ref_rpm é atualizada e passa a ser utilizada pela tarefa de controle PI. Caso a referência enviada seja 0 RPM, o controlador é reinicializado, a ação integral é zerada e o motor é desligado. Além disso, por meio de uma requisição GET, o usuário pode consultar o estado atual do sistema. A resposta contém a velocidade de referência, a velocidade medida pelo encoder, o erro de controle, o valor do PWM aplicado ao motor (duty cycle) e o sentido atual de rotação.
+
+O recurso /dir permite alterar o sentido de rotação do motor através de uma requisição POST, aceitando os comandos fwd (rotação para frente) e rev (rotação reversa). Sempre que a direção é alterada, o motor é temporariamente interrompido e as variáveis do controlador são reinicializadas, evitando que o integrador interfira na mudança de sentido.
+
+Durante a execução, o terminal serial também apresenta informações úteis para depuração, como o endereço IP obtido pelo ESP32 ao conectar-se à rede Wi-Fi e a confirmação da velocidade de referência recebida sempre que uma nova requisição POST é enviada ao recurso /vel.
 
 
 **main.c**
