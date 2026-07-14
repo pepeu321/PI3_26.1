@@ -62,7 +62,7 @@ Com os componentes posicionados e pressionados por meio de uma pinça, a placa f
    :align: center
 *Figura 3  – Transferência térmica, corrosão e furação*
 
-*Fonte: Autoria própria*
+*Fonte: Figura gerada por inteligência artificial*
 
 2.1.3 Solda
 -----------
