@@ -490,7 +490,7 @@ O que se destaca nesse código é a mudança na estratégia de cálculo da veloc
 
 Além disso, foi configurado o filtro de glitch do periférico PCNT por meio do parâmetro max_glitch_ns, de forma que pulsos incompatíveis com a velocidade máxima de operação da esteira (considerando uma margem de aproximadamente 70 RPM) sejam descartados, reduzindo a influência de ruídos na medição.
 
-Por fim, caso nenhuma variação seja detectada na contagem do PCNT (delta == 0), o código verifica o tempo decorrido desde o último pulso. Se esse intervalo ultrapassar 2 segundos, a variável rpm é atualizada para zero, indicando que o motor está parado.
+Por fim, caso nenhuma variação seja detectada na contagem do PCNT (delta = 0), o código verifica o tempo decorrido desde o último pulso. Se esse intervalo ultrapassar 2 segundos, a variável rpm é atualizada para zero, indicando que o motor está parado.
 
 
 
