@@ -229,7 +229,7 @@ Isso indica que nossas observações sobre as inconsistências nas leituras e a 
 
 Foi definido um novo controle PID com sobressinal de 10%, e tempo de acomodação de 0,4s. 
 
-.. image:: Imagens/Nova_Planta.jpeg
+.. image:: Imagens/ControlePID.jpeg
    :width: 800px
    :align: center
 *Figura 1  – Curva de resposta ao degrau da planta original e com ação do PID*
