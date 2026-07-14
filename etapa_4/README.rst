@@ -34,6 +34,9 @@ A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, r
 2.1.1 Problemática
 ------------------
 
+O processo de soldagem dos drivers SMD BTN8982TA constituiu o primeiro desafio na montagem da PCI. Inicialmente, a baixa aderência do terminal de potência — que atua também como base de dissipação térmica — exigiu a aplicação de um volume excessivo de solda para assegurar o contato elétrico.
+Durante a soldagem individual dos demais pinos, realizada sob aplicação de fluxo, ocorreu um curto-circuito entre os pinos 6 (IS) e 7 (VCC). Como a remoção do curto-circuito não foi bem-sucedida, os componentes foram removidos para a realização de uma nova tentativa de soldagem. Ressalta-se que o layout da PCI não previu a implementação de vias de alívio térmico sob o pino de potência. A Figura 1 ilustra o relato da primeira soldagem realizada.
+
 .. image:: Prob2.jpeg
    :width: 800px
    :align: center
