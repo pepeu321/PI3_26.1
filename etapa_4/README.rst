@@ -187,14 +187,14 @@ O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este
 
 *Fonte: Autoria própria*
 
+Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM (o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição do RPM remoto serão vistos a seguir. E abaixo o gif do que foi dito anteriormente, por conta da limitação de tamanhos de 25MB para arquivos, o gif com alta resolução foi impedido de ser colocado no repositório. 
+
 .. image:: Imagens/SobrecargaGIF_2.gif
    :width: 400px
    :align: center
 *Figura 1  – Gif do Teste de Sobrecarga, porém a resolução é baixa para visualizar o terminal.*
 
 *Fonte: Autoria própria*
-
-Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM (o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição do RPM remoto serão vistos a seguir.
 
 
 2.4 Teste de Controle Remoto do Sistema
