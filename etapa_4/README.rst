@@ -310,9 +310,9 @@ Para vencer este problema foi necessário mudar a estratégia de leitura dos RPM
 
 Demonstrando: 
 
-Meia volta por segundo -> 10 pulsos por segundo
+Meia volta por segundo = 10 pulsos por segundo
 
-Período de amostragem -> 100 ms
+Período de amostragem = 100 ms
 
 Número de amostras em 1 segundo -> 10 amostras
 
