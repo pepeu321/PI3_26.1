@@ -183,11 +183,15 @@ O teste de sobrecarga foi feito adicionando pesos à esteira juntamente com o c�
 
 .. raw:: html
 
-   <p align="center">
+   <div align="center">
      <video src="etapa_4/Imagens/Sobrecarga.mp4" width="100%" controls></video>
-   </p>
-
-.. align:: center
+     <p style="margin-top: 10px; margin-bottom: 5px;">
+       <em>Figura 1 – Funcionamento do driver ao ligar na fonte de alimentação</em>
+     </p>
+     <p>
+       <em>Fonte: Autoria própria</em>
+     </p>
+   </div>
 
 *Figura 1 – Funcionamento do driver ao ligar na fonte de alimentação*
 
