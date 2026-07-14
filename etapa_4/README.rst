@@ -146,8 +146,33 @@ Resultados do gabinete...
 Resultados do sistema...
 
 
-2.3 Integração dos módulos de software e firmware final
+2.3 Teste de Sobrecarga e Acionamento do Motor
 =======================================================
+
+O teste de acionamento do motor utilizando o driver confeccionado ocorreu com sucesso. Para realizar este teste foi utilizada uma fonte de bancada com duas tensões independentes, 24V e 5V, ambas com limitações de 2A. 
+
+.. image:: Imagens/Fonte_Bancada.jpg
+   :width: 400px
+   :align: center
+*Figura 1  – Configuração da Fonte de Bancada*
+
+*Fonte: Autoria própria*
+
+.. image:: Imagens/Driver.jpg
+   :width: 400px
+   :align: center
+*Figura 1  – Em destaque o Driver*
+
+*Fonte: Autoria própria*
+
+Esse teste foi feito para conferir se o driver estava funcionando corretamente ao ligar na fonte de alimentação. E funcionou, como pode ser visto na imagem abaixo:
+
+.. image:: Imagens/acionamento_drive.gif
+   :width: 800px
+   :align: center
+*Figura 1  – Funcionamento do driver ao ligar na fonte de alimentação*
+
+*Fonte: Autoria própria*
 
 
 2.3.1 Firmware definitivo
