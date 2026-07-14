@@ -42,6 +42,8 @@ Durante a soldagem individual dos demais pinos, realizada sob aplicação de flu
    :align: center
 *Figura 1  – Tentativa falha de solda*
 
+Com os componentes posicionados e pressionados por meio de uma pinça, a placa foi colocada na mesa de solda a uma temperatura de até 320 °C. Embora a soldagem inicial tenha sido bem-sucedida, uma inspeção visual detalhada identificou um curto-circuito entre os pinos 1 (GND) e 2 (PWM). Durante a tentativa de correção desse curto diretamente na mesa aquecida, a placa sofreu superaquecimento. A temperatura excedeu o limite suportado pelo substrato de fibra de vidro (temperatura de transição vítrea), resultando na carbonização da placa, como ilustrado na Figura 2.
+
 *Fonte: Autoria própria*
 
 .. image:: Prob1.jpeg
