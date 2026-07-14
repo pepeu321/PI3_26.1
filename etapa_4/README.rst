@@ -165,7 +165,7 @@ O teste de acionamento do motor utilizando o driver confeccionado ocorreu com su
 
 *Fonte: Autoria própria*
 
-Esse teste foi feito para conferir se o driver estava funcionando corretamente ao ligar na fonte de alimentação. E funcionou, como pode ser visto na imagem abaixo:
+Esse teste foi feito para conferir se o driver estava funcionando corretamente ao ligar na fonte de alimentação. E funcionou, a esteira foi acionada pelo driver, como pode ser visto no gif abaixo:
 
 .. image:: Imagens/acionamento_drive.gif
    :width: 800px
