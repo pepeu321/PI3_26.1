@@ -73,7 +73,7 @@ O processo completo descrito pode ser visto na Figura 3.
 
 *Fonte: Figura gerada por inteligência artificial*
 
-2.1.3 Solda
+2.1.3 Processo de soldagem
 -----------
 
 O processo de soldagem foi iniciado pela fixação dos dispositivos de montagem em superfície (SMD). Para essa etapa, utilizou-se uma estação de ar quente (hot air), ferro de solda com ponta fina, lupa de bancada, pasta de solda e fluxo de solda em abundância. Como todas as trilhas e terminais já haviam sido previamente estanhados, a transferência de calor ocorreu de forma rápida e localizada. O procedimento foi executado com cautela, evitando o estresse térmico do substrato de fenolite e prevenindo a formação de curtos-circuitos entre os terminais dos circuitos integrados. Na sequência, realizou-se a soldagem dos componentes de furo passante (PTH) com sucesso, seguida da remoção de seus respectivos terminais. Para finalizar a montagem física, realizou-se a limpeza completa da placa com álcool isopropílico para a eliminação de resíduos de fluxo.
@@ -83,6 +83,8 @@ A disposição dos componentes foi planejada estrategicamente devido às limita�
 Durante o processo, identificou-se o rompimento de uma das trilhas de controle no ponto de transição da face inferior para a face superior. A continuidade elétrica do circuito foi prontamente restabelecida por meio de um by-pass, soldando-se um condutor de cobre diretamente entre as extremidades íntegras da trilha interrompida. Devido à ausência de processos industriais para a metalização de furos nas dependências do IFSC, a interligação das camadas (vias) foi realizada de forma manual. Esse método gerou pequenas sobressalências de solda e fios nas faces da placa, sem prejuízo à integridade do circuito.
 
 Visando garantir a robustez necessária os barramentos de potência foram reforçados com condutores de cobre de seção transversal de 4mm soldados ao longo de cada uma das faces da placa. A maioria dos componentes também foram soldados em ambas as extremidades para maximizar a área de contato elétrico. Já as trilhas de controle foram confeccionadas utilizando condutores extraídos de cabos de rede de par trançado (UTP), soldados seguindo a mesma metodologia das vias de potência. As trilhas de uso futuro foram preservadas isoladas e não receberam deposição de solda ou componentes. Por fim, a conexão física para a entrada e saída de potência foi solucionada com a implementação de parafusos de rosca M3 com porcas, atuando como bornes de fixação mecânica. Essa solução apresentou resistência de contato extremamente baixa (na ordem de dezenas de miliohms), garantindo que não houvesse quedas de tensão significativas ou dissipação excessiva por efeito Joule, validando a eficácia e a segurança do sistema sob operação.
+
+O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. Na mesma figura Uma legenda identifica cada uma dos elementos discutidos.
 
 .. image:: PCIsolda.png
    :width: 800px
