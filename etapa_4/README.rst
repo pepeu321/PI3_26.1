@@ -84,7 +84,7 @@ Durante o processo, identificou-se o rompimento de uma das trilhas de controle n
 
 Visando garantir a robustez necessária os barramentos de potência foram reforçados com condutores de cobre de seção transversal de 4mm soldados ao longo de cada uma das faces da placa. A maioria dos componentes também foram soldados em ambas as extremidades para maximizar a área de contato elétrico. Já as trilhas de controle foram confeccionadas utilizando condutores extraídos de cabos de rede de par trançado (UTP), soldados seguindo a mesma metodologia das vias de potência. As trilhas de uso futuro foram preservadas isoladas e não receberam deposição de solda ou componentes. Por fim, a conexão física para a entrada e saída de potência foi solucionada com a implementação de parafusos de rosca M3 com porcas, atuando como bornes de fixação mecânica. Essa solução apresentou resistência de contato extremamente baixa (na ordem de dezenas de miliohms), garantindo que não houvesse quedas de tensão significativas ou dissipação excessiva por efeito Joule, validando a eficácia e a segurança do sistema sob operação.
 
-O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. Na mesma figura Uma legenda identifica cada uma dos elementos discutidos.
+O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. Na mesma Figura uma legenda identifica cada uma dos elementos discutidos.
 
 .. image:: PCIsolda.png
    :width: 800px
