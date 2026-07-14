@@ -49,38 +49,22 @@ Com os componentes posicionados e pressionados por meio de uma pinça, a placa f
 .. image:: Prob1.jpeg
    :width: 800px
    :align: center
-*Figura 1  – Excesso de temperatura e carbonização da PCI*
+*Figura 2  – Excesso de temperatura e carbonização da PCI*
 
 *Fonte: Autoria própria*
 
 
-2.1.2 Transferência térmica
+2.1.2 Transferência térmica, corrosão e furação
 ---------------------------
 
 .. image:: ProcessoPCI.png
    :width: 800px
    :align: center
-*Figura 1  – Prensa térmica*
+*Figura 3  – Transferência térmica, corrosão e furação*
 
 *Fonte: Autoria própria*
 
-2.1.3 Corrosão
---------------
-
-Nesta etapa, o percloreto de ferro...
-
-
-2.1.4 Furação
--------------
-
-.. image:: FuradeiraESSA.png
-   :width: 800px
-   :align: center
-*Figura 1  – Furadeira de bancada*
-
-*Fonte: Autoria própria*
-
-2.1.5 Solda
+2.1.3 Solda
 -----------
 
 .. image:: PCI1.jpeg
