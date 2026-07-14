@@ -316,6 +316,35 @@ Período de amostragem -> 100 ms
 
 Número de amostras em 1 segundo -> 10 amostras
 
+**Linha do tempo (1 segundo)**
+.. code-block:: c
+   Tempo (ms)
+   0      100    200    300    400    500    600    700    800    900   1000
+   |-------|------|------|------|------|------|------|------|------|------|
+   
+   Período de amostragem = 100 ms
+   Número de amostras = 10
+
+**Situação Ideal** 
+.. code-block:: c
+   Contagem de pulsos por amostra
+   
+   Amostra:   1   2   3   4   5   6   7   8   9   10
+              |   |   |   |   |   |   |   |   |    |
+   Pulsos:    1   1   1   1   1   1   1   1   1    1
+   
+   Total = 10 pulsos
+
+**Situação Real**
+.. code-block:: c
+   Contagem de pulsos por amostra
+   
+   Amostra:   1   2   3   4   5   6   7   8   9   10
+              |   |   |   |   |   |   |   |   |    |
+   Pulsos:    1   0   2   1   1   0   2   1   1    1
+   
+   Total = 10 pulsos
+
 Contagem esperada a cada amostra -> 1 1 1 1 1 1 1 1 1 1
 
 Contagem que pode ocorrer -> 1 0 2 1 1 0 2 ...
