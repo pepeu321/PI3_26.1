@@ -192,7 +192,7 @@ Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55
 2.4 Teste de Controle Remoto do Sistema
 =======================================================
 
-O ponto de partida para realização desta tarefa foi a realização de novos testes para obtenção da planta da esteira, porque a curva obtida na etapa anterior apresentou algumas leituras dos valores de RPM inconsistentes. E Foi necessário fazer uma “filtragem” desses valores muito divergentes para obter uma curva de resposta ao degrau mais “limpa”. Com isso, a obtença de uma planta mais "extata" para o motor da esteira é interessante, pois o controle será PID, então ter um modelo mais "exato" da planta ajudará em seu controle.
+O ponto de partida para realização desta tarefa foi a realização de novos testes para obtenção da planta da esteira, porque a curva obtida na etapa anterior apresentou algumas leituras dos valores de RPM inconsistentes. E Foi necessário fazer uma “filtragem” desses valores muito divergentes para obter uma curva de resposta ao degrau mais “limpa”. Com isso, a obtença da nova planta para o motor da esteira é interessante, pois o controle será PID, então ter um modelo mais "exato" da planta ajudará em seu controle.
 
 2.4.1 Obtenção de uma planta melhor
 ---------------------------
