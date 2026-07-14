@@ -234,6 +234,8 @@ Foi definido um novo controle PID com sobressinal de 10%, e tempo de acomodaçã
    :align: center
 *Figura 1  – Curva de resposta ao degrau da planta original e com ação do PID*
 
+*Fonte: Autoria própria*
+
 Conforme o gráfico acima, o controle PID melhora bastante o tempo de resposta e o erro de regime permanente. Esse projeto fornece os valores bases de Kp e Ki, que podem ser ajustados posteriormente no código para ajustar a ação de controle posteriormente, um ajuste fino. 
 
 **Kp = 2,04**
@@ -300,7 +302,7 @@ Estes valores e gráficos foram obtidos com o seguinte script matlab:
    stepinfo(T)
 
 
-*Fonte: Autoria própria*
+
 
 
 
