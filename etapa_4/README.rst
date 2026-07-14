@@ -170,7 +170,7 @@ O teste de sobrecarga foi feito adicionando pesos à esteira juntamente com o c�
    :align: center
 *Figura 1  – Teste de Sobrecarga*
 
-Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM(o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição de RPM remoto serão vistos a seguir.
+Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM (o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição do RPM remoto serão vistos a seguir.
 
 2.3.1 Firmware definitivo
 -------------------------
