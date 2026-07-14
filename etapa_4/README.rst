@@ -67,17 +67,10 @@ Com os componentes posicionados e pressionados por meio de uma pinça, a placa f
 2.1.3 Solda
 -----------
 
-.. image:: PCI1.jpeg
+.. image:: PCIsolda.png
    :width: 800px
    :align: center
-*Figura 1  – PCI camada inferior*
-
-*Fonte: Autoria própria*
-
-.. image:: PCI2.jpeg
-   :width: 800px
-   :align: center
-*Figura 1  – PCI camada superior*
+*Figura 1  – PCI após solda da camada inferior e superior*
 
 *Fonte: Autoria própria*
 
