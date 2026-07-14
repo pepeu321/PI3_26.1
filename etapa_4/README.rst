@@ -224,7 +224,7 @@ O tau encontrado é de 0,305 segundos, muito próximo do valor anteriormente enc
 
 Isso indica que nossas observações sobre as inconsistências nas leituras e a filtragem desses valores estava correta. 
 
-2.4.2 No Projeto de Controle PID
+2.4.2 Novo Projeto de Controle PID
 ---------------------------
 
 Foi definido um novo controle PID com sobressinal de 10%, e tempo de acomodação de 0,4s. 
@@ -301,9 +301,24 @@ Estes valores e gráficos foram obtidos com o seguinte script matlab:
    disp('Informações da resposta do sistema controlado:')
    stepinfo(T)
 
+2.4.3 Melhora na leitura do RPM
+---------------------------
 
+Uma parte crucial para o funcionamento correto da ação de controle é a leitura dos RPM's, porque leituras inconsistentes farão com que a ação de controle sempre "atue", ou seja, o sistema ficará sempre gerando respostas ao degrau para obter o rpm desejado. Nunca se estabelecerá uma velocidade constante. 
 
+Para vencer este problema foi necessário mudar a estratégia de leitura dos RPM's. No código anterior a contagem do RPM depende do número de pulsos contados em um intervalo de tempo, mas como a velocidade da esteira é relativamente baixa, de 0 a 60 RPM. É bem possível que haja saltos na contagem de pulsos nesse período, por exemplo: para uma velocidade de 30 RPM(meia volta por segundo), como o encoder utilizado tem 20 ranhuras, meia volta significa 10 ranhuras/pulsos. Então para a velocidade de meia volta por segundo, em 1 segundo caso o período de amostragem utilizado for 100 ms, o que se espera a cada amostragem é que seja contabilizado exatamente 1 pulso. Porém isso pode não acontecer, em algumas leituras será contabilizado 0, em outras 2, e não necessariamente 1 pulso em cada amostragem.
 
+Demonstrando: 
+
+Meia volta por segundo -> 10 pulsos por segundo
+Período de amostragem -> 100 ms
+Número de amostras em 1 segundo -> 10 amostras
+Contagem esperada a cada amostra -> 1 1 1 1 1 1 1 1 1 1
+Contagem que pode ocorrer -> 1 0 2 1 1 0 2 ...
+
+Esse problema é ainda maior com períodos de amostragem menores, porque serão contabilizados muitos 0's. Então a estratégia adotada para vencer este problema foi contar o tempo do intervalo entre os pulsos. A velocidade não é alta(0 a 60 RPM), então não comprometerá o hardware nessa contagem de tempo.
+
+O código wheel.c e wheel.h precisou ser alterado: 
 
 
 2.3.1 Firmware definitivo
