@@ -70,9 +70,9 @@ Com os componentes posicionados e pressionados por meio de uma pinça, a placa f
 .. image:: PCIsolda.png
    :width: 800px
    :align: center
-*Figura 1  – PCI após solda da camada inferior e superior*
+*Figura 4  – PCI após solda da camada inferior e superior*
 
-*Fonte: Autoria própria*
+*Fonte: Figura com auxílio de inteligência artificial*
 
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
