@@ -934,6 +934,15 @@ Durante a execução, o terminal serial também apresenta informações úteis p
        wifi_init_sta();
    }
 
+Uma visualização do terminal onde serão digitados os comandos pode ser vista abaixo:
+
+.. image:: Imagens/Comunicacao_Terminal.jpg
+   :width: 600px
+   :align: center
+*Figura 1  – Curva de resposta ao degrau da planta original e com ação do PID*
+
+*Fonte: Autoria própria*
+
 
 
 2.3.1 Firmware definitivo
