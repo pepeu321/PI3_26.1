@@ -163,12 +163,14 @@ Esse teste foi feito para conferir se o driver estava funcionando corretamente a
 
 *Fonte: Autoria própria*
 
-O teste de sobrecarga foi feito adicionando pesos à esteira juntamente com o código de controle e monitoramento remoto da velocidade da esteira, o intuito deste teste foi verificar o comportamento da esteira quando é exigida sua potência máxima. Então foi definida a velocidade máxima de 60 RPM, e com a adição de pesos o que ocorreu foi o aumento da corrente na fonte de alimentação para manter essa velocidade. Como a fonte de alimentação estava com proteção para 2A, funcionou normalmente. Podendo ser visualizado no gif abaixo:
+O teste de sobrecarga foi feito adicionando pesos à esteira juntamente com o código de controle e monitoramento remoto da velocidade da esteira, o intuito deste teste foi verificar o comportamento da esteira quando é exigida sua potência máxima. Então foi definida a velocidade máxima de 60 RPM, e com a adição de pesos o que ocorreu foi o aumento da corrente na fonte de alimentação para manter essa velocidade. Como a fonte de alimentação estava com proteção para 2A, funcionou normalmente. Podendo ser visualizado nas 4 imagens seguintes que representam a medição do RPM da esteira sem peso e a medição do RPM após a adição do peso excedente.
 
-.. image:: Imagens/SobrecargaGIF_2.gif
-   :width: 1500px
+.. image:: Imagens/Sobrecarga.jpg
+   :width: 1000px
    :align: center
 *Figura 1  – Teste de Sobrecarga*
+
+Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM(o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição de RPM remoto serão vistos a seguir.
 
 2.3.1 Firmware definitivo
 -------------------------
