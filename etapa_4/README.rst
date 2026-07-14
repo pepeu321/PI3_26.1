@@ -9,7 +9,16 @@ Etapa 4
 1. Visão geral
 **************
 
-A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, resultando na entrega de um protótipo físico e operacional em estado alfa. Esta fase materializa as características e funcionalidades idealizadas no escopo inicial do projeto. Esta etapa compreende a confecção da placa de circuito impresso (PCI), a manufatura aditiva do gabinete via impressão 3D, a integração do firmware definitivo, a execução dos testes de validação e, por fim, a análise crítica dos resultados obtidos. É inerente dizer que equívocos e imperícias ocorreram ao longo do desenvolvimento do projeto e que soluções alternativas foram incorporadas para atingir o objetivo final e o sucesso do trabalho.
+A quarta e última etapa deste projeto consolida o desenvolvimento do sistema, resultando na entrega de um protótipo físico e operacional em estado alfa. Esta fase materializa as características e funcionalidades idealizadas no escopo inicial do projeto. Esta etapa compreende:
+
+📌 Confecção da placa de circuito impresso (PCI)
+📌 Manufatura aditiva do gabinete via impressão 3D
+📌 Apresentação do Sistema Acomodado em Gabinete
+📌 Teste de Sobrecarga e Acionamento
+📌 Teste de controle de velocidade remoto do sistema
+📌Comparação entre resultados obtidos e esperados
+
+É inerente dizer que equívocos e imperícias ocorreram ao longo do desenvolvimento do projeto e que soluções alternativas foram incorporadas para atingir o objetivo final e o sucesso do trabalho.
 
 2. Desenvolvimento
 ******************
