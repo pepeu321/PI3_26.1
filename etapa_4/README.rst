@@ -187,6 +187,13 @@ O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este
 
 *Fonte: Autoria própria*
 
+.. image:: Imagens/SobrecargaGIF_2.gif
+   :width: 1000px
+   :align: center
+*Figura 1  – Gif do Teste de Sobrecarga, porém a resolução é baixa para visualizar o terminal.*
+
+*Fonte: Autoria própria*
+
 Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55 RPM (o que é um valor aceitável para um RPM definido de 60RPM) e acomodou-se com 60,21 RPM. Com o detalhe do aumento da fonte de corrente na fonte de bancada. Mais explicações sobre o código de controle e medição do RPM remoto serão vistos a seguir.
 
 
@@ -926,6 +933,8 @@ Durante a execução, o terminal serial também apresenta informações úteis p
    
        wifi_init_sta();
    }
+
+
 
 2.3.1 Firmware definitivo
 -------------------------
