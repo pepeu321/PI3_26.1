@@ -57,7 +57,7 @@ Com os componentes posicionados e pressionados por meio de uma pinça, a placa f
 2.1.2 Transferência térmica
 ---------------------------
 
-.. image:: Prensa.png
+.. image:: ProcessoPCI.png
    :width: 800px
    :align: center
 *Figura 1  – Prensa térmica*
