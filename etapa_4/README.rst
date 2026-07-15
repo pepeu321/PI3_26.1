@@ -91,7 +91,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
    :align: center
 *Figura 4  – PCI após solda da camada inferior e superior*
 
-*Fonte: Figura com auxílio de inteligência artificial*
+*Fonte: Figura gerada com auxílio de inteligência artificial*
 
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
@@ -114,7 +114,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
    :align: center
 *Figura 6  – Impressoras utilizadas para impressão 3D*
 
-*Fonte: Autoria própria*
+*Fonte: Figura gerada com auxílio de inteligência artificial*
 
 
 2.2.3 Alterações técnicas no design do gabinete
@@ -126,7 +126,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
    :align: center
 *Figura 7  – Alterações técnicas para melhoria de design do gabinete*
 
-*Fonte: Autoria própria*
+*Fonte: Figura gerada com auxílio de inteligência artificial*
 
 .. image:: Case3.jpeg
    :width: 800px
@@ -140,7 +140,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
    :align: center
 *Figura 8  – Nova fixação projetada para colocação da placa de controle*
 
-*Fonte: Autoria própria*
+*Fonte: Figura gerada com auxílio de inteligência artificial*
 
 2.2.4 Apresentação definitiva do gabinete
 -----------------------------------------
@@ -150,7 +150,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
    :align: center
 *Figura 9  – Novo gabinete após as alterações técnicas*
 
-*Fonte: Autoria própria*.
+*Fonte: Figura gerada com auxílio de inteligência artificial*.
 
 
 2.2.5 Apresentação definitiva do sistema acomodado
@@ -161,7 +161,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
    :align: center
 *Figura 10  – Sistema completo acomodado dentro do novo gabinete*
 
-*Fonte: Autoria própria*.
+*Fonte: Figura gerada com auxílio de inteligência artificial*.
 
 
 2.3 Teste de Sobrecarga e Acionamento do Motor
