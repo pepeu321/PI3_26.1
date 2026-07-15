@@ -102,7 +102,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 .. image:: AcomodacaoRuim.jpeg
    :width: 800px
    :align: center
-*Figura 1  – Incompatibilidade de espaço e posicionamento ruim das PCIs*
+*Figura 5  – Incompatibilidade de espaço e posicionamento ruim das PCIs*
 
 *Fonte: Autoria própria*
 
@@ -112,7 +112,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 .. image:: Impressora.png
    :width: 800px
    :align: center
-*Figura 1  – Impressoras utilizadas para impressão 3D*
+*Figura 6  – Impressoras utilizadas para impressão 3D*
 
 *Fonte: Autoria própria*
 
@@ -124,7 +124,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 .. image:: Gabinete.png
    :width: 800px
    :align: center
-*Figura 1  – Alterações técnicas para melhoria de design do gabinete*
+*Figura 7  – Alterações técnicas para melhoria de design do gabinete*
 
 *Fonte: Autoria própria*
 
@@ -138,7 +138,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 .. image:: Fixacao.png
    :width: 800px
    :align: center
-*Figura 1  – Nova fixação projetada para colocação da placa de controle*
+*Figura 8  – Nova fixação projetada para colocação da placa de controle*
 
 *Fonte: Autoria própria*
 
@@ -148,7 +148,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 .. image:: GabineteNovo.png
    :width: 800px
    :align: center
-*Figura 1  – Novo gabinete após as alterações técnicas*
+*Figura 9  – Novo gabinete após as alterações técnicas*
 
 *Fonte: Autoria própria*.
 
@@ -159,7 +159,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 .. image:: SistemaAcomodadoESSE.png
    :width: 800px
    :align: center
-*Figura 1  – Sistema completo acomodado dentro do novo gabinete*
+*Figura 10  – Sistema completo acomodado dentro do novo gabinete*
 
 *Fonte: Autoria própria*.
 
@@ -172,14 +172,14 @@ O teste de acionamento do motor utilizando o driver confeccionado ocorreu com su
 .. image:: Imagens/Fonte_Bancada.jpg
    :width: 400px
    :align: center
-*Figura 1  – Configuração da Fonte de Bancada*
+*Figura 11  – Configuração da Fonte de Bancada*
 
 *Fonte: Autoria própria*
 
 .. image:: Imagens/Driver.jpg
    :width: 400px
    :align: center
-*Figura 1  – Em destaque o Driver*
+*Figura 12  – Em destaque o Driver*
 
 *Fonte: Autoria própria*
 
@@ -188,7 +188,7 @@ Esse teste foi feito para conferir se o driver estava funcionando corretamente a
 .. image:: Imagens/acionamento_drive.gif
    :width: 1500px
    :align: center
-*Figura 1  – Funcionamento do driver ao ligar na fonte de alimentação*
+*GIF 1  – Funcionamento do driver ao ligar na fonte de alimentação*
 
 *Fonte: Autoria própria*
 
@@ -200,7 +200,7 @@ O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este
 .. image:: Imagens/Sobrecarga.jpg
    :width: 1000px
    :align: center
-*Figura 1  – Teste de Sobrecarga*
+*Figura 13  – Teste de Sobrecarga*
 
 *Fonte: Autoria própria*
 
@@ -209,7 +209,7 @@ Então como pode ser visto, o sistema inicialmente tinha uma velocidade de 61,55
 .. image:: Imagens/SobrecargaGIF_2.gif
    :width: 400px
    :align: center
-*Figura 1  – Gif do Teste de Sobrecarga, porém a resolução é baixa para visualizar o terminal.*
+*GIF 2  – Gif do Teste de Sobrecarga, porém a resolução é baixa para visualizar o terminal.*
 
 *Fonte: Autoria própria*
 
@@ -229,7 +229,7 @@ Foram 5 medições, as curvas dos valores obtidos podem ser vistas neste gráfic
 .. image:: Imagens/Medicoes_planta.jpeg
    :width: 800px
    :align: center
-*Figura 1  – Novas medições para obtenção da planta da esteira*
+*Figura 14  – Novas medições para obtenção da planta da esteira*
 
 *Fonte: Autoria própria*
 
@@ -239,7 +239,7 @@ Com a curva da média dessas medições foi encontrada uma curva de resposta ao 
 .. image:: Imagens/Nova_Planta.jpeg
    :width: 800px
    :align: center
-*Figura 1  – Curva da Média das medições e da nova planta obtida*
+*Figura 15  – Curva da Média das medições e da nova planta obtida*
 
 *Fonte: Autoria própria*
 
@@ -257,7 +257,7 @@ Foi definido um novo controle PID com sobressinal de 10%, e tempo de acomodaçã
 .. image:: Imagens/ControlePID.jpg
    :width: 600px
    :align: center
-*Figura 1  – Curva de resposta ao degrau da planta original e com ação do PID*
+*Figura 16  – Curva de resposta ao degrau da planta original e com ação do PID*
 
 *Fonte: Autoria própria*
 
@@ -956,7 +956,7 @@ Uma visualização do terminal onde serão digitados os comandos pode ser vista 
 .. image:: Imagens/Comunicacao_Terminal.jpg
    :width: 600px
    :align: center
-*Figura 1  – Terminal de envio de comandos e recebimento de informações*
+*Figura 17  – Terminal de envio de comandos e recebimento de informações*
 
 *Fonte: Autoria própria*
 
@@ -968,7 +968,7 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 .. image:: Imagens/Resultado.jpg
    :width: 600px
    :align: center
-*Figura 1  – Teste com RPM definido em 50 RPM*
+*Figura 18  – Teste com RPM definido em 50 RPM*
 
 *Fonte: Autoria própria*
 
@@ -977,7 +977,7 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 .. image:: Imagens/VelocidadeGIF2.gif
    :width: 600px
    :align: center
-*Figura 1  – Gif Teste com RPM definido em 50 RPM*
+*GIF 3  – Gif Teste com RPM definido em 50 RPM*
 
 *Fonte: Autoria própria*
 
@@ -986,7 +986,7 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 .. image:: Imagens/ControleObtido.jpg
    :width: 600px
    :align: center
-*Figura 1  – Gif Teste com RPM definido em 50 RPM*
+*Figura 19  – Gif Teste com RPM definido em 50 RPM*
 
 *Fonte: Autoria própria*
 
