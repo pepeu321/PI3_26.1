@@ -141,14 +141,14 @@ Além das alterações descritas, foram realizados outros aprimoramentos, inclui
 .. image:: Case3.jpeg
    :width: 800px
    :align: center
-*Figura 1  – Acessórios do gabinete*
+*Figura 8  – Acessórios do gabinete*
 
 *Fonte: Autoria própria*
 
 .. image:: Fixacao.png
    :width: 800px
    :align: center
-*Figura 8  – Nova fixação projetada para colocação da placa de controle*
+*Figura 9  – Nova fixação projetada para colocação da placa de controle*
 
 *Fonte: Figura gerada com auxílio de inteligência artificial*
 
@@ -158,7 +158,7 @@ Além das alterações descritas, foram realizados outros aprimoramentos, inclui
 .. image:: GabineteNovo.png
    :width: 800px
    :align: center
-*Figura 9  – Novo gabinete após as alterações técnicas*
+*Figura 10  – Novo gabinete após as alterações técnicas*
 
 *Fonte: Figura gerada com auxílio de inteligência artificial*.
 
@@ -169,7 +169,7 @@ Além das alterações descritas, foram realizados outros aprimoramentos, inclui
 .. image:: SistemaAcomodadoESSE.png
    :width: 800px
    :align: center
-*Figura 10  – Sistema completo acomodado dentro do novo gabinete*
+*Figura 11  – Sistema completo acomodado dentro do novo gabinete*
 
 *Fonte: Figura gerada com auxílio de inteligência artificial*.
 
@@ -182,14 +182,14 @@ O teste de acionamento do motor utilizando o driver confeccionado ocorreu com su
 .. image:: Imagens/Fonte_Bancada.jpg
    :width: 400px
    :align: center
-*Figura 11  – Configuração da Fonte de Bancada*
+*Figura 12  – Configuração da Fonte de Bancada*
 
 *Fonte: Autoria própria*
 
 .. image:: Imagens/Driver.jpg
    :width: 400px
    :align: center
-*Figura 12  – Em destaque o Driver*
+*Figura 13  – Em destaque o Driver*
 
 *Fonte: Autoria própria*
 
@@ -210,7 +210,7 @@ O vídeo está nesse repositório na pasta Imagens, e pode ser acessado com este
 .. image:: Imagens/Sobrecarga.jpg
    :width: 1000px
    :align: center
-*Figura 13  – Teste de Sobrecarga*
+*Figura 14  – Teste de Sobrecarga*
 
 *Fonte: Autoria própria*
 
@@ -239,7 +239,7 @@ Foram 5 medições, as curvas dos valores obtidos podem ser vistas neste gráfic
 .. image:: Imagens/Medicoes_planta.jpeg
    :width: 800px
    :align: center
-*Figura 14  – Novas medições para obtenção da planta da esteira*
+*Figura 15  – Novas medições para obtenção da planta da esteira*
 
 *Fonte: Autoria própria*
 
@@ -249,7 +249,7 @@ Com a curva da média dessas medições foi encontrada uma curva de resposta ao 
 .. image:: Imagens/Nova_Planta.jpeg
    :width: 800px
    :align: center
-*Figura 15  – Curva da Média das medições e da nova planta obtida*
+*Figura 16  – Curva da Média das medições e da nova planta obtida*
 
 *Fonte: Autoria própria*
 
@@ -267,7 +267,7 @@ Foi definido um novo controle PID com sobressinal de 10%, e tempo de acomodaçã
 .. image:: Imagens/ControlePID.jpg
    :width: 600px
    :align: center
-*Figura 16  – Curva de resposta ao degrau da planta original e com ação do PID*
+*Figura 17  – Curva de resposta ao degrau da planta original e com ação do PID*
 
 *Fonte: Autoria própria*
 
@@ -966,7 +966,7 @@ Uma visualização do terminal onde serão digitados os comandos pode ser vista 
 .. image:: Imagens/Comunicacao_Terminal.jpg
    :width: 600px
    :align: center
-*Figura 17  – Terminal de envio de comandos e recebimento de informações*
+*Figura 18  – Terminal de envio de comandos e recebimento de informações*
 
 *Fonte: Autoria própria*
 
@@ -980,7 +980,7 @@ Um teste foi realizado definindo a velocidade em 50 RPM e depois foi adicionado 
 .. image:: Imagens/Resultado.jpg
    :width: 600px
    :align: center
-*Figura 18  – Teste com RPM definido em 50 RPM*
+*Figura 19  – Teste com RPM definido em 50 RPM*
 
 *Fonte: Autoria própria*
 
@@ -1003,7 +1003,7 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 .. image:: Imagens/ControleObtido.jpg
    :width: 600px
    :align: center
-*Figura 19  – Gif Teste com RPM definido em 50 RPM*
+*Figura 20  – Gif Teste com RPM definido em 50 RPM*
 
 *Fonte: Autoria própria*
 
