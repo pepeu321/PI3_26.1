@@ -1070,4 +1070,20 @@ As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 4. Referências (links/datasheets/livros)
 ****************************************
 
-* `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
+ESPRESSIF SYSTEMS. ESP-IDF Programming Guide. Espressif Systems, 2026. Disponível em: <https://docs.espressif.com/projects/esp-idf/en/latest/>. Acesso em: 14 jul. 2026.
+
+ESPRESSIF SYSTEMS. ESP-IDF PCNT (Pulse Counter). Espressif Systems, 2026. Disponível em: <https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/peripherals/pcnt.html>. Acesso em: 14 jul. 2026.
+
+ESPRESSIF SYSTEMS. ESP-IDF LEDC (PWM Controller). Espressif Systems, 2026. Disponível em: <https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/peripherals/ledc.html>. Acesso em: 14 jul. 2026.
+
+FREE RTOS. FreeRTOS Kernel Developer Documentation. Amazon Web Services, 2026. Disponível em: <https://www.freertos.org/Documentation/01-FreeRTOS-Documentation>. Acesso em: 14 jul. 2026.
+
+SHELBY, Zach; HARTKE, Klaus; BORMANN, Carsten. The Constrained Application Protocol (CoAP). RFC 7252. Internet Engineering Task Force (IETF), 2014. Disponível em: <https://www.rfc-editor.org/rfc/rfc7252>. Acesso em: 14 jul. 2026.
+
+LIBCOAP. libcoap Documentation. 2026. Disponível em: <https://libcoap.net/>. Acesso em: 14 jul. 2026.
+
+OGATA, Katsuhiko. Engenharia de Controle Moderno. 5. ed. São Paulo: Pearson Prentice Hall, 2011.
+
+NISE, Norman S. Engenharia de Sistemas de Controle. 8. ed. Rio de Janeiro: LTC, 2017.
+
+DORF, Richard C.; BISHOP, Robert H. Sistemas de Controle Modernos. 13. ed. Rio de Janeiro: LTC, 2019.
