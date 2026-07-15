@@ -32,8 +32,8 @@ Foi implementada a leitura do encoder utilizando o periférico PCNT corretamente
 
 - `Etapa 4 <etapa_4/README.rst>`_
 
-Por fim, na última etapa, foram integrado os códigos que antes estavam separados, como a parte de leitura do sensor, acionamento da esteira e comunicação COAP, além do teste final da esteira controlada já usando o driver desenvolvido e o monitoramento sem fio do sistema, onde é possível setar uma velocidade e o sistema devolve o valor do PWM atual, velocidade atual e o erro entre a medida e setada.
-
+Por fim, na última etapa, foram integrados os módulos desenvolvidos nas etapas anteriores, incluindo a leitura do encoder, o acionamento do motor e a comunicação CoAP. Também foi implementado e ajustado o controlador PI, permitindo o controle de velocidade da esteira em malha fechada.
+Além disso, foi desenvolvido um sistema de monitoramento remoto, capaz de definir a velocidade de referência e visualizar, em tempo real, a velocidade medida, o erro de controle, o duty cycle aplicado ao motor e o sentido de rotação.
 
 Interface do usuário
 ********************
@@ -70,7 +70,8 @@ Os comandos disponíveis são:
     Encerra a aplicação
 
 
-
+Diagrama de blocos do Sistema
+********************
 
 
 
