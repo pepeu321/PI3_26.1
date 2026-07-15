@@ -124,7 +124,7 @@ As impressoras utilizadas durante o processo de fabricação são apresentadas n
 2.2.2 Alterações técnicas no design do gabinete e problemática
 -----------------------------------------------
 
-O gabinete inicialmente projetado apresentou incompatibilidade com a instalação da placa de controle, em decorrência da posição inadequada do suporte destinado à placa de controle, cuja altura impossibilitava a montagem correta do conjunto. Como primeira tentativa de correção, realizou-se a usinagem desse suporte por meio de uma micro retífica (Dremel), com o objetivo de reduzir sua altura. Entretanto, o resultado obtido não foi satisfatório, pois a fixação da placa permaneceu inadequada e a redução alcançada não foi suficiente para permitir o fechamento correto da tampa do gabinete.
+O gabinete inicialmente projetado apresentou incompatibilidade com a instalação da placa de controle (Figura 6), em decorrência da posição inadequada do suporte destinado à placa de controle, cuja altura impossibilitava a montagem correta do conjunto. Como primeira tentativa de correção, realizou-se a usinagem desse suporte por meio de uma micro retífica (Dremel), com o objetivo de reduzir sua altura. Entretanto, o resultado obtido não foi satisfatório, pois a fixação da placa permaneceu inadequada e a redução alcançada não foi suficiente para permitir o fechamento correto da tampa do gabinete.
 
 Diante desse cenário, optou-se pela remoção completa do suporte originalmente impresso, substituindo-o por um novo suporte confeccionado separadamente e dimensionado especificamente para a placa de controle. O novo componente foi instalado em uma altura compatível com o fechamento da tampa, garantindo a correta montagem do conjunto (Figura 9).
 
