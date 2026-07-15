@@ -943,48 +943,35 @@ O terminal que receberá os comandos e enviará as mensagens pode ser visto abai
 
 *Fonte: Autoria própria*
 
-2.4 Teste de Controle Remoto do Sistema
+2.4 Comparação entre Resultados Obtidos e Esperados
 =======================================================
 
+Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
 
+.. image:: Imagens/Resultado.jpg
+   :width: 600px
+   :align: center
+*Figura 1  – Teste com RPM definido em 50 RPM*
 
-2.3.1 Firmware definitivo
--------------------------
+*Fonte: Autoria própria*
 
-Descrição do firmware definitivo...
+Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
 
+.. image:: Imagens/VelocidadeGIF2.gif
+   :width: 600px
+   :align: center
+*Figura 1  – Gif Teste com RPM definido em 50 RPM*
 
-3. Testes de validação
-**********************
+*Fonte: Autoria própria*
 
+Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
 
-3.1 Acionamento remoto
-======================
+.. image:: Imagens/ControleObtido.jpg
+   :width: 600px
+   :align: center
+*Figura 1  – Gif Teste com RPM definido em 50 RPM*
 
-MOSTRAR GIF DE ACIONAMENTO NORMAL E REMOTO DA ESTEIRA
-
-
-3.2 Controle de velocidade
-==========================
-
-MOSTRAR GIF DE DIFERENTES VELOCIDADES ENVIADAS PELO O USUÁRIO E ALTERAÇÃO DE VELOCIDADE DA ESTEIRA
-
-
-3.3 Proteção de sobrecarga
-==========================
-
-MOSTRAR GIF DA PROTEÇÃO DO SISTEMA VIA LIMITE DIGITAL APÓS SOBREPESO
-
-
-3.4 Inversão de sentido
-=======================
-
-MOSTRAR GIF DO ACIONAMENTO PARA SENTIDO FRENTE E TRÁS
-
-
-4. Resultados finais
-********************
-
+*Fonte: Autoria própria*
 
 4.1 Comparação entre resultados esperados e obtidos
 ===================================================
