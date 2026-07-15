@@ -998,7 +998,7 @@ https://github.com/pepeu321/PI3_26.1/blob/main/etapa_4/Imagens/Velocidade.mp4.
 
 *Fonte: Autoria própria*
 
-Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
+Para fazer a análise da ação do controle foi obtida uma curva de resposta ao degrau gerada pelo próprio driver, então foi definida uma velocidade de 30 RPM para gerar o degrau e poder ser comparado com a curva obtida no projeto de controle PID. Essa curva foi obtida lendo os valores de RPM a cada 100 ms, e depois com estes dados foi traçado o gráfico. 
 
 .. image:: Imagens/ControleObtido.jpg
    :width: 600px
@@ -1006,6 +1006,12 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 *Figura 20  – Gif Teste com RPM definido em 50 RPM*
 
 *Fonte: Autoria própria*
+
+Com este gráfico foi obtido um valor de sobressinal de 30% e um tempo de acomodação de 2,10 s. O que difere da proposta inicia do projeto de sobressinal de 10% e tempo de acomodação de 0,4s.
+Um dos motivos para divergência nestes valores é que o PID foi projetado inicialmente para tempo contínuo, e o que estamos fazendo é um controle em tempo discreto. E como o período de amostragem é de 100 ms, a ação do controle é mais lenta. 
+Isso podia ser observado ao acionar o motor mantendo os valores de Kp e Ki do projeto PID inicial. Como uma espécie de onda até chegar no valor de regime permanente, mas ainda assim chegava no valor de RPM desejado, o controle funcionava.
+
+Outro motivo é a alteração dos valores de Kp e Ki do projeto inicial, antes eram de 2,04 e 34,91, respectivamente, e agora são 4 e 42 respectivamente. Por isso foi adotado o modelo de controle PID, porque ele permite a alteração para uma resposta mais próxima da desejada. E dessa forma a curva ficou conforme foi apresentada na imagem anterior.
 
 
 3. Melhorias futuras
