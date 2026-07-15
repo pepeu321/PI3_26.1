@@ -1,7 +1,7 @@
 Controle de velocidade com telemetria e acionamento remoto da esteira transportadora do laboratório LPAE
 #####################################################################
 
-.. image:: etapa_1/imagens/Esteira.png
+.. image:: imagens_principal/Esteira.png
    :width: 600px
    :align: right
 
