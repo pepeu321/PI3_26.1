@@ -2,8 +2,8 @@ Controle de velocidade com telemetria e acionamento remoto da esteira transporta
 #####################################################################
 
 .. image:: imagens_principal/Esteira.png
-   :width: 500px
-   :align: right
+   :width: 400px
+   :align: center
 
 .. contents::
    :local:
@@ -73,5 +73,7 @@ Os comandos disponíveis são:
 Diagrama de blocos do Sistema
 ********************
 
-
+.. image:: imagens_principal/DiagramaBlocos.png
+   :width: 700px
+   :align: right
 
