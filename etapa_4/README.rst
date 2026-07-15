@@ -99,13 +99,6 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 2.2.1 Problemática
 ------------------
 
-.. image:: AcomodacaoRuim.jpeg
-   :width: 800px
-   :align: center
-*Figura 5  – Incompatibilidade de espaço e posicionamento ruim das PCIs*
-
-*Fonte: Autoria própria*
-
 2.2.2 Processo de impressão
 ---------------------------
 
@@ -119,18 +112,18 @@ Os acessórios foram produzidos em ABS utilizando uma impressora fechada, cuja c
 Todo o processo de fatiamento foi realizado utilizando o software Creality Slicer, compatível com as impressoras empregadas. As impressões foram executadas com o auxílio do bolsista Sérgio, mediante autorização dos professores responsáveis pela disciplina para utilização dos filamentos disponíveis no laboratório.
 
 Ao longo do desenvolvimento foram consumidos aproximadamente 500 g de filamento, totalizando cerca de 36 horas de impressão, considerando todas as peças produzidas e suas respectivas reimpressões. Para a fabricação das peças foi adotado um preenchimento interno (infill) de 20%, valor que proporcionou rigidez estrutural suficiente, mantendo simultaneamente baixo consumo de material e tempo de fabricação. As peças impressas apresentaram boa fidelidade dimensional em relação ao modelo tridimensional desenvolvido no Tinkercad, atendendo aos requisitos mecânicos e funcionais estabelecidos para o projeto.
-As impressoras utilizadas durante o processo de fabricação são apresentadas na Figura 6.
+As impressoras utilizadas durante o processo de fabricação são apresentadas na Figura 5.
 
 
 .. image:: Impressora.png
    :width: 800px
    :align: center
-*Figura 6  – Impressoras utilizadas para impressão 3D*
+*Figura 5 – Impressoras utilizadas para impressão 3D*
 
 *Fonte: Figura gerada com auxílio de inteligência artificial*
 
 
-2.2.3 Alterações técnicas no design do gabinete
+2.2.3 Alterações técnicas no design do gabinete e problemática
 -----------------------------------------------
 
 O gabinete inicialmente projetado apresentou incompatibilidade com a instalação da placa de controle, em decorrência da posição inadequada do suporte destinado à placa de controle, cuja altura impossibilitava a montagem correta do conjunto. Como primeira tentativa de correção, realizou-se a usinagem desse suporte por meio de uma micro retífica (Dremel), com o objetivo de reduzir sua altura. Entretanto, o resultado obtido não foi satisfatório, pois a fixação da placa permaneceu inadequada e a redução alcançada não foi suficiente para permitir o fechamento correto da tampa do gabinete.
@@ -143,6 +136,12 @@ Durante a inspeção do gabinete, também foram identificadas diversas rachadura
 
 Além das alterações descritas, foram realizados outros aprimoramentos, incluindo a instalação de pés de silicone para maior estabilidade, a pintura externa na cor branca, o acabamento da saída dos cabos e a instalação definitiva do painel de vidro para inspeção visual dos componentes internos. O aspecto final do gabinete após todas as modificações é apresentado na Figura 10.
 
+.. image:: AcomodacaoRuim.jpeg
+   :width: 800px
+   :align: center
+*Figura 6  – Incompatibilidade de espaço e posicionamento ruim das PCIs*
+
+*Fonte: Autoria própria*
 
 .. image:: Gabinete.png
    :width: 800px
