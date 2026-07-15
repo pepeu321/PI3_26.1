@@ -166,6 +166,12 @@ Além das alterações descritas, foram realizados outros aprimoramentos, inclui
 2.2.5 Apresentação definitiva do sistema acomodado
 --------------------------------------------------
 
+O sistema final apresentou um resultado compatível com os requisitos estabelecidos em projeto, acomodando adequadamente as placas de potência e de controle em um único gabinete. Ambas as placas encontram-se rigidamente fixadas, protegidas contra umidade, isoladas eletricamente para minimizar riscos de curto-circuito e resguardadas contra esforços mecânicos externos. Além disso, a disposição dos componentes foi planejada de forma a facilitar procedimentos de manutenção, inspeção e reprogramação do sistema, quando necessários.
+
+O espaço interno disponível mostrou-se suficiente para garantir a adequada organização dos componentes, favorecer a dissipação térmica e permitir futuras expansões do projeto, como a instalação de ventoinhas para ventilação forçada e LEDs para iluminação interna do gabinete. A entrada e a saída de toda a fiação foram concentradas em um único ponto de passagem, simplificando a alimentação elétrica, a interligação dos dispositivos e a organização dos cabos.
+
+O conjunto desenvolvido representa uma versão funcional do protótipo, validando as soluções mecânicas adotadas durante o desenvolvimento. O gabinete atende aos requisitos funcionais, mecânicos e estéticos propostos, proporcionando proteção aos componentes eletrônicos, facilidade de montagem e manutenção, além de um acabamento adequado para a aplicação pretendida.
+
 .. image:: SistemaAcomodadoESSE.png
    :width: 800px
    :align: center
