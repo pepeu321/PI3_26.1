@@ -120,6 +120,16 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 2.2.3 Alterações técnicas no design do gabinete
 -----------------------------------------------
 
+O gabinete inicialmente projetado apresentou incompatibilidade com a instalação da placa de controle, em decorrência da posição inadequada do suporte destinado à placa de controle, cuja altura impossibilitava a montagem correta do conjunto. Como primeira tentativa de correção, realizou-se a usinagem desse suporte por meio de uma micro retífica (Dremel), com o objetivo de reduzir sua altura. Entretanto, o resultado obtido não foi satisfatório, pois a fixação da placa permaneceu inadequada e a redução alcançada não foi suficiente para permitir o fechamento correto da tampa do gabinete.
+
+Diante desse cenário, optou-se pela remoção completa do suporte originalmente impresso, substituindo-o por um novo suporte confeccionado separadamente e dimensionado especificamente para a placa de controle. O novo componente foi instalado em uma altura compatível com o fechamento da tampa, garantindo a correta montagem do conjunto (Figura 9).
+
+Paralelamente, o projeto tridimensional da tampa foi remodelado antes de sua impressão, de modo a adequar a posição das furações e assegurar o perfeito alinhamento e encaixe dos parafusos de fixação (Figura 8).
+
+Durante a inspeção do gabinete, também foram identificadas diversas rachaduras decorrentes do processo de fabricação. A maioria dessas imperfeições foi corrigida mediante aplicação de adesivo instantâneo (Bonder) e massa para acabamento. Entretanto, uma das rachaduras localizadas na região das aberturas laterais de ventilação comprometeu significativamente a integridade estrutural da parede lateral. Em razão disso, optou-se pela remoção completa dessa lateral, substituindo-a por um painel de vidro, possibilitando tanto a recuperação estrutural quanto a visualização dos componentes internos do gabinete. O resultado dessa modificação é apresentado na Figura 7.
+
+Além das alterações descritas, foram realizados outros aprimoramentos, incluindo a instalação de pés de silicone para maior estabilidade, a pintura externa na cor branca, o acabamento da saída dos cabos e a instalação definitiva do painel de vidro para inspeção visual dos componentes internos. O aspecto final do gabinete após todas as modificações é apresentado na Figura 10.
+
 
 .. image:: Gabinete.png
    :width: 800px
