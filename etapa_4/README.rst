@@ -135,16 +135,33 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 
 *Fonte: Autoria própria*
 
+.. image:: Fixacao.png
+   :width: 800px
+   :align: center
+*Figura 1  – Nova fixação projetada para colocação da placa de controle*
+
+*Fonte: Autoria própria*
+
 2.2.4 Apresentação definitiva do gabinete
 -----------------------------------------
 
-Resultados do gabinete...
+.. image:: GabineteNovo.png
+   :width: 800px
+   :align: center
+*Figura 1  – Novo gabinete após as alterações técnicas*
+
+*Fonte: Autoria própria*.
 
 
 2.2.5 Apresentação definitiva do sistema acomodado
 --------------------------------------------------
 
-Resultados do sistema...
+.. image:: SistemaAcomodado.png
+   :width: 800px
+   :align: center
+*Figura 1  – Sistema completo acomodado dentro do novo gabinete*
+
+*Fonte: Autoria própria*.
 
 
 2.3 Teste de Sobrecarga e Acionamento do Motor
