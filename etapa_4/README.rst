@@ -1029,7 +1029,7 @@ As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 
 •	Controle avançado e preditivo: Substituição de malhas clássicas de controle por malhas de controle preditivo, visando respostas mais dinâmicas e menor sobressinal diante de perturbações de carga.
 
-3.3 Conectividade, interface e telemetria
+3.4 Conectividade, interface e telemetria
 -------------------------
 
 •	Telemetria de dados: Criação de um sistema de geração e envio de logs de eventos e falhas em tempo real para armazenamento e visualização do usuário.
