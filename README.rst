@@ -14,72 +14,118 @@ Controle de velocidade com telemetria e acionamento remoto da esteira transporta
 Requisitos
 **********
 
-Este projeto foi implementado com os seguintes módulos/softwares/hardwares...
+Este projeto foi implementado com o módulo esp32-s3, de início foi utilizado o driver L298N, enquanto o driver que foi desenvolvido não estava pronto. O motor da esteira é um do tipo dc brushed, o sensor utilizado para medir foi o sensor de velocidade encoder óptico LM393, que possui 20 ranhuras e são necessárias duas fontes de alimentação, uma para alimentar o diretamente o driver de 24V e outra para alimentar o regulador de 5V. 
 
-- `XIAO nRF52840 <https://wiki.seeedstudio.com/XIAO_BLE/>`_
+Na parte de firmware foram implementados os módulos motor.c e wheel.c, que são responsáveis respectivamente por gerar o sinal PWM e fazer a aquisição da leitura do encoder. A main.c é responsável pela conexão wifi e envio de dados para o cliente python por meio de comunicação COAP, além de chamar e criar as tarefas e funções que serão utilizadas;
 
 
 Visão geral
 ***********
 
-Este projeto consiste no desenvolvimento de um sistema de controle de velocidade para uma esteira acionada por um motor DC, utilizando o microcontrolador ESP32. O sistema permite ao usuário definir a velocidade desejada pelo celular, enquanto um sensor realiza a medição da velocidade real do motor. Com base nessas informações, o controlador ajusta o sinal PWM aplicado ao motor, garantindo um controle preciso.
+Este projeto consiste no desenvolvimento de um sistema de controle de velocidade para uma esteira acionada por um motor DC, utilizando o microcontrolador ESP32. O sistema permite ao usuário definir a velocidade desejada pelo computador, enquanto um sensor realiza a medição da velocidade real do motor. Com base nessas informações, o controlador ajusta o sinal PWM aplicado ao motor, garantindo um controle preciso.
 
 O desenvolvimento foi divido em quatro etapas:
 
-- Etapa 1 (02/04/2026): (Nesta etapa, foi realizado o estudo do microcontrolador ESP32, tipo do sensor que será utilizado, a comparação entre rampa de aceleração linear e rampa em S e o diagrama de blocos do sistema, permitindo a visualização geral do funcionamento do projeto.)
-- Etapa 2 (30/04/2026): (breve resumo da etapa)
-- Etapa 3 (28/05/2026): (breve resumo da etapa)
-- Etapa 4 (09/07/2026): (breve resumo da etapa)
+- Etapa 1: Nesta etapa, foi realizado o estudo do microcontrolador ESP32, tipo do sensor que será utilizado, a comparação entre rampa de aceleração linear e rampa em S e o diagrama de blocos do sistema, permitindo a visualização geral do funcionamento do projeto.
+
+- Etapa 2: Na Etapa 2, foram realizados testes individuais com os sensores que serão utilizados com o microcontrolador, e o desenvolvimento dos esquemáticos dos hardwares do sistema. 
+
+- Etapa 3: Foi implementada a leitura do encoder utilizando o periférico PCNT corretamente, feito os layouts da PCI do driver que foi feito, foram desenvolvidos os firmwares responsáveis pelo acionamento do motor através do driver L298N e um programa preliminar para testar a comunicação COAP, além de fazer o projeto e implementação inicial de um controlador PID que será aplicado na esteira.
+
+- Etapa 4: Por fim, na última etapa, foram integrado os códigos que antes estavam separados, como a parte de leitura do sensor, acionamento da esteira e comunicação COAP, além do teste final da esteira controlada já usando o driver desenvolvido e o monitoramento sem fio do sistema, onde é possível setar uma velocidade e o sistema devolve o valor do PWM atual, velocidade atual e o erro entre a medida e setada.
+
 
 Configuração
-*************
+************
 
-Projeto foi implementado com o nRF OpenConnect SDK versão 2.4.x.
-Consulte `Configuring your application <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_ para obter informações sobre como alterar a configuração permanente ou temporariamente.
+As principais configurações do sistema remetem a parâmetros como os ganhos integrador e derivativo do controlador e seu período de amostragem, o duty cycle mínimo e o máximo e a definição do encoder
 
-A configuração do perfil do dispositivo é realizada no arquivo de configuração `prj.conf <prj.conf>`_:
+Parâmetros do controlador PI:
 
-- End-Device:
+.. code:: C
 
-.. code:: C 
+   #define TS_CONTROLE_S       0.1f
 
-  (...)
-  CONFIG_ZIGBEE_ROLE_END_DEVICE=y  
-  # CONFIG_ZIGBEE_ROLE_ROUTER=y
-  // Versão do firmware
-  CONFIG_MCUBOOT_IMAGE_VERSION="0.0.3"
-  CONFIG_ZIGBEE_FOTA_COMMENT="ruido_zigbee_endpoint"
-  # CONFIG_ZIGBEE_FOTA_COMMENT="ruido_zigbee_router"
+   #define KP_PI               4.0f
+   #define KI_PI               42.0f
+
+Limites do PWM:
+
+.. code:: C
+
+   #define DUTY_MIN            0.0f
+   #define DUTY_MAX            1023.0f
+   #define DUTY_MIN_MOVIMENTO  300.0f
+
+Configuração do encoder:
+
+.. code:: C
+
+   #define ENCODER_GPIO        14
+   #define PULSOS_POR_VOLTA    20
 
 
 Interface do usuário
 ********************
 
-LED 1:
-  Pisca enquanto o filtro estiver ativo.
+O controle remoto da esteira é realizado por uma aplicação desenvolvida em Python.
 
-Botão 1:
-  Ativa o módulo xyz.
+Os comandos disponíveis são:
 
+- **on**
+    Liga a esteira utilizando uma referência padrão.
+
+- **off**
+    Desliga a esteira.
+
+- **rpm**
+    Realiza uma única leitura da velocidade atual.
+
+- **monitor**
+    Exibe continuamente:
+
+    - velocidade de referência;
+    - velocidade medida;
+    - erro de controle;
+    - duty cycle aplicado;
+    - sentido de rotação.
+
+- **fwd**
+    Define o sentido direto de rotação.
+
+- **rev**
+    Define o sentido reverso de rotação.
+
+- **q**
+    Encerra a aplicação
 
 Compilando e executando
 ***********************
 
-Colocar detalhes na construção da applicação. Exemplo: 
+Para compilar o projeto:
 
-Para compilar o projeto com o Visual Studio Code, siga as etapas listadas na página `How to build an application <https://nrfconnect.github.io/vscode-nrf-connect/get_started/build_app_ncs.html>`_  na documentação da extensão nRF Connect for VS Code.  `Building and programming an application  <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/programming.html#gs-programming>`_ para outros cenários de construção e programação e `Testing and debugging an application <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/testing.html#gs-testing>`_ para obter informações gerais sobre testes e depuração no nRF Connect SDK.
-
-Recomenda-se o uso do J-Link para gravação e/ou depuração.
+1. Instale o ESP-IDF
+2. Importe os arquivos do projeto 
+3. Configure a placa ESP32-S3.
+4. Execute: Build no projeto
+ 
 
 Testando
-========
-
-Após programar o microcontrolador, conclua as etapas a seguir para testá-lo:
-
-1. ...
-
-Montagem
 ********
 
-Breve descrição da montagem final do projeto.
+Após gravar o firmware no ESP32:
+
+1. Monte o sistema com as conexões previstas.
+
+2. Verfique se o IP que aparece no terminal do esp-idf corresponde ao que está no scipt python.
+
+2. Execute o programa Python.
+
+3. Informe uma referência de velocidade.
+
+4. Utilize o comando **monitor** para acompanhar a resposta do sistema com controlador.
+
+5. Aplicando uma carga sobre a esteira é possível ver o comportamento e monitorar o PWM e o duty cycle que está sendo transmitido pelo prompt.
+
+
 
