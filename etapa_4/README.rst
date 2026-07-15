@@ -1021,7 +1021,7 @@ As melhorias sugeridas foram divididas em quatro pilares fundamentais:
 
 •	Conectividade de longa distância: Expansão da interface de rede local para uma arquitetura em nuvem (IoT), permitindo o acionamento e supervisão do sistema de forma remota a partir de qualquer rede externa.
 
-5. Referências (links/datasheets/livros)
+4. Referências (links/datasheets/livros)
 ****************************************
 
 * `nRF Connect SDK <https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>`_
