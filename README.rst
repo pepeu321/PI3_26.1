@@ -119,13 +119,13 @@ Após gravar o firmware no ESP32:
 
 2. Verfique se o IP que aparece no terminal do esp-idf corresponde ao que está no scipt python.
 
-2. Execute o programa Python.
+3. Execute o programa Python.
 
-3. Informe uma referência de velocidade.
+4. Informe uma referência de velocidade.
 
-4. Utilize o comando **monitor** para acompanhar a resposta do sistema com controlador.
+5. Utilize o comando **monitor** para acompanhar a resposta do sistema com controlador.
 
-5. Aplicando uma carga sobre a esteira é possível ver o comportamento e monitorar o PWM e o duty cycle que está sendo transmitido pelo prompt.
+6. Aplicando uma carga sobre a esteira é possível ver o comportamento e monitorar o PWM e o duty cycle que está sendo transmitido pelo prompt.
 
 
 
