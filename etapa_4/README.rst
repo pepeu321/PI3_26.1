@@ -976,7 +976,10 @@ Um teste foi realizado definindo a velocidade em 50 RPM e depois foi adicionado 
 
 Antes da adição do peso, o rpm medido é igual a 49,49 RPM. O duty cycle enviado ao driver é igual a 853. Para saber se esse valor é condizente basta calcular o valor do RPM referente ao duty cycle enviado ao driver do motor. Ele é praticamente linear, então para 1023 de razão cíclica, o RPM esperado é de 60 RPM. Para uma velocidade de 50 RPM, por regra de três, o valor esperado é de 852,5 de duty cycle. Então o valor encontrado de 853 para o driver do motor é correto e o valor medido de 49,49 RPM está dentro do aceitável. Pois é um erro de 1% com relação aos 50 RPM esperados. 
 
-Abaixo está um gif do teste para quando a velocidade é definida em 50 RPM.
+E com a adição do peso, é possível ver na imagem que o duty cycle aumenta e a velocidade permanece na faixa de 50 RPM. O valor encontrado é de 49,63 RPM, um erro menor do que 1%. E isso faz todo o sentido, pois a esteira tem um peso agora, e para manter a velocidade constante é preciso aumentar o duty cycle. O que comprova que a ação do controle está funcionando. 
+
+Abaixo está o gif mostrando o efeito na esteira da adição desse peso de 1 Kg com velocidade definida para 50 RPM. O vídeo está neste repositório na pasta imagens com o nome do arquivo de Velocidade.mp4, podendo ser acessado através deste link:
+https://github.com/pepeu321/PI3_26.1/blob/main/etapa_4/Imagens/Velocidade.mp4. 
 
 .. image:: Imagens/VelocidadeGIF2.gif
    :width: 600px
