@@ -70,9 +70,6 @@ Os comandos disponíveis são:
     Encerra a aplicação
 
 
-Funcionamento
-********
-
 
 
 
