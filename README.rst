@@ -28,9 +28,12 @@ O desenvolvimento foi divido em quatro etapas:
 
 - Etapa 1: Nesta etapa, foi realizado o estudo do microcontrolador ESP32, tipo do sensor que será utilizado, a comparação entre rampa de aceleração linear e rampa em S e o diagrama de blocos do sistema, permitindo a visualização geral do funcionamento do projeto.
 
+
 - Etapa 2: Na Etapa 2, foram realizados testes individuais com os sensores que serão utilizados com o microcontrolador, e o desenvolvimento dos esquemáticos dos hardwares do sistema. 
 
+
 - Etapa 3: Foi implementada a leitura do encoder utilizando o periférico PCNT corretamente, feito os layouts da PCI do driver que foi feito, foram desenvolvidos os firmwares responsáveis pelo acionamento do motor através do driver L298N e um programa preliminar para testar a comunicação COAP, além de fazer o projeto e implementação inicial de um controlador PID que será aplicado na esteira.
+
 
 - Etapa 4: Por fim, na última etapa, foram integrado os códigos que antes estavam separados, como a parte de leitura do sensor, acionamento da esteira e comunicação COAP, além do teste final da esteira controlada já usando o driver desenvolvido e o monitoramento sem fio do sistema, onde é possível setar uma velocidade e o sistema devolve o valor do PWM atual, velocidade atual e o erro entre a medida e setada.
 
