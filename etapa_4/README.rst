@@ -96,10 +96,8 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 2.2 Apresentação do gabinete confeccionado em impressão 3D e sistema final acomodado
 ====================================================================================
 
-2.2.1 Problemática
-------------------
 
-2.2.2 Processo de impressão
+2.2.1 Processo de impressão
 ---------------------------
 
 Para a fabricação do gabinete por meio de impressão 3D foram utilizadas duas impressoras de tecnologias distintas. A estrutura principal do gabinete foi produzida em uma impressora do tipo aberta utilizando filamento de ácido polilático (PLA), enquanto os componentes acessórios foram confeccionados em uma impressora fechada empregando filamento de acrilonitrila butadieno estireno (ABS). A utilização de ambas as tecnologias permitiu explorar as vantagens específicas de cada equipamento e material, de acordo com os requisitos mecânicos e funcionais de cada componente.
@@ -123,7 +121,7 @@ As impressoras utilizadas durante o processo de fabricação são apresentadas n
 *Fonte: Figura gerada com auxílio de inteligência artificial*
 
 
-2.2.3 Alterações técnicas no design do gabinete e problemática
+2.2.2 Alterações técnicas no design do gabinete e problemática
 -----------------------------------------------
 
 O gabinete inicialmente projetado apresentou incompatibilidade com a instalação da placa de controle, em decorrência da posição inadequada do suporte destinado à placa de controle, cuja altura impossibilitava a montagem correta do conjunto. Como primeira tentativa de correção, realizou-se a usinagem desse suporte por meio de uma micro retífica (Dremel), com o objetivo de reduzir sua altura. Entretanto, o resultado obtido não foi satisfatório, pois a fixação da placa permaneceu inadequada e a redução alcançada não foi suficiente para permitir o fechamento correto da tampa do gabinete.
@@ -164,7 +162,7 @@ Além das alterações descritas, foram realizados outros aprimoramentos, inclui
 
 *Fonte: Figura gerada com auxílio de inteligência artificial*
 
-2.2.4 Apresentação definitiva do gabinete
+2.2.3 Apresentação definitiva do gabinete
 -----------------------------------------
 
 .. image:: GabineteNovo.png
@@ -175,7 +173,7 @@ Além das alterações descritas, foram realizados outros aprimoramentos, inclui
 *Fonte: Figura gerada com auxílio de inteligência artificial*.
 
 
-2.2.5 Apresentação definitiva do sistema acomodado
+2.2.4 Apresentação definitiva do sistema acomodado
 --------------------------------------------------
 
 O sistema final apresentou um resultado compatível com os requisitos estabelecidos em projeto, acomodando adequadamente as placas de potência e de controle em um único gabinete. Ambas as placas encontram-se rigidamente fixadas, protegidas contra umidade, isoladas eletricamente para minimizar riscos de curto-circuito e resguardadas contra esforços mecânicos externos. Além disso, a disposição dos componentes foi planejada de forma a facilitar procedimentos de manutenção, inspeção e reprogramação do sistema, quando necessários.
