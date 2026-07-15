@@ -156,7 +156,7 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 2.2.5 Apresentação definitiva do sistema acomodado
 --------------------------------------------------
 
-.. image:: SistemaAcomodado.png
+.. image:: SistemaAcomodadoESSE.png
    :width: 800px
    :align: center
 *Figura 1  – Sistema completo acomodado dentro do novo gabinete*
