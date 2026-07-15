@@ -109,6 +109,19 @@ O resultado do processo de soldagem das duas faces pode ser visto na Figura 4. N
 2.2.2 Processo de impressão
 ---------------------------
 
+Para a fabricação do gabinete por meio de impressão 3D foram utilizadas duas impressoras de tecnologias distintas. A estrutura principal do gabinete foi produzida em uma impressora do tipo aberta utilizando filamento de ácido polilático (PLA), enquanto os componentes acessórios foram confeccionados em uma impressora fechada empregando filamento de acrilonitrila butadieno estireno (ABS). A utilização de ambas as tecnologias permitiu explorar as vantagens específicas de cada equipamento e material, de acordo com os requisitos mecânicos e funcionais de cada componente.
+
+As impressoras abertas apresentam como principais vantagens o menor custo de aquisição e manutenção, maior simplicidade de operação e, em geral, maior volume útil de impressão, sendo particularmente indicadas para materiais como o PLA. Em contrapartida, por não possuírem câmara aquecida, tornam-se mais suscetíveis às variações de temperatura ambiente e correntes de ar.
+O PLA foi selecionado para a fabricação do gabinete por apresentar elevada facilidade de impressão, boa estabilidade dimensional, baixa contração térmica e excelente acabamento superficial, características que favorecem a produção de peças de grandes dimensões com boa precisão geométrica. Além disso, trata-se de um material suficientemente rígido para aplicações estruturais de baixa solicitação mecânica, como gabinetes eletrônicos.
+
+Os acessórios foram produzidos em ABS utilizando uma impressora fechada, cuja câmara aquecida proporciona maior estabilidade térmica durante o processo de fabricação, reduzindo significativamente o risco de deformações e desprendimento da peça da mesa de impressão. O ABS foi escolhido por apresentar maior resistência mecânica, maior tenacidade e melhor resistência ao calor quando comparado ao PLA, tornando-o mais adequado para componentes sujeitos a esforços localizados, fixações e montagens repetitivas. Como desvantagem, o ABS apresenta maior contração térmica durante a impressão, exigindo controle mais rigoroso da temperatura e, consequentemente, uma impressora com câmara fechada.
+
+Todo o processo de fatiamento foi realizado utilizando o software Creality Slicer, compatível com as impressoras empregadas. As impressões foram executadas com o auxílio do bolsista Sérgio, mediante autorização dos professores responsáveis pela disciplina para utilização dos filamentos disponíveis no laboratório.
+
+Ao longo do desenvolvimento foram consumidos aproximadamente 500 g de filamento, totalizando cerca de 36 horas de impressão, considerando todas as peças produzidas e suas respectivas reimpressões. Para a fabricação das peças foi adotado um preenchimento interno (infill) de 20%, valor que proporcionou rigidez estrutural suficiente, mantendo simultaneamente baixo consumo de material e tempo de fabricação. As peças impressas apresentaram boa fidelidade dimensional em relação ao modelo tridimensional desenvolvido no Tinkercad, atendendo aos requisitos mecânicos e funcionais estabelecidos para o projeto.
+As impressoras utilizadas durante o processo de fabricação são apresentadas na Figura 6.
+
+
 .. image:: Impressora.png
    :width: 800px
    :align: center
