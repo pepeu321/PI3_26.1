@@ -974,7 +974,7 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 *Fonte: Autoria própria*
 
 
-3 Melhorias futuras
+3. Melhorias futuras
 ===================================================
 
 Embora os requisitos do projeto tenham sido atendidos, foram identificadas diversas oportunidades de aprimoramento técnico e funcional. Essas propostas visam otimizar a eficiência, a segurança, o controle e a robustez do sistema, aproximando o protótipo atual de um produto final comercializável.
