@@ -2,7 +2,7 @@ Controle de velocidade com telemetria e acionamento remoto da esteira transporta
 #####################################################################
 
 .. image:: imagens_principal/Esteira.png
-   :width: 600px
+   :width: 500px
    :align: right
 
 .. contents::
