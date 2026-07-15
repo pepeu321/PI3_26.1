@@ -963,7 +963,9 @@ Uma visualização do terminal onde serão digitados os comandos pode ser vista 
 2.5 Comparação entre Resultados Obtidos e Esperados
 =======================================================
 
-Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
+O sistema foi acomodado fisicamente conforme foi apresentado na tarefa 3 desta etapa 4. 
+
+Um teste foi realizado definindo a velocidade em 50 RPM e depois foi adicionado um peso de 1 Kg na esteira, conforme a imagem abaixo mostra.  
 
 .. image:: Imagens/Resultado.jpg
    :width: 600px
@@ -972,7 +974,9 @@ Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Te
 
 *Fonte: Autoria própria*
 
-Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
+Antes da adição do peso, o rpm medido é igual a 49,49 RPM. O duty cycle enviado ao driver é igual a 853. Para saber se esse valor é condizente basta calcular o valor do RPM referente ao duty cycle enviado ao driver do motor. Ele é praticamente linear, então para 1023 de razão cíclica, o RPM esperado é de 60 RPM. Para uma velocidade de 50 RPM, por regra de três, o valor esperado é de 852,5 de duty cycle. Então o valor encontrado de 853 para o driver do motor é correto e o valor medido de 49,49 RPM está dentro do aceitável. Pois é um erro de 1% com relação aos 50 RPM esperados. 
+
+Abaixo está um gif do teste para quando a velocidade é definida em 50 RPM.
 
 .. image:: Imagens/VelocidadeGIF2.gif
    :width: 600px
